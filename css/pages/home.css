@@ -1,0 +1,21 @@
+h1 {
+  margin-bottom: 72px;
+  font-size: 5.6rem;
+  line-height: 6.8rem;
+  text-align: center;
+}
+
+.description {
+  max-width: 482px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.double {
+  display: flex;
+  margin-top: 80px;
+}
+.double__left {
+  margin-right: 80px;
+  flex: 0 0 438px;
+}
