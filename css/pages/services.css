@@ -1,0 +1,96 @@
+.quote-list-wrap {
+  margin-bottom: 80px;
+}
+.quote-list-wrap h2 {
+  margin-bottom: 48px;
+  color: var(--blue-ribbon);
+}
+.quote-list {
+  display: flex;
+  list-style-type: none;
+}
+.quote-list__item {
+  position: relative;
+  padding: 0 16px;
+  margin: 0 20px;
+}
+.quote-list__item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--blue-ribbon);
+}
+
+blockquote {
+  padding: 48px 20px;
+  text-align: center;
+  border-radius: 24px;
+  font-size: 3.2rem;
+  line-height: 4rem;
+  background: var(--athens-gray);
+}
+blockquote p {
+  max-width: 864px;
+  margin: 0 auto;
+
+}
+
+.cards {
+  overflow: hidden;
+}
+.cards__wrap {
+  display: flex;
+}
+.card {
+  flex-shrink: 0;
+  width: 100%;
+}
+.card__image {
+  margin-bottom: 32px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+.card__tag {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-bottom: 16px;
+  background: red;
+  color: var(--lynch);
+  border-radius: 10px;
+}
+.card__title {
+  margin-bottom: 16px;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+}
+
+
+
+
+.cards__pagination {
+  display: flex;
+  justify-content: center;
+}
+.card__bullet {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: blue;
+  cursor: pointer;
+}
+.card__bullet.active {
+  background: red;
+}
+
+
+.cards--default .cards__wrap {
+  margin: 0 -32px;
+}
+.cards--default .card {
+  flex: 1 0 calc(50% - 64px);
+  margin: 0 32px;;
+}
