@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  var swiper = new Swiper('.cards', {
+  let screenWidth = window.innerWidth;
+
+  let homeCards = document.querySelector('.js-service-cards');
+
+  homeCards = new Swiper('.cards', {
     init: false,
     wrapperClass: 'cards__wrap',
     slideClass: 'card',

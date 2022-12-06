@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <link rel="stylesheet" href="css/layout/layout.css">
   <link rel="stylesheet" href="css/pages/services.css">
 
-  
   <title>Epikast</title>
 </head>
 <body>
@@ -22,7 +20,7 @@
       </a>
       <nav>
         <ul class="menu">
-          <li><a class="active" href="services.html">Our services</a></li>
+          <li><a href="services.html">Our services</a></li>
           <li><a href="about.html">About us</a></li>
           <li><a href="careers.html">Careers</a></li>
           <li><a href="contact.html">Contact us</a></li>
@@ -32,11 +30,11 @@
   </header>
 
   <main class="container container--main">
-    <section>
-      <figure>
-        <img src="https://picsum.photos/1920/687" alt="Epikast logo">
+    <section class="intro">
+      <figure class="intro__cover">
+        <img src="https://picsum.photos/1920/687?grayscale&blur=8" alt="Epikast logo">
       </figure>
-      <h1>We are there when patients<strong>need us the most</strong></h1>
+      <h1>We are there when patients <br> <strong>need us the most</strong></h1>
       <div class="content">
         <p>
           Our solutions are customized to each brand team that we 
@@ -78,7 +76,7 @@
     </blockquote>
 
 
-    <section class="cards cards--default">
+    <section class="cards cards--default js-service-cards">
       <div class="cards__wrap">
         <article class="card">
           <figure class="card__image">
@@ -111,26 +109,20 @@
           <figure class="card__image">
             <img src="https://picsum.photos/576/400" />
           </figure>
-          <span class="card__tag">example 1</span>
-          <h3 class="card__title">Treatment initiation</h3>
+          <span class="card__tag">example 2</span>
+          <h3 class="card__title">Adherence</h3>
           <div class="content">
             <p>
-              Patient receives a welcome call to introduce all the services 
-              available to them, reassure them that at this difficult time 
-              of disease diagnosis and treatment initiation they will get all 
-              the help they need, and ensure their needs are met.
+              Our teams are trained to understand the underlying 
+              reasons behind treatment discontinuations, and then 
+              address those reasons with targeted interventions. 
             </p>
             <p>
-              Subsequently, our care team will take care of any and all 
-              details needed to ensure that the patient quickly receives 
-              their life-altering therapy: Ensuring all appropriate 
-              documentation is in pace, liaising with a specialty 
-              pharmacy as needed, managing co-pay assistance programs 
-              for eligible patients, liaising with insurance companies 
-              for benefits investigation and verification, working with 
-              physician offices and patients to manage any step edits 
-              or prior authorizations, coordinate free drug programs, 
-              provide any available financial assistance programs, etc.
+              From routine adherence calls, to offering bridge drug 
+              as needed, understanding adverse events, recommending 
+              any available financial assistance programs, and 
+              empowering patients to overcome any emotional or 
+              other barriers to their treatment.
             </p>
           </div>
         </article>
@@ -142,12 +134,12 @@
   </main>
 
   <footer class="container container--footer">
-    <span>
+    <span class="email">
       <img src="https://picsum.photos/24" />
-      info@epikast.gt
+      <a href="mailto: info@epikast.gt">info@epikast.gt</a>
     </span>
-    <span>2022 &copy; All rights reserved</span>
-    <a href="#"><img src="https://picsum.photos/128/27" /></a>
+    <span class="copyrights">2022 &copy; All rights reserved</span>
+    <a href="#" class="logo"><img src="https://picsum.photos/128/27" /></a>
   </footer>
   
   <script src="js/swiper.min.js"></script>
