@@ -184,13 +184,11 @@ header {
 
 
 
-
-.content p {
-  margin-bottom: 20px;
+.content {
   color: var(--lynch);
 }
-.content p:last-child {
-  margin-bottom: 0;
+.content p:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 
