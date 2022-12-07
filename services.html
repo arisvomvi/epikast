@@ -18,7 +18,7 @@
           <img src="https://picsum.photos/158/36" alt="Epikast logo">
         </figure>
       </a>
-      <nav>
+      <nav class="menu-wrap js-menu">
         <ul class="menu">
           <li><a href="services.html" class="active">Our services</a></li>
           <li><a href="about.html">About us</a></li>
@@ -26,6 +26,7 @@
           <li><a href="contact.html">Contact us</a></li>
         </ul>
       </nav>
+      <span class="burger js-burger"></span>
     </div>
   </header>
 
@@ -49,19 +50,19 @@
       </div>
     </section>
 
-    <section class="quote-list-wrap">
-      <h2>We focus on...</h2>
-      <ul class="quote-list">
-        <li class="quote-list__item">
+    <section class="quote-list">
+      <h2 class="quote-list__title">We focus on...</h2>
+      <ul class="split split--quadraple">
+        <li class="split__part">
           …ensuring that patients have access to life-altering medications
         </li>
-        <li class="quote-list__item">
+        <li class="split__part">
           …minimizing the bureaucratic and administrative burden for patients and physician offices
         </li>
-        <li class="quote-list__item">
+        <li class="split__part">
           …ensuring that all eligible patients are informed of the treatments options available to them
         </li>
-        <li class="quote-list__item">
+        <li class="split__part">
           …enabling a deep understanding of patient and physician preferences, behaviors & attitudes
         </li>
       </ul>
@@ -75,8 +76,61 @@
       </p>
     </blockquote>
 
+    <section>
+      <div class="split">
+        <article class="split__part">
+          <figure class="card__image">
+            <img src="https://picsum.photos/576/400" />
+          </figure>
+          <span class="card__tag">example 1</span>
+          <h3 class="card__title">Treatment initiation</h3>
+          <div class="content">
+            <p>
+              Patient receives a welcome call to introduce all the services 
+              available to them, reassure them that at this difficult time 
+              of disease diagnosis and treatment initiation they will get all 
+              the help they need, and ensure their needs are met.
+            </p>
+            <p>
+              Subsequently, our care team will take care of any and all 
+              details needed to ensure that the patient quickly receives 
+              their life-altering therapy: Ensuring all appropriate 
+              documentation is in pace, liaising with a specialty 
+              pharmacy as needed, managing co-pay assistance programs 
+              for eligible patients, liaising with insurance companies 
+              for benefits investigation and verification, working with 
+              physician offices and patients to manage any step edits 
+              or prior authorizations, coordinate free drug programs, 
+              provide any available financial assistance programs, etc.
+            </p>
+          </div>
+        </article>
+        <article class="split__part">
+          <figure class="card__image">
+            <img src="https://picsum.photos/576/400" />
+          </figure>
+          <span class="card__tag">example 2</span>
+          <h3 class="card__title">Adherence</h3>
+          <div class="content">
+            <p>
+              Our teams are trained to understand the underlying 
+              reasons behind treatment discontinuations, and then 
+              address those reasons with targeted interventions. 
+            </p>
+            <p>
+              From routine adherence calls, to offering bridge drug 
+              as needed, understanding adverse events, recommending 
+              any available financial assistance programs, and 
+              empowering patients to overcome any emotional or 
+              other barriers to their treatment.
+            </p>
+          </div>
+        </article>  
+      </div>
+    </section>
 
-    <section class="cards cards--default js-service-cards">
+
+    <!-- <section class="cards cards--default">
       <div class="cards__wrap">
         <article class="card">
           <figure class="card__image">
@@ -128,7 +182,7 @@
         </article>
       </div>
       <div class="cards__pagination"></div>
-    </section>
+    </section> -->
     
 
   </main>

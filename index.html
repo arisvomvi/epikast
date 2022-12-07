@@ -18,7 +18,7 @@
           <img src="https://picsum.photos/158/36" alt="Epikast logo">
         </figure>
       </a>
-      <nav>
+      <nav class="menu-wrap js-menu">
         <ul class="menu">
           <li><a href="services.html">Our services</a></li>
           <li><a href="about.html">About us</a></li>
@@ -26,23 +26,26 @@
           <li><a href="contact.html">Contact us</a></li>
         </ul>
       </nav>
+      <span class="burger js-burger"></span>
     </div>
   </header>
 
   <main class="container container--main">
-    <h1>We are passionate <br> about healthcare and service to patients</h1>
-    <div class="description">
-      We focus on creating customized and personalized experiences 
-      across all communication channels.
-    </div>
+    <section class="intro">
+      <h1>We are passionate about healthcare and service to patients</h1>
+      <div class="intro__description">
+        We focus on creating customized and personalized experiences 
+        across all communication channels.
+      </div>
+    </section>
 
-    <figure style="margin: 0 auto 80;">
+    <figure style="margin: 0 auto 80px;">
       <img src="https://picsum.photos/1296/218" alt="">
     </figure>
 
-    <section class="double">
-      <div class="double__left">
-        <h2>We are there when patients need us the most</h2>
+    <article class="split main-teaser">
+      <div class="split__part">
+        <h2 class="main-teaser__title">We are there when patients need us the most</h2>
         <div class="content">
           <p>
             We partner with biopharmaceutical companies as they 
@@ -61,10 +64,14 @@
           </p>
         </div>
       </div>
-      <figure>
-        <img src="https://picsum.photos/698/448" alt="">
-      </figure>
-    </section>
+      <div class="split__part split__part--wrap">
+        <figure class="rounded layered">
+          <img src="https://picsum.photos/698/448" alt="">
+        </figure>
+        <span class="circle"></span>
+        <span class="half-circle"></span>
+      </div>
+    </article>
     
   </main>
 

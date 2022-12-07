@@ -33,24 +33,23 @@ h1 strong {
   max-width: 448px;
 }
 
-.quote-list-wrap {
-  padding: 72px 0 100px;
+
+
+.quote-list {
+  outline: 1px solid;
 }
-.quote-list-wrap h2 {
+
+.quote-list__title {
   margin-bottom: 48px;
   color: var(--blue-ribbon);
 }
-.quote-list {
-  margin: 0 -20px;
-  display: flex;
+
+.quote-list li {
+  position: relative;
+  padding: 0 16px;
   list-style-type: none;
 }
-.quote-list__item {
-  position: relative;
-  padding-left: 16px;
-  margin: 0 22px;
-}
-.quote-list__item:before {
+.quote-list li:before {
   content: '';
   position: absolute;
   top: 0;
@@ -60,14 +59,40 @@ h1 strong {
   background: var(--blue-ribbon);
   transition: 0.4s;
 }
-.quote-list__item:hover:before {
+.quote-list li:hover:before {
   width: 4px;
 }
+
+/* .quote-list-wrap {
+  padding: 72px 0 0;
+}
+.quote-list-wrap h2 {
+  
+}
+.quote-list {
+  margin: 0 -20px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+.quote-list__item {
+  position: relative;
+  padding-left: 16px;
+  flex: 0 0 calc(calc(25% - 44px));
+  margin: 0 22px;
+}
+.quote-list__item:before {
+  
+}
+.quote-list__item:hover:before {
+  width: 4px;
+} */
+
 
 blockquote {
   padding: 48px 20px;
   text-align: center;
-  margin-bottom: 116px;
+  /* margin-bottom: 116px; */
   border-radius: 24px;
   font-weight: 300;
   font-size: 3.2rem;
@@ -95,6 +120,11 @@ blockquote p {
   overflow: hidden;
   border-radius: 16px;
 }
+.card__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 .card__tag {
   display: inline-block;
   padding: 5px 10px;
@@ -112,21 +142,7 @@ blockquote p {
 
 
 
-.cards__pagination {
-  display: flex;
-  justify-content: center;
-}
-.card__bullet {
-  width: 20px;
-  height: 20px;
-  margin: 0 10px;
-  border-radius: 50%;
-  background: blue;
-  cursor: pointer;
-}
-.card__bullet.active {
-  background: red;
-}
+
 
 
 .cards--default .cards__wrap {
@@ -135,4 +151,100 @@ blockquote p {
 .cards--default .card {
   flex: 1 0 calc(50% - 64px);
   margin: 0 32px;;
+}
+
+@media only screen and (max-width: 1024px) {
+  /* .quote-list__item {
+    flex: 0 0 calc(50% - 44px);
+    margin-bottom: 40px;
+  } */
+}
+
+@media only screen and (max-width: 655px) {
+  blockquote {
+    padding: 30px 24px;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  .cards--default .cards__wrap {
+    display: block;
+    margin: 0;
+  }
+  
+  .cards--default .card {
+    width: auto;
+    margin: 0 0 64px;
+  }
+  
+}
+
+@media only screen and (max-width: 360px) {
+  /* .quote-list {
+    display: block;
+    margin: 0;
+  }
+  .quote-list__item {
+    margin: 0 0 40px;
+  } */
+
+  blockquote {
+    margin: 0 calc(var(--safe-space) * -1);
+    border-radius: 0;
+  }
+
+  .cards {
+    position: relative;
+    margin: 0 calc(var(--safe-space) * -1);
+  }
+  .card {
+    position: relative;
+    padding: 0 var(--safe-space);
+  }
+  .card__image {
+    height: 320px;
+    margin: 0 calc(var(--safe-space) * -1) 23px;
+    border-radius: 0;
+  }
+  .card__tag {
+    position: absolute;
+    top: 290px;
+    left: var(--safe-space);
+    margin: 0;
+    transform: translateY(-50%);
+  }
+  .cards__pagination {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 290px;
+    right: var(--safe-space);
+    transform: translateY(-50%);
+  }
+  .card__bullet {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: #fff;
+    cursor: pointer;
+  }
+  .card__bullet:last-child {
+    margin-right: 0;
+  }
+  .card__bullet:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .card__bullet.active:before {
+    border-color: #fff;
+  }
 }

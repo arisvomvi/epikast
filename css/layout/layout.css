@@ -69,6 +69,7 @@
   --athens-gray: #F9FAFB;
   --lynch: #687992;
   --geyser: #DBDFE5;
+  --melrose: #B2C7FD;
 
   --safe-space: 40px;
   
@@ -131,6 +132,7 @@ header {
   justify-content: space-between;
   padding-top: 22px;
   padding-bottom: 22px;
+  background: #fff;
 }
 .container--main {
   padding-top: 80px;
@@ -182,6 +184,14 @@ header {
 }
 
 
+.burger {
+  display: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background: red;
+}
+
 
 
 .content {
@@ -190,5 +200,113 @@ header {
 .content p:not(:last-child) {
   margin-bottom: 20px;
 }
+
+
+
+
+
+figure.rounded {
+  border-radius: 24px;
+  overflow: hidden;
+}
+figure.rounded img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+figure.layered {
+  position: relative;
+}
+figure.layered:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--blue-ribbon);
+  opacity: 0.3;
+  mix-blend-mode: multiply;
+}
+
+
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+  outline: 1px solid red;
+}
+.split__part {
+  flex: 1 0 calc(50% - 40px);
+  margin: 0 20px;
+}
+.split__part--wrap {
+  position: relative;
+}
+.split--quadraple .split__part {
+  flex: 1 0 calc(25% - 40px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .split--quadraple .split__part {
+    flex: 1 0 calc(50% - 40px);
+  }
+}
+
+@media only screen and (max-width: 655px) {
+  .burger {
+    display: block;
+  }
+  .menu-wrap {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    background: #fff;
+    right: 0;
+    padding: 25px var(--safe-space);
+    box-shadow: 0 5px 10px #D9DDE3;
+    border-radius: 0 0 24px 24px;
+    z-index: -1;
+    transform: translateY(0);
+    transition: 0.4s;
+  }
+  .menu-wrap.active {
+    transform: translateY(calc(100% + 40px))
+  }
+  .menu {
+    display: block;
+    text-align: right;
+  }
+  .menu li {
+    margin: 0 0 24px;
+  }
+
+  .split:not(.split--quadraple) {
+    display: block;
+    margin: 0;
+  }
+  .split:not(.split--quadraple) .split__part {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  .split--quadraple {
+    display: block;
+    margin: 0;
+  }
+  .split__part {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  
+  
+}
+
+
+
 
 
