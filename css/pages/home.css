@@ -12,7 +12,7 @@ h1 {
 
 .intro__description {
   max-width: 482px;
-  margin: 0 auto 65px;
+  margin: 0 auto;
   text-align: center;
   color: var(--lynch);
 }

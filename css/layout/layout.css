@@ -246,6 +246,43 @@ figure.layered:before {
   flex: 1 0 calc(25% - 40px);
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  /* position: absolute;
+  top: 290px;
+  right: var(--safe-space); */
+  transform: translateY(-50%);
+  background-color: red;
+}
+.pagination__bullet {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #fff;
+  background: blue;
+  cursor: pointer;
+}
+.pagination__bullet:last-child {
+  margin-right: 0;
+}
+.pagination__bullet:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.pagination__bullet.active:before {
+  border-color: #fff;
+}
+
 @media only screen and (max-width: 1024px) {
   .split--quadraple .split__part {
     flex: 1 0 calc(50% - 40px);
@@ -309,4 +346,8 @@ figure.layered:before {
 
 
 
+
+.test {
+  outline: 1px solid;
+}
 

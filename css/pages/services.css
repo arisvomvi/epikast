@@ -90,14 +90,24 @@ h1 strong {
 
 
 blockquote {
+  position: relative;
   padding: 48px 20px;
   text-align: center;
   /* margin-bottom: 116px; */
-  border-radius: 24px;
+  
   font-weight: 300;
   font-size: 3.2rem;
   line-height: 4rem;
+  
+}
+blockquote:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
   background: var(--athens-gray);
+  background-color: red;
+  z-index: -1;
 }
 blockquote p {
   max-width: 864px;
@@ -105,27 +115,14 @@ blockquote p {
 
 }
 
-.cards {
-  overflow: hidden;
+
+.vertical-teasers {
+
 }
-.cards__wrap {
-  display: flex;
-}
-.card {
-  flex-shrink: 0;
-  width: 100%;
-}
-.card__image {
+.vertical-teaser figure {
   margin-bottom: 32px;
-  overflow: hidden;
-  border-radius: 16px;
 }
-.card__image img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-.card__tag {
+.vertical-teaser__tag {
   display: inline-block;
   padding: 5px 10px;
   margin-bottom: 16px;
@@ -133,25 +130,13 @@ blockquote p {
   color: var(--lynch);
   border-radius: 10px;
 }
-.card__title {
+.vertical-teaser__title {
   margin-bottom: 16px;
   font-size: 2.4rem;
   line-height: 3.2rem;
 }
 
 
-
-
-
-
-
-.cards--default .cards__wrap {
-  margin: 0 -32px;
-}
-.cards--default .card {
-  flex: 1 0 calc(50% - 64px);
-  margin: 0 32px;;
-}
 
 @media only screen and (max-width: 1024px) {
   /* .quote-list__item {
@@ -166,16 +151,6 @@ blockquote p {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
-
-  .cards--default .cards__wrap {
-    display: block;
-    margin: 0;
-  }
-  
-  .cards--default .card {
-    width: auto;
-    margin: 0 0 64px;
-  }
   
 }
 
@@ -189,11 +164,43 @@ blockquote p {
   } */
 
   blockquote {
-    margin: 0 calc(var(--safe-space) * -1);
+    padding: 30px 0;
+  }
+  blockquote:before {
+    inset: 0 calc(var(--safe-space) * -1);;
     border-radius: 0;
   }
 
-  .cards {
+  .vertical-teasers {
+    position: relative;
+    margin: 0 calc(var(--safe-space) * -1);
+    overflow: hidden;
+  }
+  .vertical-teasers .split {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .vertical-teaser {
+    flex: 1 0 auto;
+    padding: 0 var(--safe-space);
+    /* flex-shrink: 0; */
+  }
+  .vertical-teaser figure {
+    height: 320px;
+    margin: 0 calc(var(--safe-space) * -1) 23px;
+    border-radius: 0;
+  }
+  .vertical-teaser__tag {
+    position: absolute;
+    top: 290px;
+    left: var(--safe-space);
+    margin: 0;
+    transform: translateY(-50%);
+  }
+
+ 
+  
+  /* .cards {
     position: relative;
     margin: 0 calc(var(--safe-space) * -1);
   }
@@ -206,45 +213,6 @@ blockquote p {
     margin: 0 calc(var(--safe-space) * -1) 23px;
     border-radius: 0;
   }
-  .card__tag {
-    position: absolute;
-    top: 290px;
-    left: var(--safe-space);
-    margin: 0;
-    transform: translateY(-50%);
-  }
-  .cards__pagination {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 290px;
-    right: var(--safe-space);
-    transform: translateY(-50%);
-  }
-  .card__bullet {
-    position: relative;
-    width: 8px;
-    height: 8px;
-    margin: 0 10px;
-    border-radius: 50%;
-    background: #fff;
-    cursor: pointer;
-  }
-  .card__bullet:last-child {
-    margin-right: 0;
-  }
-  .card__bullet:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .card__bullet.active:before {
-    border-color: #fff;
-  }
+  
+   */
 }
