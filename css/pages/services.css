@@ -181,6 +181,7 @@ blockquote p {
     flex-wrap: nowrap;
   }
   .vertical-teaser {
+    position: relative;
     flex: 1 0 auto;
     padding: 0 var(--safe-space);
     /* flex-shrink: 0; */
@@ -197,22 +198,13 @@ blockquote p {
     margin: 0;
     transform: translateY(-50%);
   }
-
+  .vertical-teasers .pagination {
+    position: absolute;
+    top: 290px;
+    right: var(--safe-space);
+  }
+  
  
   
-  /* .cards {
-    position: relative;
-    margin: 0 calc(var(--safe-space) * -1);
-  }
-  .card {
-    position: relative;
-    padding: 0 var(--safe-space);
-  }
-  .card__image {
-    height: 320px;
-    margin: 0 calc(var(--safe-space) * -1) 23px;
-    border-radius: 0;
-  }
   
-   */
 }

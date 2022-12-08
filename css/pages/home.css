@@ -1,6 +1,6 @@
 
 .intro {
-  /* padding-top: 63px; */
+  margin-bottom: 72px;
 }
 h1 {
   margin-bottom: 72px;
@@ -9,13 +9,16 @@ h1 {
   font-weight: 600;
   text-align: center;
 }
-
 .intro__description {
   max-width: 482px;
   margin: 0 auto;
   text-align: center;
   color: var(--lynch);
 }
+.tiles {
+  margin-bottom: 80px;
+}
+
 
 .main-teaser {
   align-items: flex-start;
@@ -48,9 +51,18 @@ h1 {
 }
 
 
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 475px) {
   h1 {
     font-size: 4rem;
     line-height: 4.8rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .intro {
+    margin-bottom: 52px;
+  }
+  .tiles {
+    margin: 0 calc(var(--safe-space) * -1) 48px;
   }
 }

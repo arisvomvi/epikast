@@ -13,7 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
     slider: null,
   };
 
-  burger.addEventListener('click', () => menu.classList.toggle('active'));
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('active');
+    menu.classList.toggle('active');
+  });
 
   if (verticalTeasers.el) check_vertical_teasers();
   if (valueTeasers.el) check_value_teasers();
@@ -52,7 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function carousel_values() {
     console.log('carousel_values');
     valueTeasers.slider = new Swiper('.js-values', {
-      init: true,
+      // init: true,
+      // autoHeight: true,
       wrapperClass: 'split',
       slideClass: 'split__part',
       slideActiveClass: 'active',

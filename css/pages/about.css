@@ -82,7 +82,32 @@
   justify-content: center;
 }
 .persona {
-  margin: 0 20px 20px;
+  padding: 8px;
+  border-radius: 24px 24px 0 0;
+  background: var(--athens-gray);
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  border-bottom: 1px solid var(--blue-ribbon);
+  /* margin: 0 20px 20px; */
+}
+.persona__image {
+  max-width: 152px;
+  margin-bottom: 16px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.persona__image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.persona__title {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.persona__desc {
+  margin-bottom: 8px;
+  color: var(--lynch)
 }
 
 
@@ -105,7 +130,19 @@
     display: flex;
     flex-wrap: nowrap;
   }
-  .values__list li {
+  .values__item {
     flex: 1 0 100%;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+  }
+  .values__item h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  .values__item img {
+    margin-bottom: 8px;
   }
 }
