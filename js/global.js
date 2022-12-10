@@ -15,46 +15,65 @@ document.addEventListener('DOMContentLoaded', () => {
     el: document.querySelector('.js-personas'),
     slider: null,
   };
+
   let accordion = document.querySelector('.js-accordion');
-  let accordionItems = document.querySelectorAll('.js-accordion-item');
-
-  // let x = document.querySelectorAll('.js-position-list');
-  // let y = document.querySelectorAll('.js-position-item');
-
-  // x.forEach(el => {
-  //   el.addEventListener('click', z => {
-  //     console.log(z.scrollHeight);
-  //   });
-  //   // console.log(el.offsetHeight);
-  //   // x.style.maxHeight = x.scrollHeight + "px";
-  // });
-
-  // y.forEach(el => {
-  //   el.addEventListener('click', e => {
-  //     e.stopPropagation();
-  //     console.log('asd');
-  //   });
-  // });
-
-  // let o = document.querySelector('.position__wrap');
-  // console.log(o.scrollHeight);
-
-  let x = document.querySelector('.js-position-list');
-  console.log(x.scrollHeight);
-  console.log(x);
+  let accordionItems = accordion ? accordion.querySelectorAll('.accordion__item') : [];
 
   accordionItems.forEach(item => {
     item.addEventListener('click', e => {
-      accordionItems.forEach(item => {
-        // console.log(item.scrollHeight);
-        if (e.target.closest('.js-accordion-item').isSameNode(item)) {
-          item.classList.toggle('active');
-        } else {
-          item.classList.remove('active');
-        }
-      });
+      let target = e.target;
+      if (target.closest('.accordion__content li')) {
+        let trigger = target.closest('.accordion__content li');
+        toggle_position(item.querySelectorAll('.position'), trigger.getAttribute('data-trigger'));
+        return;
+      }
+
+      toggle_accordion(item, accordionItems);
     });
   });
+
+  function toggle_accordion(target, items) {
+    console.log('toggle_accordion');
+
+    items.forEach(item => {
+      if (item.isSameNode(target)) {
+        console.log('---is same node');
+        if (item.classList.contains('active')) {
+          console.log('is active');
+          item.classList.remove('active');
+          item.querySelector('.accordion__body').style.removeProperty('height');
+          toggle_position(item.querySelectorAll('.position'));
+          // target.querySelector('.accordion__body').style.setProperty('height', `${target.querySelector('.accordion__content').scrollHeight}px`);
+        } else {
+          console.log('is not active', item);
+          item.classList.add('active');
+          // item.querySelector('.accordion__body').style.removeProperty('height');
+          item.querySelector('.accordion__body').style.setProperty('height', `${target.querySelector('.accordion__content').scrollHeight}px`);
+          //
+        }
+      } else {
+        console.log('---is NOT same node');
+        item.classList.remove('active');
+        item.querySelector('.accordion__body').style.removeProperty('height');
+        toggle_position(item.querySelectorAll('.position'));
+      }
+    });
+  }
+
+  function toggle_position(articles, pos = null) {
+    console.log('toggle_position');
+    if (pos) {
+      articles.forEach(article => {
+        if (article.getAttribute('data-position') === pos) {
+          article.classList.toggle('open');
+        } else {
+          article.classList.remove('open');
+        }
+      });
+    } else {
+      articles.forEach(article => article.classList.remove('open'));
+    }
+  }
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
