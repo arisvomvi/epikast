@@ -21,8 +21,6 @@ h1 span {
 .tiles {
   margin-bottom: 80px;
 }
-
-
 .main-teaser {
   align-items: flex-start;
 }
@@ -35,29 +33,6 @@ h1 span {
   font-weight: 700;
   margin-bottom: 24px;
 }
-/* 
-.circle {
-  position: absolute;
-  bottom: -28px;
-  left: 40px;
-  width: 56px;
-  height: 56px;
-  background: var(--melrose);
-  border-radius: 50%;
-}
-
-.half-circle {
-  position: absolute;
-  bottom: -110px;
-  left: 140px;
-  width: 152px;
-  height: 152px;
-  background: var(--blue-ribbon);
-  border-radius: 50%;
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-} */
-
-
 
 @media only screen and (max-width: 655px) {
   .main-teaser .split__part:nth-child(1) {
@@ -65,7 +40,6 @@ h1 span {
     margin-bottom: 40px;
   }
 }
-
 
 @media only screen and (max-width: 475px) {
   h1 {

@@ -13,7 +13,6 @@
 
 .accordion {
   position: relative;
-  outline: 1px solid red;
 }
 .accordion__item {
   padding: 24px;

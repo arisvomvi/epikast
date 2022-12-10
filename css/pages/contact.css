@@ -45,7 +45,6 @@
 
 .locations__map {
   position: relative;
-  outline: 1px solid red;
 }
 .locations__map img {
   object-fit: contain;

@@ -110,8 +110,37 @@ body {
   max-width: 1296px;
   margin: 0 auto;
   padding: 0 var(--safe-space);
-  /* outline: 1px solid red; */
 }
+
+
+/* ---- */
+.container:before,
+.container:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(0,0,0,0.1);
+}
+.container:before {
+  left: calc(var(--safe-space) - 1px);
+}
+.container:after {
+  right: calc(var(--safe-space) - 1px);
+}
+.container {
+  position: relative;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+}
+.split {
+  outline: 1px solid rgba(4, 212, 4, 0.574);
+}
+.split__part {
+  outline: 1px solid rgba(4, 212, 4, 0.2);
+}
+
+/* ----- */
 
 header {
   position: fixed;
@@ -177,12 +206,10 @@ header {
 .container--footer {
   display: flex;
   justify-content: space-between;
-  /* align-items: flex-end; */
   padding-top: 64px;
   padding-bottom: 40px;
   font-size: 1.4rem;
   line-height: 2.1rem;
-  border-top: 1px solid #000;
 }
 .container--footer .logo {
   max-width: 128px;
@@ -245,7 +272,6 @@ figure.layered:before {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -24px;
-  outline: 1px solid red;
 }
 .split__part {
   margin: 0 24px;
@@ -262,9 +288,6 @@ figure.layered:before {
 .pagination {
   display: none;
   justify-content: center;
-  
-  /* transform: translateY(-50%); */
-  /* background-color: red; */
 }
 .pagination__bullet {
   position: relative;
@@ -272,8 +295,6 @@ figure.layered:before {
   height: 16px;
   margin: 0 10px;
   border-radius: 50%;
-  /* background: #fff;
-  background: blue; */
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -444,11 +465,4 @@ figure.layered:before {
   }
 }
 
-
-
-
-
-.test {
-  outline: 1px solid;
-}
 
