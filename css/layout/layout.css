@@ -317,6 +317,20 @@ figure.layered:before {
   /* border-color: #fff; */
 }
 
+.btn {
+  display: inline-block;
+  padding: 8px 24px;
+  border-radius: 19px;
+  font-weight: 500;
+  border: 1px solid var(--blue-ribbon);
+  color: var(--blue-ribbon);
+}
+.btn--fill {
+  background: var(--blue-ribbon);
+  font-weight: 600;
+  color: #fff;
+}
+
 
 @media only screen and (max-width: 1024px) {
   .split--quadraple .split__part {
