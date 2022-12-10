@@ -1,8 +1,12 @@
 
+.container--main {
+  padding-top: 0;
+}
 .intro {
   position: relative;
   min-height: 687px;
   padding-top: 64px;
+  margin-bottom: 72px;
 }
 .intro__cover {
   position: absolute;
@@ -36,7 +40,8 @@ h1 strong {
 
 
 .quote-list {
-  outline: 1px solid;
+  /* outline: 1px solid; */
+  margin-bottom: 80px;
 }
 
 .quote-list__title {
@@ -89,36 +94,48 @@ h1 strong {
 } */
 
 
-blockquote {
+.blockquote {
   position: relative;
   padding: 48px 20px;
   text-align: center;
-  /* margin-bottom: 116px; */
-  
+  margin-bottom: 116px;
   font-weight: 300;
   font-size: 3.2rem;
   line-height: 4rem;
-  
 }
-blockquote:before {
+.blockquote:before {
   content: '';
   position: absolute;
   inset: 0;
   border-radius: 24px;
   background: var(--athens-gray);
-  background-color: red;
+  /* background-color: red; */
   z-index: -1;
 }
-blockquote p {
+.blockquote p {
   max-width: 864px;
   margin: 0 auto;
 
 }
-
-
-.vertical-teasers {
-
+.blockquote span {
+  display: block;
 }
+.blockquote__animation {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.blockquote__animation:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+}
+
+
 .vertical-teaser figure {
   margin-bottom: 32px;
 }
@@ -129,6 +146,8 @@ blockquote p {
   background: var(--geyser);
   color: var(--lynch);
   border-radius: 10px;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
 }
 .vertical-teaser__title {
   margin-bottom: 16px;
@@ -139,19 +158,40 @@ blockquote p {
 
 
 @media only screen and (max-width: 1024px) {
-  /* .quote-list__item {
-    flex: 0 0 calc(50% - 44px);
+  .quote-list {
+    margin-bottom: 0;
+  }
+  .quote-list li {
     margin-bottom: 40px;
-  } */
+  }
+
+  .blockquote {
+    margin-bottom: 92px;
+  }
 }
 
 @media only screen and (max-width: 655px) {
-  blockquote {
-    padding: 30px 24px;
+  .blockquote {
+    margin-bottom: 76px;
+    /* padding: 30px 24px; */
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
+
+  .vertical-teaser:not(:last-child) {
+    margin-bottom: 64px;
+  }
   
+}
+
+@media only screen and (max-width: 475px) {
+  .quote-list .split--quadraple {
+    display: block;
+    margin: 0;
+  }
+  .quote-list .split__part {
+    margin: 0 0 40px;
+  }
 }
 
 @media only screen and (max-width: 360px) {
@@ -163,10 +203,11 @@ blockquote p {
     margin: 0 0 40px;
   } */
 
-  blockquote {
+  .blockquote {
+    margin-bottom: 24px;
     padding: 30px 0;
   }
-  blockquote:before {
+  .blockquote:before {
     inset: 0 calc(var(--safe-space) * -1);;
     border-radius: 0;
   }
@@ -180,7 +221,7 @@ blockquote p {
     display: flex;
     flex-wrap: nowrap;
   }
-  .vertical-teaser {
+  .vertical-teasers .vertical-teaser {
     position: relative;
     flex: 1 0 auto;
     padding: 0 var(--safe-space);

@@ -99,7 +99,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font: 400 1.6rem/2rem var(--font-inter);
+  font: 400 1.6rem/2.2rem var(--font-inter);
   color: var(--stratos);
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern" 1;
@@ -195,7 +195,8 @@ header {
 .mail-copy {
   position: relative;
   flex: 1;
-  margin: 0 32px;
+  align-self: flex-end;
+  margin: 0 32px 2px;
   text-align: center;
 }
 .mail-copy__mail {
@@ -243,28 +244,60 @@ figure.layered:before {
 .split {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -20px;
+  margin: 0 -24px;
   outline: 1px solid red;
 }
 .split__part {
-  flex: 1 0 calc(50% - 40px);
-  margin: 0 20px;
+  margin: 0 24px;
+  word-break: break-word;
 }
-.split__part--wrap {
-  position: relative;
+.split--double .split__part {
+  flex: 1 0 calc(50% - 48px);
 }
 .split--quadraple .split__part {
-  flex: 1 0 calc(25% - 40px);
+  flex: 1 0 calc(25% - 48px);
 }
+
 
 .pagination {
   display: none;
+  justify-content: center;
+  
+  transform: translateY(-50%);
+  /* background-color: red; */
+}
+.pagination__bullet {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #fff;
+  background: blue;
+  cursor: pointer;
+}
+.pagination__bullet:last-child {
+  margin-right: 0;
+}
+.pagination__bullet:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.pagination__bullet.active:before {
+  border-color: #fff;
 }
 
 
 @media only screen and (max-width: 1024px) {
   .split--quadraple .split__part {
-    flex: 1 0 calc(50% - 40px);
+    flex: 1 0 calc(50% - 48px);
   }
 }
 
@@ -346,13 +379,14 @@ figure.layered:before {
     margin: 0;
   }
 
-  .split:not(.split--quadraple) {
+  .split--double {
     display: block;
     margin: 0;
   }
-  .split:not(.split--quadraple) .split__part {
+  .split--double .split__part {
     margin: 0;
   }
+
 
 
   .container--footer .logo {
@@ -393,49 +427,18 @@ figure.layered:before {
 }
 
 @media only screen and (max-width: 475px) {
-  .split--quadraple {
+  /* .split--quadraple {
     display: block;
     margin: 0;
   }
   .split__part {
     margin: 0;
-  }
+  } */
 }
 
 @media only screen and (max-width: 360px) {
   .pagination {
     display: flex;
-    justify-content: center;
-    
-    transform: translateY(-50%);
-    background-color: red;
-  }
-  .pagination__bullet {
-    position: relative;
-    width: 8px;
-    height: 8px;
-    margin: 0 10px;
-    border-radius: 50%;
-    background: #fff;
-    background: blue;
-    cursor: pointer;
-  }
-  .pagination__bullet:last-child {
-    margin-right: 0;
-  }
-  .pagination__bullet:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 16px;
-    height: 16px;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .pagination__bullet.active:before {
-    border-color: #fff;
   }
 }
 

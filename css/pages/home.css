@@ -9,6 +9,9 @@ h1 {
   font-weight: 600;
   text-align: center;
 }
+h1 span {
+  display: block;
+}
 .intro__description {
   max-width: 482px;
   margin: 0 auto;
@@ -23,12 +26,16 @@ h1 {
 .main-teaser {
   align-items: flex-start;
 }
+.main-teaser .split__part:nth-child(1) {
+  max-width: 438px;
+}
 .main-teaser__title {
   font-size: 3.2rem;
   line-height: 4rem;
+  font-weight: 700;
   margin-bottom: 24px;
 }
-
+/* 
 .circle {
   position: absolute;
   bottom: -28px;
@@ -42,12 +49,21 @@ h1 {
 .half-circle {
   position: absolute;
   bottom: -110px;
-  left: 120px;
+  left: 140px;
   width: 152px;
   height: 152px;
   background: var(--blue-ribbon);
   border-radius: 50%;
   clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+} */
+
+
+
+@media only screen and (max-width: 655px) {
+  .main-teaser .split__part:nth-child(1) {
+    max-width: none;
+    margin-bottom: 40px;
+  }
 }
 
 

@@ -31,7 +31,7 @@
   </header>
 
   <main class="container container--main">
-    <section class="intro test">
+    <section class="intro">
       <figure class="intro__cover">
         <img src="https://picsum.photos/1920/687?grayscale&blur=8" alt="Epikast logo">
       </figure>
@@ -50,7 +50,7 @@
       </div>
     </section>
 
-    <section class="quote-list test">
+    <section class="quote-list">
       <h2 class="quote-list__title">We focus on...</h2>
       <ul class="split split--quadraple">
         <li class="split__part">
@@ -68,17 +68,20 @@
       </ul>
     </section>
 
-    <blockquote class="test">
+    <blockquote class="blockquote">
       <p>
-        We work closely with our clients to <strong>customize</strong> a 
-        patient engagement program 
-        that is uniquely tailored to the needs of the specific treatment
+        <span>We work closely with our clients to <strong>customize</strong> a patient</span> 
+        <span>engagement program that is uniquely tailored </span>
+        to the needs of the specific treatment
       </p>
+      <!-- <span class="blockquote__animation"></span> -->
+      <!-- <img src="assets/services_triangle_1.svg" alt=""> -->
     </blockquote>
 
-    <section class="vertical-teasers js-vertical-teasers test">
-      <div class="split">
+    <section class="vertical-teasers js-vertical-teasers">
+      <div class="split split--double">
         <article class="split__part vertical-teaser">
+          <!-- <img src="assets/services_triangle_2.svg" alt=""> -->
           <figure class="rounded">
             <img src="https://picsum.photos/576/400" />
           </figure>
@@ -132,13 +135,15 @@
 
   </main>
 
-  <footer class="container container--footer">
-    <span class="email">
-      <img src="https://picsum.photos/24" />
-      <a href="mailto: info@epikast.gt">info@epikast.gt</a>
-    </span>
-    <span class="copyrights">2022 &copy; All rights reserved</span>
-    <a href="#" class="logo"><img src="https://picsum.photos/128/27" /></a>
+  <footer class="container container--footer test">
+    <a href="#" target="_blank" class="linkedin">
+      <img src="assets/linkedin.png" alt="Linkedin logo" />
+    </a>
+    <div class="mail-copy">
+      <a href="mailto: info@epikast.gt" class="mail-copy__mail">info@epikast.gt</a>
+      <span class="mail-copy__copy">2022 &copy; All rights reserved</span>
+    </div>
+    <a href="index.html" class="logo"><img src="assets/logo.svg" /></a>
   </footer>
   
   <script src="js/swiper.min.js"></script>
