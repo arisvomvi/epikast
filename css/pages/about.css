@@ -55,6 +55,7 @@
 .values__list {
   max-width: 1088px;
   margin: 0 auto;
+  justify-content: space-between;
   /* display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

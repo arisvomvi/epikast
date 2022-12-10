@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
   let accordion = document.querySelector('.js-accordion');
   let accordionItems = document.querySelectorAll('.js-accordion-item');
 
-  let x = document.querySelectorAll('.js-position-list');
-  let y = document.querySelectorAll('.js-position-item');
+  // let x = document.querySelectorAll('.js-position-list');
+  // let y = document.querySelectorAll('.js-position-item');
 
   // x.forEach(el => {
   //   el.addEventListener('click', z => {
@@ -29,17 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
   //   // x.style.maxHeight = x.scrollHeight + "px";
   // });
 
-  y.forEach(el => {
-    el.addEventListener('click', e => {
-      e.stopPropagation();
-      console.log('asd');
-    });
-  });
+  // y.forEach(el => {
+  //   el.addEventListener('click', e => {
+  //     e.stopPropagation();
+  //     console.log('asd');
+  //   });
+  // });
+
+  // let o = document.querySelector('.position__wrap');
+  // console.log(o.scrollHeight);
+
+  let x = document.querySelector('.js-position-list');
+  console.log(x.scrollHeight);
+  console.log(x);
 
   accordionItems.forEach(item => {
     item.addEventListener('click', e => {
       accordionItems.forEach(item => {
-        console.log(item.scrollHeight);
+        // console.log(item.scrollHeight);
         if (e.target.closest('.js-accordion-item').isSameNode(item)) {
           item.classList.toggle('active');
         } else {
