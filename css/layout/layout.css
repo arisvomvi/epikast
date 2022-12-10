@@ -263,17 +263,18 @@ figure.layered:before {
   display: none;
   justify-content: center;
   
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
   /* background-color: red; */
 }
 .pagination__bullet {
   position: relative;
-  width: 8px;
-  height: 8px;
+  width: 16px;
+  height: 16px;
   margin: 0 10px;
   border-radius: 50%;
-  background: #fff;
-  background: blue;
+  /* background: #fff;
+  background: blue; */
+  border: 1px solid transparent;
   cursor: pointer;
 }
 .pagination__bullet:last-child {
@@ -284,14 +285,15 @@ figure.layered:before {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 16px;
-  height: 16px;
-  border: 1px solid transparent;
+  width: 8px;
+  height: 8px;
+  background-color: red;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
-.pagination__bullet.active:before {
-  border-color: #fff;
+.pagination__bullet.active {
+  border-color: red;
+  /* border-color: #fff; */
 }
 
 

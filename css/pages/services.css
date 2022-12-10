@@ -243,6 +243,7 @@ h1 strong {
     position: absolute;
     top: 290px;
     right: var(--safe-space);
+    transform: translateY(-50%);
   }
   
  

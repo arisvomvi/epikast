@@ -15,6 +15,39 @@ document.addEventListener('DOMContentLoaded', () => {
     el: document.querySelector('.js-personas'),
     slider: null,
   };
+  let accordion = document.querySelector('.js-accordion');
+  let accordionItems = document.querySelectorAll('.js-accordion-item');
+
+  let x = document.querySelectorAll('.js-position-list');
+  let y = document.querySelectorAll('.js-position-item');
+
+  // x.forEach(el => {
+  //   el.addEventListener('click', z => {
+  //     console.log(z.scrollHeight);
+  //   });
+  //   // console.log(el.offsetHeight);
+  //   // x.style.maxHeight = x.scrollHeight + "px";
+  // });
+
+  y.forEach(el => {
+    el.addEventListener('click', e => {
+      e.stopPropagation();
+      console.log('asd');
+    });
+  });
+
+  accordionItems.forEach(item => {
+    item.addEventListener('click', e => {
+      accordionItems.forEach(item => {
+        console.log(item.scrollHeight);
+        if (e.target.closest('.js-accordion-item').isSameNode(item)) {
+          item.classList.toggle('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    });
+  });
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');

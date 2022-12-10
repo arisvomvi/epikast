@@ -107,7 +107,8 @@
   justify-content: center;
 }
 .persona {
-  
+  max-width: 200px;
+  min-width: 200px;
   font-size: 1.4rem;
   line-height: 2.2rem;
   
@@ -118,8 +119,7 @@
   border-radius: 24px 24px 0 0;
   background: var(--athens-gray);
   border-bottom: 1px solid var(--blue-ribbon);
-  max-width: 200px;
-  min-width: 200px;
+  
 }
 .persona__image {
   max-width: 152px;
@@ -324,7 +324,7 @@
     margin: 0 0 8px;
   }
 
-  .values .pagination__bullet {
+  /* .values .pagination__bullet {
     background: #D9DDE3;
   }
   .values .pagination__bullet.active {
@@ -332,5 +332,5 @@
   }
   .values .pagination__bullet.active:before {
     border-color: var(--lynch);
-  }
+  } */
 }
