@@ -1,4 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
+  let clocks = document.querySelectorAll('[data-clock]');
+  // console.log(clocks);
+
+  clocks.forEach(clock => {
+    switch (clock.getAttribute('data-clock')) {
+      case 'NY':
+        fetch_time('America/New_York', clock);
+        break;
+      case 'GR':
+        fetch_time('Europe/Athens', clock);
+        break;
+      default:
+    }
+  });
+
   // Global
   const burger = document.querySelector('.js-burger');
   const menu = document.querySelector('.js-menu');
@@ -73,6 +88,36 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       articles.forEach(article => article.classList.remove('open'));
     }
+  }
+
+  function fetch_time(path, clock) {
+    console.log('--------------');
+    console.log(path);
+    axios
+      .get('http://worldtimeapi.org/api/timezone/' + path)
+      .then(res => {
+        // console.log('----', path);
+        // console.log(res.data);
+        // let time = new Date(res.data.unixtime * 1000);
+        let time = new Date(res.data.datetime);
+        console.log(time);
+        console.log(time.getTimezoneOffset());
+        // console.log('---', new Date(res.data.unixtime * 1000)time - res.data.raw_offset);
+
+        clock.innerHTML = format_time(time);
+        // setInterval(() => {
+        //   time.setSeconds(time.getSeconds() + 60);
+        //   // clock.innerHTML = format_time(time);
+        //   console.log(format_time(time));
+        // }, 1000 * 60);
+      })
+      .catch(err => console.error(err));
+  }
+
+  function format_time(time) {
+    let hours = time.getHours();
+    let minutes = '0' + time.getMinutes();
+    return `${hours}:${minutes.substr(-2)}`;
   }
 
   burger.addEventListener('click', () => {

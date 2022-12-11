@@ -68,6 +68,7 @@ h1 {
   line-height: 4rem;
   font-weight: 300;
   color: var(--lynch);
+  white-space: nowrap;
 }
 address {
   font-style: normal;
