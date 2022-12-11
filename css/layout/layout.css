@@ -69,6 +69,7 @@
 
   --safe-space: 40px;
   --header-size: 80px;
+  --base-distance: 64px;
   
   --font-inter: 'Inter', sans-serif;
 }
@@ -309,13 +310,12 @@ figure.layered:before {
   left: 50%;
   width: 8px;
   height: 8px;
-  background-color: red;
+  background: currentColor;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 .pagination__bullet.active {
-  border-color: red;
-  /* border-color: #fff; */
+  border-color: currentColor;
 }
 
 .btn {
@@ -346,6 +346,9 @@ figure.layered:before {
 }
 
 @media only screen and (max-width: 655px) {
+  :root {
+    --base-distance: 48px
+  }
   .container--header .logo {
     max-width: 130px;
   }

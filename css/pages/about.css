@@ -1,39 +1,46 @@
+.quotes {
+  margin-bottom: var(--base-distance);
+}
 .quotes .split {
   align-items: center;
 }
-.quote {
+.quote:not(:last-child) {
+  margin-bottom: 40px;
+}
+.quote__content {
   position: relative;
+  padding: 48px 0;
   font-size: 3.2rem;
   line-height: 3.8rem;
   font-weight: 300;
+  /* max-width: calc(100% - 40px); */
 }
-.quote:before,
-.quote:after {
+.quote__content:before,
+.quote__content:after {
   content: '';
   position: absolute;
   width: 10px;
   height: 10px;
   background: red;
 }
-.quote:before {
+.quote__content:before {
   top: 0;
   left: 0;
 }
-.quote:after {
+.quote__content:after {
   bottom: 0;
   right: 0;
 }
+
 .quote strong {
   font-weight: 600;
 }
 
 
-
-
-
 .values {
   position: relative;
-  padding: 32px 8px;
+  padding: 32px 8px 8px;
+  margin-bottom: var(--base-distance);
   /* margin-bottom: 64px; */
   
 }
@@ -80,9 +87,16 @@
 .value__title img {
   margin-right: 16px;
 }
+.pagination--values {
+  margin-top: 30px;
+  color: var(--lynch);
+}
 
 
 
+.personas__title {
+  margin-bottom: 64px;
+}
 .personas__container {
   margin-top: 64px;
 }
@@ -104,7 +118,7 @@
   border-radius: 50%;
 }
 .personas .split {
-  padding-bottom: 170px;
+  padding-bottom: 76px;
   justify-content: center;
 }
 .persona {
@@ -112,6 +126,8 @@
   min-width: 200px;
   font-size: 1.4rem;
   line-height: 2.2rem;
+  margin-bottom: 96px;
+  cursor: pointer;
   
   /* margin: 0 20px 20px; */
 }
@@ -152,7 +168,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  max-width: 647px;
+  max-width: calc(100% - 100px);
   width: 100%;
   left: 50%;
   padding: 41px;
@@ -160,6 +176,7 @@
   background: var(--stratos);
   border-radius: 24px;
   max-height: 537px;
+  
 }
 .persona__content {
   color: #fff;
@@ -196,6 +213,10 @@
   display: flex;
 }
 
+.persona:hover .persona__bio {
+  display: flex;
+}
+
 @media only screen and (max-width: 1024px) {
   .personas .split--quadraple .split__part {
     flex: 1 0 calc(25% - 48px);
@@ -216,16 +237,18 @@
 }
 
 @media only screen and (max-width: 655px) {
-  .quotes .split {
+
+  .quotes .quote {
     display: flex;
     flex-direction: column;
-    margin-bottom: 56px;
-  }
-  .quotes .quote {
     order: 1;
     margin-bottom: 32px;
   }
-  .quotes figure {
+  .quotes .quote__content {
+    margin-bottom: 32px;
+    max-width: none;
+  }
+  .quote figure {
     order: 2;
     /* margin-bottom: 32px; */
   }
@@ -264,7 +287,7 @@
   } */
   .persona {
     position: relative;
-    margin: 0 24px;
+    margin: 0 24px 96px;
     /* flex: 0 0 200px;
     max-width: none;
     min-width: none; */
@@ -286,7 +309,7 @@
 }
 
 @media only screen and (max-width: 360px) {
-  .quote {
+  .quote__content {
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
@@ -325,6 +348,9 @@
     margin: 0 0 8px;
   }
 
+  .persona {
+    margin-bottom: 64px;
+  }
   /* .values .pagination__bullet {
     background: #D9DDE3;
   }

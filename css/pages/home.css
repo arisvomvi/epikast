@@ -21,9 +21,9 @@ h1 {
 .main-teaser {
   align-items: flex-start;
 }
-.main-teaser .split__part:nth-child(1) {
+/* .main-teaser .split__part:nth-child(1) {
   max-width: 438px;
-}
+} */
 .main-teaser__title {
   font-size: 3.2rem;
   line-height: 4rem;
@@ -32,10 +32,10 @@ h1 {
 }
 
 @media only screen and (max-width: 655px) {
-  .main-teaser .split__part:nth-child(1) {
+  /* .main-teaser .split__part:nth-child(1) {
     max-width: none;
     margin-bottom: 40px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 475px) {

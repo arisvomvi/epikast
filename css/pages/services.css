@@ -40,12 +40,10 @@ h1 strong {
 .quote-list {
   margin-bottom: 80px;
 }
-
 .quote-list__title {
   margin-bottom: 48px;
   color: var(--blue-ribbon);
 }
-
 .quote-list li {
   position: relative;
   padding: 0 16px;
@@ -91,7 +89,7 @@ h1 strong {
 .blockquote span {
   display: block;
 }
-.blockquote__animation {
+/* .blockquote__animation {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -104,7 +102,7 @@ h1 strong {
   width: 150px;
   height: 150px;
   background-color: red;
-}
+} */
 
 .vertical-teaser figure {
   margin-bottom: 32px;
@@ -123,6 +121,9 @@ h1 strong {
   margin-bottom: 16px;
   font-size: 2.4rem;
   line-height: 3.2rem;
+}
+.pagination--vertical-teasers {
+  color: #fff
 }
 
 @media only screen and (max-width: 1024px) {
@@ -206,6 +207,7 @@ h1 strong {
     left: var(--safe-space);
     margin: 0;
     transform: translateY(-50%);
+    max-width: calc(100% - var(--safe-space) * 2 - 72px);
   }
   .vertical-teasers .pagination {
     position: absolute;
