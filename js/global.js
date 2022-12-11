@@ -91,25 +91,20 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function fetch_time(path, clock) {
-    console.log('--------------');
-    console.log(path);
     axios
       .get('http://worldtimeapi.org/api/timezone/' + path)
       .then(res => {
-        // console.log('----', path);
-        // console.log(res.data);
         // let time = new Date(res.data.unixtime * 1000);
         let time = new Date(res.data.datetime);
         console.log(time);
         console.log(time.getTimezoneOffset());
-        // console.log('---', new Date(res.data.unixtime * 1000)time - res.data.raw_offset);
 
         clock.innerHTML = format_time(time);
-        // setInterval(() => {
-        //   time.setSeconds(time.getSeconds() + 60);
-        //   // clock.innerHTML = format_time(time);
-        //   console.log(format_time(time));
-        // }, 1000 * 60);
+        setInterval(() => {
+          time.setSeconds(time.getSeconds() + 60);
+          clock.innerHTML = format_time(time);
+          console.log(format_time(time));
+        }, 1000 * 60);
       })
       .catch(err => console.error(err));
   }

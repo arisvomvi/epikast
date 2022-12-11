@@ -9,9 +9,6 @@ h1 {
   font-weight: 600;
   text-align: center;
 }
-h1 span {
-  display: block;
-}
 .intro__description {
   max-width: 482px;
   margin: 0 auto;
