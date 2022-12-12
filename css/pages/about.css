@@ -19,9 +19,9 @@
 .quote__content:after {
   content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
-  background: red;
+  width: 24px;
+  height: 24px;
+  background: var(--lynch);
 }
 .quote__content:before {
   top: 0;
@@ -37,28 +37,19 @@
 }
 
 
+
 .values {
-  position: relative;
-  padding: 32px 8px 8px;
+  /* position: relative; */
+  /* padding: 32px 8px 8px; */
   margin-bottom: var(--base-distance);
   /* margin-bottom: 64px; */
   
 }
-.values:before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  background: var(--athens-gray);
-  /* background-color: lightblue; */
-  z-index: -1;
-}
-.values h2 {
+
+/* .values h2 {
   margin: 0 0 64px 24px;
-  font-size: 2rem;
-  line-height: 2.4rem;
-  font-weight: 600;
-}
+  
+} */
 .values__list {
   max-width: 1088px;
   margin: 0 auto;
@@ -95,6 +86,8 @@
 
 
 .personas__title {
+  font-size: 2rem;
+  line-height: 2.4rem;
   margin-bottom: 64px;
 }
 .personas__container {
@@ -222,6 +215,10 @@
 } */
 
 @media only screen and (max-width: 1024px) {
+  .values__list {
+    max-width: none;
+    margin: 0 -24px;
+  }
   .personas .split--quadraple .split__part {
     flex: 1 0 calc(25% - 48px);
   }
@@ -248,7 +245,7 @@
     order: 1;
     margin-bottom: 32px;
   }
-  .quotes .quote__content {
+  .quotes .quote__content{
     margin-bottom: 32px;
     max-width: none;
   }
@@ -256,9 +253,20 @@
     order: 2;
     /* margin-bottom: 32px; */
   }
+  .values__list {
+    margin: 0;
+  }
   .values__list .values__item {
     max-width: none;
     margin-bottom: 24px;
+    
+  }
+  
+  .value__title {
+    margin-bottom: 0;
+  }
+  .values__item .content {
+    margin-left: 56px;
   }
 }
 
@@ -317,13 +325,9 @@
     font-size: 2.4rem;
     line-height: 3.2rem;
   }
-  .values {
+  /* .values {
     padding: 32px 0;
-  }
-  .values:before {
-    inset: 0 calc(var(--safe-space) * -1);
-    border-radius: 0;
-  }
+  } */
   .values h2 {
     margin-bottom: 32px;
   }
@@ -350,6 +354,9 @@
   }
   .values__item img {
     margin: 0 0 8px;
+  }
+  .values__item .content {
+    margin: 0;
   }
 
   .persona {

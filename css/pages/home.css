@@ -31,11 +31,17 @@ h1 {
   margin-bottom: 24px;
 }
 
+@media only screen and (max-width: 1024px) {
+  h1 {
+    margin-bottom: 64px;
+  }
+}
+
 @media only screen and (max-width: 655px) {
-  /* .main-teaser .split__part:nth-child(1) {
-    max-width: none;
+  .main-teaser .split__part:nth-child(1) {
+    /* max-width: none; */
     margin-bottom: 40px;
-  } */
+  }
 }
 
 @media only screen and (max-width: 475px) {

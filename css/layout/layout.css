@@ -167,6 +167,9 @@ header {
   padding-top: 64px;
   margin-top: var(--header-size);
 }
+.container--main > *:last-child {
+  margin-bottom: 0;
+}
 .burger {
   display: none;
 }
@@ -337,10 +340,33 @@ figure.layered:before {
   color: #fff;
 }
 
+.bubble {
+  position: relative;
+  padding: 32px;
+}
+.bubble:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: var(--athens-gray);
+  /* background-color: lightblue; */
+  z-index: -1;
+}
+.bubble__title {
+  margin-bottom: 24px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+}
+
 
 @media only screen and (max-width: 1024px) {
   .split--quadraple .split__part {
     flex: 1 0 calc(50% - 48px);
+  }
+  .bubble {
+    padding: 32px 24px;
   }
 }
 
@@ -431,7 +457,9 @@ figure.layered:before {
   }
   .split--double .split__part {
     margin: 0;
+    /* margin: 0; */
   }
+
 
 
 
@@ -483,6 +511,13 @@ figure.layered:before {
 }
 
 @media only screen and (max-width: 360px) {
+  .bubble {
+    padding: 32px 0;
+  }
+  .bubble:before {
+    inset: 0 calc(-1 * var(--safe-space));
+    border-radius: 0;
+  }
   .pagination {
     display: flex;
   }
