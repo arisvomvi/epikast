@@ -17,6 +17,16 @@ document.addEventListener('DOMContentLoaded', () => {
     slider: null,
   };
 
+  let personaBio = document.querySelectorAll('.js-personas .persona') ?? [];
+
+  personaBio.forEach((persona, i) => {
+    persona.addEventListener('click', () => persona.classList.toggle('open'));
+    personaBio[i].querySelector('.persona__bio').addEventListener('click', e => {
+      e.stopPropagation();
+      persona.classList.remove('open');
+    });
+  });
+
   let accordion = document.querySelector('.js-accordion');
   let accordionItems = accordion ? accordion.querySelectorAll('.accordion__item') : [];
   let clocks = document.querySelectorAll('[data-clock]');
@@ -141,6 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function carousel_vertical_teasers() {
     verticalTeasers.slider = new Swiper('.js-vertical-teasers', {
       init: true,
+      autoHeight: true,
       wrapperClass: 'split',
       slideClass: 'vertical-teaser',
       slideActiveClass: 'active',
@@ -156,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function carousel_values() {
     valueTeasers.slider = new Swiper('.js-values', {
-      // autoHeight: true,
+      autoHeight: true,
       // setWrapperSize: true,
       wrapperClass: 'values__list',
       slideClass: 'values__item',

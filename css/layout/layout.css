@@ -116,7 +116,8 @@ body {
 
 
 /* ---- */
-.container:before,
+
+/* .container:before,
 .container:after {
   content: '';
   position: absolute;
@@ -140,7 +141,7 @@ body {
 }
 .split__part {
   outline: 1px solid var(--melrose)
-}
+} */
 
 /* ----- */
 
@@ -244,6 +245,9 @@ header {
 .content {
   color: var(--lynch);
 }
+.content a {
+  color: var(--blue-ribbon);
+}
 .content p:not(:last-child) {
   margin-bottom: 24px;
 }
@@ -272,6 +276,7 @@ figure.layered:before {
 
 .split {
   display: flex;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin: 0 -24px;
 }
