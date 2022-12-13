@@ -20,7 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
   let personaBio = document.querySelectorAll('.js-personas .persona') ?? [];
 
   personaBio.forEach((persona, i) => {
-    persona.addEventListener('click', () => persona.classList.toggle('open'));
+    persona.addEventListener('click', () => {
+      console.log(persona);
+      // persona.classList.toggle('open');
+
+      let heigh = persona.querySelector('.persona__bio').scrollHeight;
+      let x = persona.querySelector('.persona__bio').getBoundingClientRect();
+      console.log('heigh: ', heigh);
+      console.log('x: ', x, window.pageYOffset);
+      console.log('window height', window.innerHeight);
+      // window.pageYOffset + el.getBoundingClientRect().top
+    });
     personaBio[i].querySelector('.persona__bio').addEventListener('click', e => {
       e.stopPropagation();
       persona.classList.remove('open');

@@ -154,21 +154,33 @@
   line-height: 2.2rem;
   color: var(--lynch)
 }
+.persona__bio-wrap {
+  position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    overflow: hidden;
+    outline: 1px solid red;
+    max-height: 537px;
+    max-width: 400px;
+    width: 100%;
+    top: 0;
+}
 .persona__bio {
   display: flex;
-  display: none;
+  /* display: none; */
   flex-direction: column;
-  position: absolute;
+  /* position: absolute;
   top: 0;
-  bottom: 0;
-  max-width: 647px;
-  width: 100%;
-  left: 50%;
+  bottom: 0; */
+  
+  /* width: 100%;
+  left: 50%; */
   padding: 41px;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   background: var(--stratos);
   border-radius: 24px;
-  max-height: 537px;
+  
   /* opacity: 0; */
   /* transition: 0.2s; */
   cursor: default;
