@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let heigh = persona.querySelector('.persona__bio').scrollHeight;
       let x = persona.querySelector('.persona__bio').getBoundingClientRect();
+      console.log('persona:', persona.getBoundingClientRect());
       console.log('heigh: ', heigh);
       console.log('x: ', x, window.pageYOffset);
       console.log('window height', window.innerHeight);
