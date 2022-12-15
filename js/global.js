@@ -2,96 +2,55 @@ document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.js-burger');
   const menu = document.querySelector('.js-menu');
 
-  let screenWidth = window.innerWidth;
-
-  let verticalTeasers = {
-    el: document.querySelector('.js-vertical-teasers'),
-    slider: null,
-  };
-  let valueTeasers = {
-    el: document.querySelector('.js-values'),
-    slider: null,
-  };
-  let personas = {
-    el: document.querySelector('.js-personas'),
-    slider: null,
-  };
-
-  let personaBio = document.querySelectorAll('.js-personas .persona') ?? [];
-
-  personaBio.forEach((persona, i) => {
-    persona.addEventListener('click', () => {
-      console.log(persona);
-      // persona.classList.toggle('open');
-
-      let heigh = persona.querySelector('.persona__bio').scrollHeight;
-      let x = persona.querySelector('.persona__bio').getBoundingClientRect();
-      console.log('heigh: ', heigh);
-      console.log('x: ', x, window.pageYOffset);
-      console.log('window height', window.innerHeight);
-      // window.pageYOffset + el.getBoundingClientRect().top
-    });
-    personaBio[i].querySelector('.persona__bio').addEventListener('click', e => {
-      e.stopPropagation();
-      persona.classList.remove('open');
-    });
-  });
-
-  let accordion = document.querySelector('.js-accordion');
-  let accordionItems = accordion ? accordion.querySelectorAll('.accordion__item') : [];
-  let clocks = document.querySelectorAll('[data-clock]');
-
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
     menu.classList.toggle('active');
   });
 
-  accordionItems.forEach(item => {
-    item.addEventListener('click', e => {
-      let target = e.target;
-      if (target.closest('.accordion__content li')) {
-        let trigger = target.closest('.accordion__content li');
-        toggle_position(item.querySelectorAll('.position'), trigger.getAttribute('data-trigger'));
-        return;
-      }
+  if (document.querySelector('.js-personas')) new Personas('.js-personas');
+  if (document.querySelector('.js-vertical-teasers')) new VerticalTeasers('.js-vertical-teasers');
+  if (document.querySelector('.js-values')) new Values('.js-values');
+  if (document.querySelector('.js-accordion')) new Accordion('.js-accordion');
+  if (document.querySelectorAll('[data-clock]').length) new Clocks('[data-clock]');
+});
 
-      toggle_accordion(item, accordionItems);
+class Personas {
+  constructor(selector) {
+    this.selector = selector;
+    this.el = document.querySelector(selector);
+    this.personas = this.el.querySelectorAll('.persona');
+    this.carousel = null;
+    this.init();
+  }
+  init() {
+    this.watch_carousel();
+
+    window.addEventListener('resize', () => this.watch_carousel());
+
+    this.personas.forEach(persona => {
+      let bioWrap = persona.querySelector('.persona__bio-wrap');
+      let bio = bioWrap.querySelector('.persona__bio');
+
+      persona.addEventListener('click', () => {
+        bioWrap.style.setProperty('height', `${bio.scrollHeight}px`);
+      });
+
+      bioWrap.addEventListener('click', e => {
+        e.stopPropagation();
+        console.log();
+        bioWrap.style.removeProperty('height');
+      });
     });
-  });
-
-  clocks.forEach(clock => {
-    switch (clock.getAttribute('data-clock')) {
-      case 'NY':
-        fetch_time('America/New_York', clock);
-        break;
-      case 'GR':
-        fetch_time('Europe/Athens', clock);
-        break;
-      default:
-    }
-  });
-
-  if (verticalTeasers.el) watch_carousel(verticalTeasers, 360, carousel_vertical_teasers);
-  if (valueTeasers.el) watch_carousel(valueTeasers, 360, carousel_values);
-  if (personas.el) watch_carousel(personas, 528, carousel_personas);
-
-  window.addEventListener('resize', () => {
-    screenWidth = window.innerWidth;
-    if (verticalTeasers.el) watch_carousel(verticalTeasers, 360, carousel_vertical_teasers);
-    if (valueTeasers.el) watch_carousel(valueTeasers, 360, carousel_values);
-    if (personas.el) watch_carousel(personas, 528, carousel_personas);
-  });
-
-  function watch_carousel(el, screenPoint, callback) {
-    if (screenWidth <= screenPoint) {
-      if (!!!el.slider || el.slider?.destroyed) callback();
+  }
+  watch_carousel() {
+    if (window.innerWidth <= 528) {
+      if (!!!this.carousel || this.carousel?.destroyed) this.create_carousel();
     } else {
-      if (el.slider?.enabled) el.slider.destroy(true, true);
+      if (this.carousel?.enabled) this.carousel.destroy(true, true);
     }
   }
-
-  function carousel_personas() {
-    personas.slider = new Swiper('.js-personas', {
+  create_carousel() {
+    this.carousel = new Swiper(this.selector, {
       slidesPerView: 'auto',
       centeredSlides: true,
       wrapperClass: 'split',
@@ -99,67 +58,28 @@ document.addEventListener('DOMContentLoaded', () => {
       slideActiveClass: 'active',
     });
   }
-
-  function toggle_accordion(target, items) {
-    items.forEach(item => {
-      if (item.isSameNode(target)) {
-        if (item.classList.contains('active')) {
-          item.classList.remove('active');
-          item.querySelector('.accordion__body').style.removeProperty('height');
-          toggle_position(item.querySelectorAll('.position'));
-        } else {
-          item.classList.add('active');
-          item.querySelector('.accordion__body').style.setProperty('height', `${target.querySelector('.accordion__content').scrollHeight}px`);
-        }
-      } else {
-        item.classList.remove('active');
-        item.querySelector('.accordion__body').style.removeProperty('height');
-        toggle_position(item.querySelectorAll('.position'));
-      }
-    });
+}
+class VerticalTeasers {
+  constructor(selector) {
+    this.selector = selector;
+    this.el = document.querySelector(selector);
+    this.carousel = null;
+    this.init();
   }
+  init() {
+    this.watch_carousel();
 
-  function toggle_position(articles, pos = null) {
-    if (pos) {
-      articles.forEach(article => {
-        if (article.getAttribute('data-position') === pos) {
-          article.classList.toggle('open');
-        } else {
-          article.classList.remove('open');
-        }
-      });
+    window.addEventListener('resize', () => this.watch_carousel());
+  }
+  watch_carousel() {
+    if (window.innerWidth <= 360) {
+      if (!!!this.carousel || this.carousel?.destroyed) this.create_carousel();
     } else {
-      articles.forEach(article => article.classList.remove('open'));
+      if (this.carousel?.enabled) this.carousel.destroy(true, true);
     }
   }
-
-  function fetch_time(path, clock) {
-    axios
-      .get('http://worldtimeapi.org/api/timezone/' + path)
-      .then(res => {
-        // let time = new Date(res.data.unixtime * 1000);
-        let time = new Date(res.data.datetime);
-        console.log(time);
-        console.log(time.getTimezoneOffset());
-
-        clock.innerHTML = format_time(time);
-        setInterval(() => {
-          time.setSeconds(time.getSeconds() + 60);
-          clock.innerHTML = format_time(time);
-          console.log(format_time(time));
-        }, 1000 * 60);
-      })
-      .catch(err => console.error(err));
-  }
-
-  function format_time(time) {
-    let hours = time.getHours();
-    let minutes = '0' + time.getMinutes();
-    return `${hours}:${minutes.substr(-2)}`;
-  }
-
-  function carousel_vertical_teasers() {
-    verticalTeasers.slider = new Swiper('.js-vertical-teasers', {
+  create_carousel() {
+    this.carousel = new Swiper(this.selector, {
       init: true,
       autoHeight: true,
       wrapperClass: 'split',
@@ -174,11 +94,29 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
+}
+class Values {
+  constructor(selector) {
+    this.selector = selector;
+    this.el = document.querySelector(selector);
+    this.carousel = null;
+    this.init();
+  }
+  init() {
+    this.watch_carousel();
 
-  function carousel_values() {
-    valueTeasers.slider = new Swiper('.js-values', {
+    window.addEventListener('resize', () => this.watch_carousel());
+  }
+  watch_carousel() {
+    if (window.innerWidth <= 360) {
+      if (!!!this.carousel || this.carousel?.destroyed) this.create_carousel();
+    } else {
+      if (this.carousel?.enabled) this.carousel.destroy(true, true);
+    }
+  }
+  create_carousel() {
+    this.carousel = new Swiper(this.selector, {
       autoHeight: true,
-      // setWrapperSize: true,
       wrapperClass: 'values__list',
       slideClass: 'values__item',
       slideActiveClass: 'active',
@@ -191,4 +129,100 @@ document.addEventListener('DOMContentLoaded', () => {
       },
     });
   }
-});
+}
+class Clocks {
+  constructor(selector) {
+    this.selector = selector;
+    this.clocks = document.querySelectorAll(selector);
+    this.init();
+  }
+  init() {
+    this.clocks.forEach(clock => {
+      switch (clock.getAttribute('data-clock')) {
+        case 'NY':
+          this.get_time('America/New_York', clock);
+          break;
+        case 'GR':
+          this.get_time('Europe/Athens', clock);
+          break;
+        default:
+      }
+    });
+  }
+  get_time(path, clock) {
+    axios
+      .get('http://worldtimeapi.org/api/timezone/' + path)
+      .then(res => {
+        // let time = new Date(res.data.unixtime * 1000);
+        let time = new Date(res.data.datetime);
+        console.log(time);
+        console.log(time.getTimezoneOffset());
+
+        clock.innerHTML = this.format_time(time);
+        setInterval(() => {
+          time.setSeconds(time.getSeconds() + 60);
+          clock.innerHTML = this.format_time(time);
+          console.log(this.format_time(time));
+        }, 1000 * 60);
+      })
+      .catch(err => console.error(err));
+  }
+  format_time(time) {
+    let hours = time.getHours();
+    let minutes = '0' + time.getMinutes();
+    return `${hours}:${minutes.substr(-2)}`;
+  }
+}
+class Accordion {
+  constructor(selector) {
+    this.selector = selector;
+    this.accordion = document.querySelector(this.selector);
+    this.items = this.accordion.querySelectorAll('.accordion__item');
+    this.init();
+  }
+  init() {
+    this.items.forEach(item => {
+      item.addEventListener('click', e => {
+        let target = e.target;
+        if (target.closest('.accordion__content li')) {
+          let trigger = target.closest('.accordion__content li');
+          this.toggle_position(item.querySelectorAll('.position'), trigger.getAttribute('data-trigger'));
+          return;
+        }
+
+        this.toggle_accordion(item, this.items);
+      });
+    });
+  }
+  toggle_position(articles, pos = null) {
+    if (pos) {
+      articles.forEach(article => {
+        if (article.getAttribute('data-position') === pos) {
+          article.classList.toggle('open');
+        } else {
+          article.classList.remove('open');
+        }
+      });
+    } else {
+      articles.forEach(article => article.classList.remove('open'));
+    }
+  }
+  toggle_accordion(target, items) {
+    items.forEach(item => {
+      if (item.isSameNode(target)) {
+        if (item.classList.contains('active')) {
+          item.classList.remove('active');
+          item.querySelector('.accordion__body').style.removeProperty('height');
+          this.toggle_position(item.querySelectorAll('.position'));
+        } else {
+          item.classList.add('active');
+          item.querySelector('.accordion__body').style.setProperty('height', `${target.querySelector('.accordion__content').scrollHeight}px`);
+        }
+      } else {
+        item.classList.remove('active');
+        item.querySelector('.accordion__body').style.removeProperty('height');
+        this.toggle_position(item.querySelectorAll('.position'));
+      }
+    });
+  }
+}

@@ -95,7 +95,7 @@
 }
 .personas__wrap {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* display: flex;
   justify-content: center; */
 }
@@ -109,6 +109,7 @@
   bottom: 0;
   transform: translate(-50%, 50%);
   border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 .personas .split {
   padding-bottom: 76px;
@@ -161,10 +162,11 @@
     height: 4px;
     overflow: hidden;
     outline: 1px solid red;
-    max-height: 537px;
-    max-width: 400px;
+    /* max-height: 537px; */
+    max-width: 647px;
     width: 100%;
     top: 0;
+    transition: 0.4s;
 }
 .persona__bio {
   display: flex;
@@ -217,9 +219,9 @@
   background: blue;
 } */
 
-.persona.open .persona__bio {
+/* .persona.open .persona__bio {
   display: flex;
-}
+} */
 
 /* .persona:hover .persona__bio {
   display: flex;
