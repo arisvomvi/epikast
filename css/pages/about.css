@@ -159,16 +159,17 @@
   position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 4px;
+    height: 0;
     overflow: hidden;
     outline: 1px solid red;
     /* max-height: 537px; */
     max-width: 647px;
     width: 100%;
-    top: 0;
+    /* top: 0; */
     transition: 0.4s;
 }
 .persona__bio {
+  position: relative;
   display: flex;
   /* display: none; */
   flex-direction: column;
@@ -287,6 +288,7 @@
 @media only screen and (max-width: 528px) {
   .personas__wrap {
     margin: 0 -40px;
+    overflow: hidden;
     /* margin-right: calc(-1 * var(--safe-space)); */
     /* padding: 0 16px; */
     /* margin: 0 -40px 0 -16px */
