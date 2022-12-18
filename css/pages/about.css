@@ -94,7 +94,7 @@
   margin-top: 64px;
 }
 .personas__wrap {
-  position: relative;
+  /* position: relative; */
   /* overflow: hidden; */
   /* display: flex;
   justify-content: center; */
@@ -156,21 +156,35 @@
   color: var(--lynch)
 }
 .persona__bio-wrap {
-  position: absolute;
+  display: none;
+  position: fixed;
+  inset: 0;
+  /* background: red; */
+  justify-content: center;
+  align-items: center;
+  padding: var(--safe-space);
+  overflow: auto;
+  cursor: default;
+
+  /* position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    height: 0;
-    overflow: hidden;
+    height: 0; */
+    /* overflow: hidden; */
     outline: 1px solid red;
     /* max-height: 537px; */
-    max-width: 647px;
-    width: 100%;
+    /* max-width: 647px; */
+    /* width: 100%; */
     /* top: 0; */
-    transition: 0.4s;
+    /* transition: 0.4s; */
+    z-index: 1;
 }
 .persona__bio {
   position: relative;
   display: flex;
+  margin: auto;
+  max-width: 647px;
+  max-height: 537px;
   /* display: none; */
   flex-direction: column;
   /* position: absolute;
@@ -213,6 +227,11 @@
 .persona__content::-webkit-scrollbar-thumb {
   background: #fff;
   border-radius: 20px;
+}
+
+.persona.open .persona__bio-wrap {
+  display: flex;
+  
 }
 
 /* Handle on hover */

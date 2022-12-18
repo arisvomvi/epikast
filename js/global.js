@@ -23,90 +23,14 @@ class Personas {
     this.parent = this.el.closest('.personas__wrap');
     this.init();
   }
-  close_popup(pos = null) {
-    console.log('close_popup: ' + pos);
-    if (pos) {
-      let bioWrap = this.personas[pos].querySelector('.persona__bio-wrap');
-      this.personas[pos].classList.remove('open');
-      bioWrap.style.removeProperty('height');
-      setTimeout(() => {
-        bioWrap.removeAttribute('style');
-      }, 400);
-    } else {
-      this.personas.forEach(persona => {
-        let bioWrap = persona.querySelector('.persona__bio-wrap');
-        persona.classList.remove('open');
-        bioWrap.style.removeProperty('height');
-        setTimeout(() => {
-          bioWrap.removeAttribute('style');
-        }, 400);
-      });
-    }
-  }
-  open_popup(pos) {
-    console.log('open_popup: ' + pos);
-    let bioWrap = this.personas[pos].querySelector('.persona__bio-wrap');
-    let bio = bioWrap.querySelector('.persona__bio');
-    console.log(bioWrap);
-    this.personas[pos].classList.add('open');
-    // calculate position
-    if (bio.scrollHeight > this.parent.getBoundingClientRect().height) {
-      bioWrap.style.setProperty('bottom', 0);
-    } else {
-      bioWrap.style.setProperty('top', 0);
-    }
-
-    bioWrap.style.setProperty('height', `${bio.scrollHeight}px`);
-  }
   init() {
     this.watch_carousel();
 
-    window.addEventListener('resize', () => {
-      console.log('resize');
-      this.watch_carousel();
-      this.close_popup();
-    });
-
     this.personas.forEach(persona => {
-      // let bioWrap = persona.querySelector('.persona__bio-wrap');
-      // let bio = bioWrap.querySelector('.persona__bio');
-      // let isOpen = false;
-
       persona.addEventListener('click', e => {
-        this.personas.forEach((el, index) => {
-          let isClicked = e.target.closest('.persona').isSameNode(this.personas[index]);
-          if (isClicked) {
-            console.log('isclicked', index);
-            console.log('----');
-            if (el.classList.contains('open')) {
-              this.close_popup(index);
-            } else {
-              this.open_popup(index);
-            }
-          } else {
-            if (el.classList.contains('open')) {
-              console.log('not clicked, will close ', index);
-              this.close_popup(index);
-            }
-            // el.classList.remove('open');
-            // el.querySelector('.persona__bio-wrap').style.removeProperty('height');
-            // setTimeout(() => {
-            //   el.querySelector('.persona__bio-wrap').removeAttribute('style');
-            // }, 400);
-          }
-        });
+        persona.classList.toggle('open');
+        persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
       });
-
-      // bioWrap.addEventListener('click', e => {
-      //   console.log('bio clicked');
-      //   e.stopPropagation();
-      //   // isOpen = false;
-      //   // bioWrap.closest('.persona').classList.remove('open');
-      //   // bioWrap.style.removeProperty('height');
-      //   // setTimeout(() => {
-      //   //   bioWrap.removeAttribute('style');
-      //   // }, 400);
-      // });
     });
   }
   watch_carousel() {
