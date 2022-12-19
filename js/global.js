@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.js-burger');
   const menu = document.querySelector('.js-menu');
+  const copyYear = document.querySelector('.js-copy-year');
+
+  copyYear ? (copyYear.innerHTML = new Date().getFullYear()) : null;
 
   burger.addEventListener('click', () => {
     burger.classList.toggle('active');
@@ -13,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.js-accordion')) new Accordion('.js-accordion');
   if (document.querySelectorAll('[data-clock]').length) new Clocks('[data-clock]');
 });
-
 class Personas {
   constructor(selector) {
     this.selector = selector;
@@ -133,41 +135,28 @@ class Clocks {
     this.clocks = document.querySelectorAll(selector);
     this.init();
   }
+  set_time(path, clock, initialized = true) {
+    const date = new Date();
+    let time = date.toLocaleTimeString('en-US', {
+      timeZone: path,
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+    clock.innerHTML = time;
+    if (initialized) setInterval(() => this.set_time(path, clock, false), 1000 * 60);
+  }
   init() {
     this.clocks.forEach(clock => {
       switch (clock.getAttribute('data-clock')) {
         case 'NY':
-          this.get_time('America/New_York', clock);
+          this.set_time('America/New_York', clock);
           break;
         case 'GR':
-          this.get_time('Europe/Athens', clock);
+          this.set_time('Europe/Athens', clock);
           break;
         default:
       }
     });
-  }
-  get_time(path, clock) {
-    axios
-      .get('http://worldtimeapi.org/api/timezone/' + path)
-      .then(res => {
-        // let time = new Date(res.data.unixtime * 1000);
-        let time = new Date(res.data.datetime);
-        console.log(time);
-        console.log(time.getTimezoneOffset());
-
-        clock.innerHTML = this.format_time(time);
-        setInterval(() => {
-          time.setSeconds(time.getSeconds() + 60);
-          clock.innerHTML = this.format_time(time);
-          console.log(this.format_time(time));
-        }, 1000 * 60);
-      })
-      .catch(err => console.error(err));
-  }
-  format_time(time) {
-    let hours = time.getHours();
-    let minutes = '0' + time.getMinutes();
-    return `${hours}:${minutes.substr(-2)}`;
   }
 }
 class Accordion {
