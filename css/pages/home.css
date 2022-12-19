@@ -36,7 +36,6 @@ h1 {
 
 @media only screen and (max-width: 655px) {
   .main-teaser .split__part:nth-child(1) {
-    /* max-width: none; */
     margin-bottom: 40px;
   }
 }

@@ -8,14 +8,6 @@ h1 {
   font-weight: 300;
 }
 
-.openings {
-  /* padding: 40px;
-  border-radius: 24px;
-  background: var(--athens-gray); */
-}
-/* .openings h2 {
-  margin-bottom: 48px;
-} */
 .openings__list {
   position: relative;
  
@@ -23,18 +15,15 @@ h1 {
   list-style-type: none;
 }
 
-
 .accordion {
   position: relative;
   margin-bottom: 32px;
 }
 .accordion__item {
-  
   padding: 8px 0 0;
-    list-style-type: none;
-    /* border-bottom: 2px solid var(--lynch); */
-    cursor: pointer;
-    margin: 0 0 0 40px;
+  list-style-type: none;
+  cursor: pointer;
+  margin: 0 0 0 40px;
 }
 .accordion__item:after {
   content: '';
@@ -45,21 +34,17 @@ h1 {
 }
 .accordion__item:last-child:after {
   display: none;
-  /* border: none; */
 }
 .accordion__head {
   position: relative;
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-  /* outline: 1px solid;; */
 }
 .accordion__head:before,
 .accordion__head:after {
   content: '';
   position: absolute;
   transition: 0.4s;
-  /* border-radius: 20px; */
   background: var(--lynch);
 }
 .accordion__head:before {
@@ -104,13 +89,8 @@ h1 {
   height: 0;
   overflow: hidden;
   transition: 0.4s;
-  /* background-color: lightblue; */
   cursor: default;
 }
-/* .accordion__item.active .accordion__body {
-  height: 100%;
-  cursor: default;
-} */
 
 .accordion__content {
   padding: 0 40px 0 16px;
@@ -122,10 +102,8 @@ h1 {
   justify-content: space-between;
   margin-bottom: 4px;
   padding: 8px 0 8px 24px;
-  /* background-color: lightgray; */
   cursor: pointer;
   border-bottom: 1px solid var(--lynch);
-  
 }
 .accordion__content li:last-child {
   margin-bottom: 0;
@@ -153,21 +131,12 @@ h1 {
 .position {
   display: flex;
   position: relative;
-  /* display: none; */
   flex-direction: column;
-  /* position: absolute; */
-  /* border: 1px solid var(--blue-ribbon); */
   padding: 40px;
   border-radius: 24px;
   background: #fff;
-  /* top: 0; */
-  /* right: -40px; */
-  /* left: 50%; */
   max-width: 460px;
-  /* max-height: 100%; */
   box-shadow: 0 0 40px rgba(0, 0, 51, 0.16);
-  /* max-height: 200px; */
-  /* transform: translateX(-50%); */
   z-index: 1;
   cursor: default;
 }
@@ -189,21 +158,15 @@ h1 {
   cursor: pointer;
 }
 .position .content {
-  /* background-color: yellow; */
   overflow-y: auto;
 }
 .position .content::-webkit-scrollbar {
   width: 3px;
   border-radius: 20px;
 }
-
-/* Track */
 .position .content::-webkit-scrollbar-track {
   background: transparent;
-  /* border-radius: 20px; */
 }
-
-/* Handle */
 .position .content::-webkit-scrollbar-thumb {
   background: var(--lynch);
   border-radius: 20px;

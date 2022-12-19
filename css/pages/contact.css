@@ -6,9 +6,7 @@
   justify-content: space-between;
   min-height: 400px;
   padding: 24px 32px;
-  /* border-radius: 24px; */
   margin-bottom: 88px;
-  /* overflow: hidden; */
   color: var(--lynch);
 }
 .intro__top {
@@ -40,20 +38,12 @@ h1 {
   height: 100%;
 }
 
-
-
-.locations {
-  /* background: var(--athens-gray);
-  padding: 24px 32px;
-  border-radius: 24px; */
-}
 .locations__wrap {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   max-width: 1135px;
   margin: 0 auto;;
-
 }
 .locations__list {
   margin-right: 56px;
@@ -146,7 +136,6 @@ address span:last-child {
   .intro {
     min-height: auto;;
     padding: 0;
-    /* border-radius: 0; */
     align-items: center;
     margin-bottom: 64px;
   }
