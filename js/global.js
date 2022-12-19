@@ -175,51 +175,63 @@ class Accordion {
     this.selector = selector;
     this.accordion = document.querySelector(this.selector);
     this.items = this.accordion.querySelectorAll('.accordion__item');
+    this.activePosition = null;
     this.init();
   }
   init() {
-    this.items.forEach(item => {
-      item.addEventListener('click', e => {
-        let target = e.target;
-        if (target.closest('.accordion__content li')) {
-          let trigger = target.closest('.accordion__content li');
-          this.toggle_position(item.querySelectorAll('.position'), trigger.getAttribute('data-trigger'));
-          return;
+    this.items.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        if (index == this.activePosition) {
+          this.close_item(item);
+          this.activePosition = null;
+        } else {
+          if (this.activePosition == null) {
+            this.activePosition = index;
+            this.open_item(item);
+          } else {
+            this.close_item(this.items[this.activePosition]);
+            this.activePosition = index;
+            this.open_item(item);
+          }
         }
+      });
 
-        this.toggle_accordion(item, this.items);
+      item.querySelectorAll('[data-trigger]').forEach(trigger => {
+        trigger.addEventListener('click', e => {
+          e.stopPropagation();
+          let triggerPosition = trigger.getAttribute('data-trigger');
+          item.querySelector(`[data-position="${triggerPosition}"]`).classList.add('open');
+        });
+      });
+
+      item.querySelectorAll('[data-position]').forEach(position => {
+        position.addEventListener('click', e => {
+          e.stopPropagation();
+          if (e.target.isSameNode(position)) position.classList.remove('open');
+        });
+        position.querySelector('.position__close').addEventListener('click', () => position.classList.remove('open'));
       });
     });
-  }
-  toggle_position(articles, pos = null) {
-    if (pos) {
-      articles.forEach(article => {
-        if (article.getAttribute('data-position') === pos) {
-          article.classList.toggle('open');
-        } else {
-          article.classList.remove('open');
-        }
-      });
-    } else {
-      articles.forEach(article => article.classList.remove('open'));
-    }
-  }
-  toggle_accordion(target, items) {
-    items.forEach(item => {
-      if (item.isSameNode(target)) {
-        if (item.classList.contains('active')) {
+
+    window.addEventListener('resize', () => {
+      if (this.activePosition != null) {
+        this.activePosition = null;
+        this.items.forEach(item => {
           item.classList.remove('active');
           item.querySelector('.accordion__body').style.removeProperty('height');
-          this.toggle_position(item.querySelectorAll('.position'));
-        } else {
-          item.classList.add('active');
-          item.querySelector('.accordion__body').style.setProperty('height', `${target.querySelector('.accordion__content').scrollHeight}px`);
-        }
-      } else {
-        item.classList.remove('active');
-        item.querySelector('.accordion__body').style.removeProperty('height');
-        this.toggle_position(item.querySelectorAll('.position'));
+          item.querySelectorAll('[data-position]').forEach(position => position.classList.remove('open'));
+        });
       }
     });
+  }
+  open_item(item) {
+    item.classList.add('active');
+    let itemBody = item.querySelector('.accordion__body');
+    let height = itemBody.querySelector('.accordion__content').scrollHeight;
+    itemBody.style.setProperty('height', `${height}px`);
+  }
+  close_item(item) {
+    item.classList.remove('active');
+    item.querySelector('.accordion__body').style.removeProperty('height');
   }
 }

@@ -135,16 +135,33 @@ h1 {
   font-style: normal;
   color: var(--lynch);
 }
-.position {
+.position-wrap {
   display: none;
   flex-direction: column;
-  position: absolute;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  position: fixed;
+  inset: 0;
+  cursor: default;
+  z-index: 1;
+}
+.position-wrap.open {
+  display: flex;
+  
+}
+.position {
+  display: flex;
+  position: relative;
+  /* display: none; */
+  flex-direction: column;
+  /* position: absolute; */
   /* border: 1px solid var(--blue-ribbon); */
   padding: 40px;
   border-radius: 24px;
   background: #fff;
-  top: 0;
-  right: -40px;
+  /* top: 0; */
+  /* right: -40px; */
   /* left: 50%; */
   max-width: 460px;
   /* max-height: 100%; */
@@ -154,9 +171,7 @@ h1 {
   z-index: 1;
   cursor: default;
 }
-.position.open {
-  display: flex;
-}
+
 .position__title {
   margin-bottom: 8px;
   color: var(--blue-ribbon);
@@ -171,6 +186,7 @@ h1 {
   width: 10px;
   height: 10px;
   background-color: var(--blue-ribbon);
+  cursor: pointer;
 }
 .position .content {
   /* background-color: yellow; */
