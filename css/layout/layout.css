@@ -68,6 +68,7 @@
   --melrose: #B2C7FD;
 
   --safe-space: 40px;
+  --negative-safe-space: calc(-1 * var(--safe-space));
   --header-size: 80px;
   --base-distance: 64px;
   
@@ -515,7 +516,7 @@ figure.layered:before {
     padding: 32px 0;
   }
   .bubble:before {
-    inset: 0 calc(-1 * var(--safe-space));
+    inset: 0 var(--negative-safe-space);
     border-radius: 0;
   }
   .pagination {

@@ -21,20 +21,26 @@ class Personas {
     this.personas = this.el.querySelectorAll('.persona');
     this.carousel = null;
     this.parent = this.el.closest('.personas__wrap');
+    this.breakPoint = 528;
     this.init();
   }
   init() {
     this.watch_carousel();
 
-    this.personas.forEach(persona => {
+    window.addEventListener('resize', () => this.watch_carousel());
+
+    this.personas.forEach((persona, index) => {
       persona.addEventListener('click', e => {
         persona.classList.toggle('open');
+        if (window.innerWidth <= this.breakPoint) {
+          this.carousel.slideTo(index);
+        }
         persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
       });
     });
   }
   watch_carousel() {
-    if (window.innerWidth <= 528) {
+    if (window.innerWidth <= this.breakPoint) {
       if (!!!this.carousel || this.carousel?.destroyed) this.create_carousel();
     } else {
       if (this.carousel?.enabled) this.carousel.destroy(true, true);

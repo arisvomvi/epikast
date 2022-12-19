@@ -21,9 +21,6 @@ h1 {
 .main-teaser {
   align-items: flex-start;
 }
-/* .main-teaser .split__part:nth-child(1) {
-  max-width: 438px;
-} */
 .main-teaser__title {
   font-size: 3.2rem;
   line-height: 4rem;
@@ -56,6 +53,6 @@ h1 {
     margin-bottom: 52px;
   }
   .tiles {
-    margin: 0 calc(var(--safe-space) * -1) 48px;
+    margin: 0 var(--negative-safe-space) 48px;
   }
 }
