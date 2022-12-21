@@ -28,8 +28,8 @@ h1 {
 .accordion__item:after {
   content: '';
   display: block;
-  height: 2px;
-  margin: 8px 0 0 64px;
+  height: 1px;
+  margin: 8px 0 0 72px;
   background: var(--lynch);
 }
 .accordion__item:last-child:after {
@@ -98,6 +98,7 @@ h1 {
 }
 .accordion__content li {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 4px;
@@ -176,6 +177,9 @@ h1 {
   .accordion__item {
     margin-left: 0;
   }
+  .accordion__item:after {
+    margin-left: 40px;
+  }
   .accordion__head:after {
     right: 10px;
   }
@@ -208,6 +212,9 @@ h1 {
 }
 
 @media only screen and (max-width: 360px) {
+  .accordion__item:after {
+    margin-left: 0;
+  }
   .accordion__icon {
     display: none;
   }
