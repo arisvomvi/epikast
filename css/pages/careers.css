@@ -42,6 +42,7 @@ h1 {
   position: relative;
   display: flex;
   align-items: center;
+  padding-right: 32px;
 }
 .accordion__head:before,
 .accordion__head:after {
@@ -71,7 +72,6 @@ h1 {
 .accordion__icon {
   width: 32px;
   height: 32px;
-  background-color: var(--blue-ribbon);
   margin-right: 40px;
 }
 .accordion__title {
@@ -104,6 +104,7 @@ h1 {
   justify-content: space-between;
   margin-bottom: 4px;
   padding: 8px 0 8px 24px;
+  
   cursor: pointer;
   border-bottom: 1px solid rgba(104, 121, 146, 0.16);
 }
@@ -111,7 +112,40 @@ h1 {
   margin-bottom: 0;
   border: none;
 }
-.accordion__content address {
+
+.position-trigger {
+  /* display: flex;
+  align-items: center; */
+  flex: 1;
+  margin-right: 10px;
+}
+.accordion__content li:hover .position-trigger {
+  text-decoration: underline;
+}
+.position-trigger img {
+  max-width: 20px;
+  vertical-align: bottom;
+  /* margin-left: 8px; */
+  transform: translateX(0);
+  opacity: 0;
+  transition: 0.2s;
+}
+.accordion__content li:hover .position-trigger img {
+  transform: translateX(8px);
+  opacity: 1;
+}
+.position-location {
+  display: flex;
+  align-items: center;
+  /* flex: 1; */
+  justify-content: flex-end;
+  white-space: nowrap;
+  
+}
+.position-location img {
+  width: 24px;
+}
+.position-location address {
   font-style: normal;
   color: var(--lynch);
 }
@@ -137,7 +171,8 @@ h1 {
   padding: 40px;
   border-radius: 24px;
   background: #fff;
-  max-width: 460px;
+  max-width: 626px;
+  max-height: 568px;
   box-shadow: 0 0 40px rgba(0, 0, 51, 0.16);
   z-index: 1;
   cursor: default;
@@ -152,11 +187,9 @@ h1 {
 }
 .position__close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 10px;
-  height: 10px;
-  background-color: var(--blue-ribbon);
+  width: 32px;
+  top: 8px;
+  right: 8px;
   cursor: pointer;
 }
 .position .content {
@@ -176,13 +209,13 @@ h1 {
 
 .bubble__element {
   position: absolute;
-  top: 100%;
-  left: 0;
+  left: 200px;
   width: 72px;
+  bottom: -24px;
   height: 72px;
   border-radius: 50%;
   background: var(--blue-ribbon);
-  clip-path: polygon();
+  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 
 @media only screen and (max-width: 768px) {
@@ -221,6 +254,21 @@ h1 {
   .intro .split__part:first-child {
     margin-bottom: 32px;
   }
+
+  .bubble__element {
+    left: 80px;
+    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+  }
+  .accordion__content li {
+    display: block;
+  }
+  .position-trigger {
+    margin: 0 0 8px;
+  }
+  .position-location {
+    justify-content: flex-start;
+    white-space: normal;
+  }
 }
 
 @media only screen and (max-width: 360px) {
@@ -241,24 +289,3 @@ h1 {
     font-size: 1.4rem;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

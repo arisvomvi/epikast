@@ -57,6 +57,9 @@ class Personas {
       wrapperClass: 'split',
       slideClass: 'split__part',
       slideActiveClass: 'active',
+      mousewheel: {
+        forceToAxis: true,
+      },
     });
   }
 }
