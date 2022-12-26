@@ -89,7 +89,7 @@ address span:last-child {
   height: 8px;
   background: var(--blue-ribbon);
   border-radius: 50%;
-  background-color: red;
+  background: var(--blue-ribbon);
 }
 .locations__dot--ny {
   left: 53%;

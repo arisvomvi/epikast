@@ -4,8 +4,11 @@
 .quotes .split {
   align-items: center;
 }
-.quote:not(:last-child) {
+.quote:first-child {
   margin-bottom: 40px;
+}
+.quote:first-child strong {
+  display: block;
 }
 .quote__content {
   position: relative;
@@ -20,7 +23,7 @@
   position: absolute;
   width: 24px;
   height: 24px;
-  background: var(--lynch);
+  background: url('../../assets/quote.svg');
 }
 .quote__content:before {
   top: 0;
@@ -29,6 +32,7 @@
 .quote__content:after {
   bottom: 0;
   right: 0;
+  transform: scaleX(-1);
 }
 .quote strong {
   font-weight: 600;
@@ -54,6 +58,7 @@
   color: var(--blue-ribbon);
 }
 .value__title img {
+  max-width: 40px;
   margin-right: 16px;
 }
 .pagination--values {
@@ -124,6 +129,9 @@
   line-height: 2.2rem;
   color: var(--lynch)
 }
+.persona__arrow {
+  max-width: 23px;
+}
 .persona__bio-wrap {
   display: none;
   position: fixed;
@@ -146,6 +154,23 @@
   background: var(--stratos);
   border-radius: 24px;
   cursor: default;
+}
+.persona__close {
+  position: absolute;
+  width: 32px;
+  top: 8px;
+  right: 8px;
+  /* background-color: var(--blue-ribbon); */
+  cursor: pointer;
+}
+
+.persona__close:before {
+  transform: rotate(45deg) translate(2px, -1px);
+  transform-origin: left top;
+}
+.persona__close:after {
+  transform: rotate(-45deg) translate(-2px, -1px);
+  transform-origin: right top;
 }
 .persona__content {
   color: #fff;
@@ -179,8 +204,7 @@
   }
 }
 
-@media only screen and (max-width: 655px) {
-
+@media only screen and (max-width: 800px) {
   .quotes .quote {
     display: flex;
     flex-direction: column;
@@ -211,21 +235,28 @@
   }
 }
 
+
 @media only screen and (max-width: 528px) {
   .personas__wrap {
     overflow: hidden;
     margin: 0 var(--negative-safe-space);
+  }
+  .persona:not(.active).open {
+    min-height: auto;
   }
   .persona:not(.active).open .persona__bio-wrap {
     display: none;
   }
   .persona.open .persona__bio-wrap {
     display: block;
-    position: relative;
+    position: absolute;
+    top: 0;
+    padding: 0;
+    max-height: 437px;
     width: calc(100vw - 17px);
     left: 50%;
     transform: translateX(-50%);
-    padding: 24px 0 0;
+    /* padding: 24px 0 0; */
   }
   .personas .split {
     margin: 0;
@@ -237,14 +268,18 @@
     position: relative;
     margin: 0 24px 96px;
   }
+  .persona.open {
+    min-height: 437px;
+  }
   .persona__bio {
     position: relative;
     left: 0;
     transform: translateX(0);
     width: auto;
-    padding: 16px;
+    padding: 42px 16px 16px;
     max-width: none;
     margin: 0 16px;
+    max-height: 437px;
   }
 }
 
@@ -262,6 +297,7 @@
   .values__list.split {
     display: flex;
     flex-wrap: nowrap;
+    align-items: flex-start;
   }
   .values__list .values__item {
     flex: 1 0 100%;

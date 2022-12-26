@@ -32,13 +32,15 @@ class Personas {
     window.addEventListener('resize', () => this.watch_carousel());
 
     this.personas.forEach((persona, index) => {
-      persona.addEventListener('click', e => {
+      persona.addEventListener('click', () => {
         persona.classList.toggle('open');
         if (window.innerWidth <= this.breakPoint) {
           this.carousel.slideTo(index);
         }
-        persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
       });
+
+      persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
+      persona.querySelector('.persona__close').addEventListener('click', () => persona.classList.remove('open'));
     });
   }
   watch_carousel() {
