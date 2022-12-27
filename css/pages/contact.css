@@ -73,7 +73,6 @@ address span:last-child {
   display: block;
   color: var(--lynch);
 }
-
 .locations__map {
   position: relative;
   flex: 0 1 825px;
@@ -123,7 +122,6 @@ address span:last-child {
   .locations__map {
     flex: 0;
   }
-  
 }
 
 @media only screen and (max-width: 655px) {
@@ -148,7 +146,6 @@ address span:last-child {
   .intro__bottom {
     margin-top: 64px;
   }
-
   .locations__map {
     display: none;
   }

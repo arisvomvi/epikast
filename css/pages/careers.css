@@ -114,8 +114,6 @@ h1 {
 }
 
 .position-trigger {
-  /* display: flex;
-  align-items: center; */
   flex: 1;
   margin-right: 10px;
 }
@@ -125,7 +123,6 @@ h1 {
 .position-trigger img {
   max-width: 20px;
   vertical-align: bottom;
-  /* margin-left: 8px; */
   transform: translateX(0);
   opacity: 0;
   transition: 0.2s;
@@ -137,10 +134,8 @@ h1 {
 .position-location {
   display: flex;
   align-items: center;
-  /* flex: 1; */
   justify-content: flex-end;
   white-space: nowrap;
-  
 }
 .position-location img {
   width: 24px;
@@ -151,7 +146,7 @@ h1 {
 }
 .position-wrap {
   display: none;
-  flex-direction: column;
+  padding: 16px;
   justify-content: center;
   align-items: center;
   overflow: auto;
@@ -168,6 +163,7 @@ h1 {
   display: flex;
   position: relative;
   flex-direction: column;
+  margin: auto;
   padding: 40px;
   border-radius: 24px;
   background: #fff;
@@ -223,6 +219,15 @@ h1 {
   right: 180px;
 }
 
+@media only screen and (max-width: 800px) {
+  .intro {
+    margin-bottom: 40px;
+  }
+  .intro .split__part:first-child {
+    margin-bottom: 32px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .accordion__item {
     margin-left: 0;
@@ -248,18 +253,9 @@ h1 {
   .accordion__content li {
     padding-left: 0;
   }
-  
-  
 }
 
 @media only screen and (max-width: 655px) {
-  .intro {
-    margin-bottom: 40px;
-  }
-  .intro .split__part:first-child {
-    margin-bottom: 32px;
-  }
-
   .bubble__element-1 {
     left: 80px;
     clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
@@ -276,6 +272,9 @@ h1 {
   .position-location {
     justify-content: flex-start;
     white-space: normal;
+  }
+  .position-wrap {
+    padding: 16px 0;
   }
 }
 

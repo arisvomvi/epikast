@@ -223,7 +223,6 @@ header {
   line-height: 0;
 }
 .linkedin {
-  /* max-width: 24px; */
   line-height: 0;
 }
 .linkedin svg {
@@ -248,8 +247,6 @@ header {
   color: var(--lynch);
 }
 
-
-
 .content {
   color: var(--lynch);
 }
@@ -259,7 +256,6 @@ header {
 .content p:not(:last-child) {
   margin-bottom: 24px;
 }
-
 
 figure.rounded {
   border-radius: 24px;
@@ -287,7 +283,6 @@ figure.full-height {
 
 .split {
   display: flex;
-  /* align-items: flex-start; */
   flex-wrap: wrap;
   margin: 0 -24px;
 }
@@ -298,10 +293,6 @@ figure.full-height {
 .split--double .split__part {
   flex: 1 0 calc(50% - 48px);
 }
-/* .split--quadraple .split__part {
-  flex: 1 0 calc(25% - 48px);
-} */
-
 
 .pagination {
   display: none;
@@ -358,7 +349,6 @@ figure.full-height {
   inset: 0;
   border-radius: 24px;
   background: var(--athens-gray);
-  /* background-color: lightblue; */
   z-index: -1;
 }
 .bubble__title {
@@ -368,11 +358,7 @@ figure.full-height {
   font-weight: 600;
 }
 
-
 @media only screen and (max-width: 1024px) {
-  /* .split--quadraple .split__part {
-    flex: 1 0 calc(50% - 48px);
-  } */
   .bubble {
     padding: 32px 24px;
   }
@@ -469,11 +455,6 @@ figure.full-height {
     margin: 0;
   }
 
-  
-
-
-
-
   .container--footer .logo {
     width: 24px;
     overflow: hidden;
@@ -511,16 +492,6 @@ figure.full-height {
   }
 }
 
-@media only screen and (max-width: 475px) {
-  /* .split--quadraple {
-    display: block;
-    margin: 0;
-  }
-  .split__part {
-    margin: 0;
-  } */
-}
-
 @media only screen and (max-width: 360px) {
   .bubble {
     padding: 32px 0;
@@ -533,5 +504,3 @@ figure.full-height {
     display: flex;
   }
 }
-
-

@@ -48,7 +48,6 @@ h1 strong {
 }
 .quote-list ul {
   display: flex;
-  /* align-items: center; */
 }
 .quote-list li {
   display: flex;
@@ -183,20 +182,10 @@ h1 strong {
   }
 }
 
-@media only screen and (max-width: 655px) {
-  
-
-  
-}
-
 @media only screen and (max-width: 475px) {
   .quote-list ul {
     display: block;
   }
-  /* .quote-list .split--quadraple {
-    display: block;
-    margin: 0;
-  } */
   .quote-list .split__part {
     margin: 0 0 40px;
   }
@@ -255,8 +244,4 @@ h1 strong {
     right: var(--safe-space);
     transform: translateY(-50%);
   }
-  
- 
-  
-  
 }
