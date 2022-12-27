@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .intro {
   margin-bottom: 64px;
 }
@@ -40,14 +47,20 @@ h1 {
 }
 .accordion__head {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 32px;
 }
 .accordion__head:before,
 .accordion__head:after {
   content: '';
   position: absolute;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
   background: var(--lynch);
 }
@@ -55,7 +68,9 @@ h1 {
   top: 50%;
   width: 20px;
   right: 16px;
-  transform: translate(0, -50%) rotate(0deg);
+  -webkit-transform: translate(0, -50%) rotate(0deg);
+      -ms-transform: translate(0, -50%) rotate(0deg);
+          transform: translate(0, -50%) rotate(0deg);
   height: 1px;
 }
 .accordion__head:after {
@@ -63,11 +78,15 @@ h1 {
     top: 50%;
     width: 1px;
     height: 20px;
-    transform: translate(0, -50%) rotate(0);
+    -webkit-transform: translate(0, -50%) rotate(0);
+        -ms-transform: translate(0, -50%) rotate(0);
+            transform: translate(0, -50%) rotate(0);
 }
 .accordion__item.active .accordion__head:before,
 .accordion__item.active .accordion__head:after {
-  transform: translate(0, -50%) rotate(45deg);
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+      -ms-transform: translate(0, -50%) rotate(45deg);
+          transform: translate(0, -50%) rotate(45deg);
 }
 .accordion__icon {
   width: 32px;
@@ -75,7 +94,9 @@ h1 {
   margin-right: 40px;
 }
 .accordion__title {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-weight: 600;
   color: var(--lynch);
 }
@@ -89,6 +110,8 @@ h1 {
   margin: 0 0 0 72px;
   height: 0;
   overflow: hidden;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
   cursor: default;
 }
@@ -98,10 +121,17 @@ h1 {
   list-style-type: none;
 }
 .accordion__content li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 4px;
   padding: 8px 0 8px 24px;
   
@@ -114,7 +144,9 @@ h1 {
 }
 
 .position-trigger {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-right: 10px;
 }
 .accordion__content li:hover .position-trigger {
@@ -123,18 +155,30 @@ h1 {
 .position-trigger img {
   max-width: 20px;
   vertical-align: bottom;
-  transform: translateX(0);
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
   opacity: 0;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 .accordion__content li:hover .position-trigger img {
-  transform: translateX(8px);
+  -webkit-transform: translateX(8px);
+      -ms-transform: translateX(8px);
+          transform: translateX(8px);
   opacity: 1;
 }
 .position-location {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   white-space: nowrap;
 }
 .position-location img {
@@ -147,8 +191,12 @@ h1 {
 .position-wrap {
   display: none;
   padding: 16px;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   overflow: auto;
   position: fixed;
   inset: 0;
@@ -156,20 +204,28 @@ h1 {
   z-index: 1;
 }
 .position-wrap.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   
 }
 .position {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto;
   padding: 40px;
   border-radius: 24px;
   background: #fff;
   max-width: 626px;
   max-height: 568px;
-  box-shadow: 0 0 40px rgba(0, 0, 51, 0.16);
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 51, 0.16);
+          box-shadow: 0 0 40px rgba(0, 0, 51, 0.16);
   z-index: 1;
   cursor: default;
 }
@@ -211,7 +267,8 @@ h1 {
   height: 72px;
   border-radius: 50%;
   background: var(--blue-ribbon);
-  clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 }
 .bubble__element-2 {
   position: absolute;
@@ -258,7 +315,8 @@ h1 {
 @media only screen and (max-width: 655px) {
   .bubble__element-1 {
     left: 80px;
-    clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   }
   .bubble__element-2 {
     right: 80px;
@@ -270,7 +328,9 @@ h1 {
     margin: 0 0 8px;
   }
   .position-location {
-    justify-content: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     white-space: normal;
   }
   .position-wrap {

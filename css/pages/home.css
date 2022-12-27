@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 
 .intro {
   margin-bottom: 72px;
@@ -19,7 +26,9 @@ h1 {
   margin-bottom: 80px;
 }
 .main-teaser {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .main-teaser .split__part:nth-child(1) {
   max-width: 438px;
@@ -39,7 +48,9 @@ h1 {
   position: absolute;
   bottom: 0;
   left: 24px;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -51,10 +62,13 @@ h1 {
   height: 152px;
   bottom: -40px;
   left: 152px;
-  transform: translateY(50%);
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
   border-radius: 50%;
   background: var(--blue-ribbon);
-  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+          clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
 }
 
 @media only screen and (max-width: 1024px) {
