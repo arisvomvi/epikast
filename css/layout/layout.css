@@ -223,8 +223,12 @@ header {
   line-height: 0;
 }
 .linkedin {
-  max-width: 24px;
+  /* max-width: 24px; */
   line-height: 0;
+}
+.linkedin svg {
+  width: 30px;
+  height: 30px;
 }
 .mail-copy {
   position: relative;
