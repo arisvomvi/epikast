@@ -148,6 +148,7 @@ h1 strong {
   position: absolute;
   right: 24px;
   top: -88px;
+  z-index: 1;
 }
 .vertical-teaser__tag {
   display: inline-block;

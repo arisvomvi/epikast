@@ -48,8 +48,14 @@
 .quote strong {
   font-weight: 600;
 }
+.quote figure img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .values {
+  position: relative;
   margin-bottom: var(--base-distance);
 }
 .values__list {
@@ -82,6 +88,13 @@
   margin-top: 30px;
   color: var(--lynch);
 }
+.values__element {
+  position: absolute;
+  top: -16px;
+  right: 80px;
+}
+
+
 .personas__title {
   font-size: 2rem;
   line-height: 2.4rem;
@@ -263,6 +276,9 @@
     margin-bottom: 32px;
     max-width: none;
   }
+  .quote .split__part {
+    width: 100%;
+  }
   .quote figure {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -286,6 +302,10 @@
 }
 
 @media only screen and (max-width: 528px) {
+  .values__element {
+    display: none;
+  }
+  
   .personas__wrap {
     overflow: hidden;
     margin: 0 var(--negative-safe-space);
