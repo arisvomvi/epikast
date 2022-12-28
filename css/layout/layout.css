@@ -281,11 +281,55 @@ header {
 .content {
   color: var(--lynch);
 }
+.content--positions {
+  color: var(--stratos);
+}
 .content a {
   color: var(--blue-ribbon);
 }
-.content p:not(:last-child) {
+.content > * {
   margin-bottom: 24px;
+}
+.content > *:last-child {
+  margin-bottom: 0;
+}
+.content h2,h3,h4,h5 {
+  color: var(--stratos);
+}
+.content ul,
+.content ol {
+  padding-left: 24px;
+  margin-bottom: 48px;
+}
+.content ol {
+  counter-reset: olist;
+}
+.content li {
+  position: relative;
+  list-style-type: none;
+}
+.content li:not(:last-child) {
+  margin-bottom: 8px;
+}
+.content ul li:before {
+  content: '';
+  position: absolute;
+  left: -16px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--stratos);
+}
+.content ol li {
+  counter-increment: olist;
+}
+.content ol li:before {
+  content: counter(olist);
+  position: absolute;
+  left: -18px;
+  top: 0;
+  color: var(--stratos);
 }
 
 figure.rounded {

@@ -27,7 +27,7 @@ h1 {
 
 .accordion {
   position: relative;
-  margin-bottom: 32px;
+  margin: 0 48px 32px 0;
 }
 .accordion__item {
   padding: 8px 0 0;
@@ -38,12 +38,16 @@ h1 {
 .accordion__item:after {
   content: '';
   display: block;
-  height: 2px;
+  height: 1px;
   margin: 8px 0 0 64px;
   background: rgba(104, 121, 146, 0.32);
 }
-.accordion__item:last-child:after {
-  display: none;
+.accordion__item:first-child:before {
+  content: '';
+  display: block;
+  height: 1px;
+  margin: 0 0 8px 64px;
+  background: rgba(104, 121, 146, 0.32);
 }
 .accordion__head {
   position: relative;
@@ -201,7 +205,7 @@ h1 {
   position: fixed;
   inset: 0;
   cursor: default;
-  z-index: 1;
+  z-index: 2;
 }
 .position-wrap.open {
   display: -webkit-box;
@@ -272,7 +276,7 @@ h1 {
 }
 .bubble__element-2 {
   position: absolute;
-  top: -16px;
+  top: -24px;
   right: 180px;
 }
 
@@ -286,9 +290,13 @@ h1 {
 }
 
 @media only screen and (max-width: 768px) {
+  .accordion {
+    margin: 0 0 32px;
+  }
   .accordion__item {
     margin-left: 0;
   }
+  .accordion__item:first-child:before,
   .accordion__item:after {
     margin-left: 40px;
   }
@@ -342,9 +350,7 @@ h1 {
   .bubble__element-2 {
     display: none;
   }
-}
-
-@media only screen and (max-width: 360px) {
+  .accordion__item:first-child:before,
   .accordion__item:after {
     margin-left: 0;
   }
@@ -361,4 +367,8 @@ h1 {
   .accordion__content address {
     font-size: 1.4rem;
   }
+}
+
+@media only screen and (max-width: 360px) {
+  
 }
