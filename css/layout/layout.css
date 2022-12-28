@@ -118,7 +118,10 @@ body {
   -webkit-font-kerning: normal;
           font-kerning: normal;
 }
-
+body.no-scroll {
+  height: 100vh;
+  overflow: hidden;
+}
 .container {
   max-width: 1296px;
   margin: 0 auto;

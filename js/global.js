@@ -24,23 +24,36 @@ class Personas {
     this.carousel = null;
     this.parent = this.el.closest('.personas__wrap');
     this.breakPoint = 528;
+    this.body = document.querySelector('body');
     this.init();
   }
   init() {
     this.watch_carousel();
 
-    window.addEventListener('resize', () => this.watch_carousel());
+    window.addEventListener('resize', () => {
+      this.watch_carousel();
+      this.personas.forEach(persona => persona.classList.remove('open'));
+      this.handle_global_scroll();
+    });
 
-    this.personas.forEach((persona, index) => {
+    this.personas.forEach(persona => {
       persona.addEventListener('click', () => {
-        persona.classList.toggle('open');
-        if (window.innerWidth <= this.breakPoint) {
-          this.carousel.slideTo(index);
-        }
+        this.personas.forEach(el => {
+          if (el.isSameNode(persona)) {
+            el.classList.toggle('open');
+          } else {
+            el.classList.remove('open');
+          }
+        });
+
+        this.handle_global_scroll();
       });
 
       persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
-      persona.querySelector('.persona__close').addEventListener('click', () => persona.classList.remove('open'));
+      persona.querySelector('.persona__close').addEventListener('click', () => {
+        persona.classList.remove('open');
+        this.handle_global_scroll();
+      });
     });
   }
   watch_carousel() {
@@ -61,6 +74,15 @@ class Personas {
         forceToAxis: true,
       },
     });
+  }
+  handle_global_scroll() {
+    if (window.innerWidth >= this.breakPoint) {
+      if ([...this.personas].filter(persona => persona.classList.contains('open')).length) {
+        this.body.classList.add('no-scroll');
+      } else {
+        this.body.classList.remove('no-scroll');
+      }
+    }
   }
 }
 class VerticalTeasers {
@@ -170,6 +192,7 @@ class Accordion {
     this.accordion = document.querySelector(this.selector);
     this.items = this.accordion.querySelectorAll('.accordion__item');
     this.activePosition = null;
+    this.body = document.querySelector('body');
     this.init();
   }
   init() {
@@ -195,6 +218,7 @@ class Accordion {
           e.stopPropagation();
           let triggerPosition = trigger.getAttribute('data-trigger');
           item.querySelector(`[data-position="${triggerPosition}"]`).classList.add('open');
+          this.handle_global_scroll();
         });
       });
 
@@ -202,6 +226,7 @@ class Accordion {
         position.addEventListener('click', e => {
           e.stopPropagation();
           if (e.target.isSameNode(position)) position.classList.remove('open');
+          this.handle_global_scroll();
         });
         position.querySelector('.position__close').addEventListener('click', () => position.classList.remove('open'));
       });
@@ -215,8 +240,16 @@ class Accordion {
           item.querySelector('.accordion__body').style.removeProperty('height');
           item.querySelectorAll('[data-position]').forEach(position => position.classList.remove('open'));
         });
+        this.handle_global_scroll();
       }
     });
+  }
+  handle_global_scroll() {
+    let openPopups = [...this.items].filter(item => {
+      let popup = item.querySelectorAll('[data-position].open');
+      if (popup.length) return popup;
+    });
+    openPopups.length ? this.body.classList.add('no-scroll') : this.body.classList.remove('no-scroll');
   }
   open_item(item) {
     item.classList.add('active');
