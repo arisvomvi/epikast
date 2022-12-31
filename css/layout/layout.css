@@ -310,9 +310,14 @@ header {
 .content li {
   position: relative;
   list-style-type: none;
+  margin: 4px 0;
 }
-.content li:not(:last-child) {
-  margin-bottom: 8px;
+.content li:last-child {
+  margin-bottom: 0;
+}
+.content li ul,
+.content li ol {
+  margin-bottom: 10px;
 }
 .content ul li:before {
   content: '';
