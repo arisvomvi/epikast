@@ -66,7 +66,29 @@
     <section class="locations bubble">
       <h2 class="bubble__title">Our locations</h2>
       <div class="locations__wrap">
-        <ul class="locations__list">
+
+        <table class="locations__list">
+          <tr>
+            <td data-clock="NY" class="location__time">--:--</td>
+            <td>
+              <address>
+                <span>USA</span>
+                <span>New York, NY</span>
+              </address>
+            </td>
+          </tr>
+          <tr>
+            <td data-clock="GR" class="location__time">--:--</td>
+            <td>
+              <address>
+                <span>Europe</span>
+                <span>Athens, GR</span>
+              </address>
+            </td>
+          </tr>
+        </table>
+
+        <!-- <ul class="locations__list">
           <li class="location">
             <span data-clock="NY" class="location__time">--:--</span>
             <address>
@@ -81,7 +103,7 @@
               <span>Athens, GR</span>
             </address>
           </li>
-        </ul>
+        </ul> -->
         <figure class="locations__map">
           <img src="assets/map.svg" width="825" height="408" alt="Global map" />
           <span class="locations__dot locations__dot--ny"></span>

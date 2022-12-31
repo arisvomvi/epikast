@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .intro {
   position: relative;
   display: -webkit-box;
@@ -71,14 +64,14 @@ h1 {
 .locations__list {
   margin-right: 56px;
 }
-.location {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 32px;
+.locations__list td {
+  vertical-align: top;
+}
+.locations__list tr:not(:first-child) td {
+  padding-top: 32px;
 }
 .location__time {
-  margin-right: 16px;
+  padding-right: 16px;
   font-size: 3.2rem;
   line-height: 4rem;
   font-weight: 300;
@@ -141,19 +134,22 @@ address span:last-child {
             align-items: flex-start;
   }
   .locations__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 24px -40px 0;
+    margin-top: 24px;
   }
-  .location {
+  .locations__list tbody {
+    display: flex;
+  }
+  .locations__list td {
     display: block;
-    margin: 0 40px 16px;
+  }
+  .locations__list td,
+  .locations__list tr:not(:first-child) td {
+    padding: 0 40px 8px 0;
   }
   .location__time {
     margin: 0;
+    font-size: 3rem;
+    line-height: 3.8rem;
   }
   .locations__map {
     -webkit-box-flex: 0;
@@ -167,6 +163,19 @@ address span:last-child {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+  }
+  .locations__list tbody {
+    display: block;
+  }
+  .locations__list tr {
+    display: block;
+  }
+  .locations__list tr:first-child {
+    margin-bottom: 40px;
+  }
+  .locations__list td, 
+  .locations__list tr:not(:first-child) td {
+    padding-right: 0;
   }
 }
 
@@ -194,11 +203,5 @@ address span:last-child {
   .locations__list {
     display: block;
     margin: 0;
-  }
-  .location {
-    margin: 0 0 40px;
-  }
-  .location:last-child {
-    margin-bottom: 16px;
   }
 }
