@@ -206,6 +206,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+          align-items: center;
   padding-top: 56px;
   padding-bottom: 40px;
   font-size: 1.4rem;
@@ -219,10 +220,15 @@ header {
   line-height: 0;
 }
 .linkedin svg {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
 }
 .mail-copy {
+  padding-left: 104px;
+  margin: 0 8px;
+  text-align: center;
+}
+/* .mail-copy {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -231,17 +237,17 @@ header {
       align-self: flex-end;
   margin: 0 32px 2px;
   text-align: center;
-}
-.mail-copy__mail {
+} */
+/* .mail-copy__mail {
   position: absolute;
   left: 0;
   font-weight: 600;
   color: var(--blue-ribbon);
-}
-.mail-copy__copy {
+} */
+/* .mail-copy__copy {
   margin-left: 104px;
   color: var(--lynch);
-}
+} */
 
 .content {
   color: var(--lynch);
@@ -540,6 +546,9 @@ figure.full-height {
     width: 120px;
   }
   .mail-copy {
+    padding-left: 0;
+  }
+  /* .mail-copy {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -550,22 +559,22 @@ figure.full-height {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin: 0 24px;
-  }
-  .mail-copy__mail {
+  } */
+  /* .mail-copy__mail {
     position: static;
-  }
-  .mail-copy__copy {
+  } */
+  /* .mail-copy__copy {
     margin: 0;
-  }
+  } */
 }
 
 @media only screen and (max-width: 500px) {
-  .container--footer {
+  /* .container--footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .mail-copy {
+  } */
+  /* .mail-copy {
     margin: 0 16px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -573,10 +582,10 @@ figure.full-height {
             flex-direction: column;
     font-size: 1.2rem;
     line-height: 1.8rem;
-  }
-  .mail-copy__mail {
+  } */
+  /* .mail-copy__mail {
     margin-bottom: 10px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 360px) {
@@ -591,5 +600,8 @@ figure.full-height {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .mail-copy {
+    max-width: 50%;
   }
 }
