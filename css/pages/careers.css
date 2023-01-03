@@ -173,7 +173,8 @@ h1 {
   white-space: nowrap;
 }
 .position-location img {
-  width: 24px;
+  width: 16px;
+  margin-right: 8px;
 }
 .position-location address {
   font-style: normal;

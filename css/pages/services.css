@@ -21,6 +21,8 @@
 .intro__cover img {
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: right bottom;
+     object-position: right bottom;
   width: 100%;
   height: 100%;
 }
@@ -198,6 +200,9 @@ h1 strong {
   }
   .vertical-teaser:not(:last-child) {
     margin-bottom: 64px;
+  }
+  .intro__cover {
+    opacity: 0.4;
   }
 }
 
