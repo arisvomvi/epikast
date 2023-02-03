@@ -137,7 +137,6 @@ h1 strong {
 .vertical-teaser {
   position: relative;
 
-  /* margin-bottom: 64px; */
 }
 .vertical-teaser.split__part {
   flex: 0 0 calc(50% - 48px);
@@ -236,9 +235,9 @@ h1 strong {
   .vertical-teaser > img {
     display: none;
   }
-  /* .vertical-teaser:not(:last-child) {
+  .vertical-teaser:not(:last-child) {
     margin-bottom: 64px;
-  } */
+  }
 }
 
 @media only screen and (max-width: 475px) {
