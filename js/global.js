@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (document.querySelector('.js-personas')) new Personas('.js-personas');
-  if (document.querySelector('.js-vertical-teasers')) new VerticalTeasers('.js-vertical-teasers');
+  if (document.querySelector('.js-horizontal-teasers')) new HorizontalTeasers('.js-horizontal-teasers');
   if (document.querySelector('.js-values')) new Values('.js-values');
   if (document.querySelector('.js-accordion')) new Accordion('.js-accordion');
   if (document.querySelectorAll('[data-clock]').length) new Clocks('[data-clock]');
@@ -108,7 +108,7 @@ class Personas {
     }
   }
 }
-class VerticalTeasers {
+class HorizontalTeasers {
   constructor(selector) {
     this.selector = selector;
     this.el = document.querySelector(selector);
@@ -131,11 +131,14 @@ class VerticalTeasers {
     this.carousel = new Swiper(this.selector, {
       init: true,
       autoHeight: true,
-      wrapperClass: 'split',
-      slideClass: 'vertical-teaser',
+      wrapperClass: 'horizontal-teasers__container',
+      slideClass: 'horizontal-teaser',
       slideActiveClass: 'active',
+      mousewheel: {
+        forceToAxis: true,
+      },
       pagination: {
-        el: '.pagination--vertical-teasers',
+        el: '.pagination--horizontal-teasers',
         type: 'bullets',
         bulletClass: 'pagination__bullet',
         bulletActiveClass: 'active',
