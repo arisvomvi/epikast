@@ -399,6 +399,17 @@ figure.full-height {
   font-weight: 600;
   color: #fff;
 }
+.btn-secondary {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  /* font-weight: 500; */
+  border: 1px solid var(--stratos);
+  color: #fff;
+  background: var(--stratos);
+}
 
 .bubble {
   position: relative;

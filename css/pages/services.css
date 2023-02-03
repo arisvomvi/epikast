@@ -5,6 +5,7 @@
   position: relative;
   min-height: 687px;
   padding-top: 64px;
+  padding-bottom: 40px;
   margin-bottom: 72px;
 }
 .intro__cover {
@@ -35,9 +36,30 @@ h1 strong {
   font-weight: 600;
 }
 .intro .content {
+  margin-top: 20px;
   max-width: 448px;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--stratos);
 }
-
+.intro .content ul li {
+  position: relative;
+  margin-bottom: 16px;
+  
+  font-size: 1.6rem;
+  line-height: 2.2rem;
+}
+.intro .content ul li:last-child {
+  margin-bottom: 0;
+}
+.intro .content ul li:before {
+  top: 4px;
+  width: 16px;
+  left: -24px;
+  border-radius: 0;
+  height: 16px;
+  background: url(../../assets/question_mark.svg);
+}
 .quote-list {
   margin-bottom: 80px;
 }
@@ -114,6 +136,14 @@ h1 strong {
 
 .vertical-teaser {
   position: relative;
+
+  /* margin-bottom: 64px; */
+}
+.vertical-teaser.split__part {
+  flex: 0 0 calc(50% - 48px);
+}
+.vertical-teaser:not(:last-child) {
+  margin-bottom: 64px;
 }
 .vertical-teaser:last-child {
   padding-bottom: 80px;
@@ -149,7 +179,7 @@ h1 strong {
   background: var(--geyser);
   color: var(--lynch);
   border-radius: 10px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.8rem;
 }
 .vertical-teaser__title {
@@ -187,6 +217,16 @@ h1 strong {
   }
 }
 
+@media only screen and (max-width: 870px) {
+  .intro__cover {
+    background: #D9DDE3;
+    opacity: 0.5;
+  }
+  .intro__cover img {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .blockquote {
     margin-bottom: 76px;
@@ -196,9 +236,9 @@ h1 strong {
   .vertical-teaser > img {
     display: none;
   }
-  .vertical-teaser:not(:last-child) {
+  /* .vertical-teaser:not(:last-child) {
     margin-bottom: 64px;
-  }
+  } */
 }
 
 @media only screen and (max-width: 475px) {
@@ -211,6 +251,15 @@ h1 strong {
 }
 
 @media only screen and (max-width: 360px) {
+  .intro .content {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  .intro .content ul li {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+
   .blockquote {
     margin-bottom: 24px;
     padding: 30px 0;

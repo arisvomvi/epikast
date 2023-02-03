@@ -15,7 +15,30 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.js-values')) new Values('.js-values');
   if (document.querySelector('.js-accordion')) new Accordion('.js-accordion');
   if (document.querySelectorAll('[data-clock]').length) new Clocks('[data-clock]');
+  if (document.querySelectorAll('[data-location]').length) new Locations('[data-location]');
 });
+
+class Locations {
+  constructor(selector) {
+    this.triggers = document.querySelectorAll(selector);
+    this.popups = document.querySelectorAll('.locations__dot' + selector);
+    this.init();
+  }
+  init() {
+    this.triggers.forEach(trigger => {
+      trigger.addEventListener('mouseenter', () => {
+        if (window.innerWidth <= 800) return;
+        let location = trigger.getAttribute('data-location');
+        [...this.popups].forEach(el => el.classList.remove('active'));
+        [...this.popups].find(el => el.classList.contains(`locations__dot--${location}`)).classList.add('active');
+      });
+      trigger.addEventListener('mouseleave', () => {
+        [...this.popups].forEach(el => el.classList.remove('active'));
+      });
+    });
+  }
+}
+
 class Personas {
   constructor(selector) {
     this.selector = selector;

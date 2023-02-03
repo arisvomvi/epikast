@@ -64,6 +64,9 @@ h1 {
 .locations__list {
   margin-right: 56px;
 }
+.locations__list tr {
+  cursor: pointer;
+}
 .locations__list td {
   vertical-align: top;
 }
@@ -111,13 +114,42 @@ address span:last-child {
   border-radius: 50%;
   background: var(--blue-ribbon);
 }
-.locations__dot--ny {
-  left: 53%;
-    top: 31%;
+.locations__dot:before {
+  content: '';
+  position: absolute;
+  inset: -8px;
+  cursor: pointer;
 }
 .locations__dot--eu {
+  left: 53%;
+  top: 31%;
+}
+.locations__dot--ny {
   left: 26%;
   top: 31%;
+}
+.locations__dot address {
+  position: absolute;
+  right: 100%;
+  margin-right: 16px;
+  width: 213px;
+  padding: 24px;
+  color: var(--lynch);
+  font-size: 14px;
+  line-height: 22px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.24);
+  z-index: 1;
+  top: 16px;
+  transform: translate(0, -50%);
+  transition: 0.4s;;
+  opacity: 0;
+  pointer-events: none;
+}
+.locations__dot.active address {
+  opacity: 1;
+  transform: translate(0, calc(-50% - 16px));
 }
 
 @media only screen and (max-width: 860px) {
@@ -155,6 +187,13 @@ address span:last-child {
     -webkit-box-flex: 0;
         -ms-flex: 0;
             flex: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .locations__dot:before,
+  .locations__list tr {
+    cursor: default;
   }
 }
 

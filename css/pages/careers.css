@@ -124,7 +124,7 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 4px;
-  padding: 8px 0 8px 24px;
+  padding: 8px 0;
   
   cursor: pointer;
   border-bottom: 1px solid rgba(104, 121, 146, 0.16);
@@ -249,8 +249,21 @@ h1 {
   background: var(--lynch);
   border-radius: 20px;
 }
+.position__file {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  align-self: flex-start;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  text-decoration: underline;
+  color: var(--blue-ribbon);
+}
+.position__file img {
+  margin-right: 8px;
+}
 
-.bubble__element-1 {
+/* .bubble__element-1 {
   position: absolute;
   left: 200px;
   width: 72px;
@@ -260,11 +273,21 @@ h1 {
   background: var(--blue-ribbon);
   -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
           clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-}
+} */
 .bubble__element-2 {
   position: absolute;
   top: -24px;
   right: 180px;
+}
+
+.disclaimer {
+  max-width: 836px;
+  margin: 46px;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  color: var(--lynch);
+  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
@@ -302,17 +325,14 @@ h1 {
   .accordion__content {
     padding: 0;
   }
-  .accordion__content li {
-    padding-left: 0;
-  }
 }
 
 @media only screen and (max-width: 655px) {
-  .bubble__element-1 {
+  /* .bubble__element-1 {
     left: 80px;
     -webkit-clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
             clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
-  }
+  } */
   .bubble__element-2 {
     right: 80px;
   }
