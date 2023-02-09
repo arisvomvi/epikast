@@ -37,9 +37,7 @@ h1 strong {
 }
 .intro .content {
   margin-top: 20px;
-  max-width: 448px;
-  font-size: 2rem;
-  line-height: 2.4rem;
+  max-width: 576px;
   color: var(--stratos);
 }
 .intro .content ul li {
@@ -219,12 +217,15 @@ h1 strong {
 
 @media only screen and (max-width: 360px) {
   .intro .content {
-    font-size: 1.6rem;
-    line-height: 2.2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
   .intro .content ul li {
     font-size: 1.2rem;
     line-height: 1.6rem;
+  }
+  .intro .content ul li:before {
+    top: 0;
   }
 
   .blockquote {
