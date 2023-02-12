@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <main class="container container--main">
+  <main class="container container--main" id="personas">
     
     <section class="quotes">
       <article class="split split--double quote">
@@ -126,276 +126,24 @@
 
     <section class="personas">
       <h2 class="personas__title">Our leadership</h2>
-      <div class="personas__wrap js-personas">
+      <div class="personas__wrap">
         <div class="split split--quadraple">
-          <article class="split__part persona">
+
+          <article class="split__part persona" :class="{ open: persona.isOpen }"  v-for="(persona, index) in personas" :key="index" @click="open_bio(index)">
             <div class="persona__card">
               <figure class="persona__image">
-                <img src="assets/images/Vangelis_vergetis.jpg" width="152" height="160" alt="Vangelis Vergetis" />
+                <img :src="persona.img" width="152" height="160" :alt="persona.name" />
               </figure>
-              <h3 class="persona__title">Vangelis Vergetis, PhD</h3>
-              <div class="persona__desc">CEO and board member</div>
+              <h3 class="persona__title">{{ persona.name }}</h3>
+              <div class="persona__desc">{{ persona.position }}</div>
               <img class="persona__arrow" src="assets/arrow.svg">
             </div>
-            <div class="persona__bio-wrap">
+            <div class="persona__bio-wrap" @click.stop.self="close_bio(index)">
               <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Vangelis has been working in the intersection 
-                    of healthcare, technology, and data science 
-                    for more than 15 years.
-                  </p>
-                  <p>
-                    He initialy worked as a consultant at McKinsey and at Hakluyt 
-                    for about a douzen years, advising biopharmaceutical executives 
-                    on several topics - particularly in launching drugs across 
-                    disease areas, and in designing and putting in 
-                    place their commercial models and infrastructure. 
-                  </p>
-                  <p>
-                    
-                  </p>
-                  <p>
-                    Immediately prior to Epikast, Vangelis was the 
-                    co-founder and CEO of Intelligencia, a software 
-                    company that utilizes AI to assess and reduce 
-                    the risk of clinical trials. He currently serves 
-                    as a board advisor to the company.
-                  </p>
-                  <p>
-                    He is a board member and member of the executive committee 
-                    at the Alliance for AI in Healthcare (AAIH), 
-                    and a former member of the advisory board for 
-                    Cornell's Bowers College of Computing &amp; 
-                    Information Science (CIS).
-                  </p>
-                  <p>
-                    Vangelis holds a 
-                    PhD in Electrical Engineering from the University 
-                    of Pennsylvania, and a BS in 
-                    Computer Science from Cornell.
-                  </p>
-                </div>
+                <img class="persona__close" src="assets/close.svg" @click="close_bio(index)">
+                <div class="persona__content content" v-html="persona.bio"></div>
                 <span class="persona__shadow"></span>
-                <a href="https://www.linkedin.com/in/vangelisvergetis" target="_blank" class="linkedin">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                    <g id="Group_330" data-name="Group 330" fill="#fff">
-                      <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="split__part persona">
-            <div class="persona__card">
-              <figure class="persona__image">
-                <img src="assets/images/Stelios_papadopoulos.jpg" width="152" height="160" alt="Stelios Papadopoulos" />
-              </figure>
-              <h3 class="persona__title">Stelios Papadopoulos, PhD</h3>
-              <div class="persona__desc">Chairman of the board</div>
-              <img class="persona__arrow" src="assets/arrow.svg" alt="">
-            </div>
-            <div class="persona__bio-wrap">
-              <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Stelios brings more than four decades of experience in the 
-                    biopharmaceutical industry in various roles: as a company founder, 
-                    executive, investment banker, and leader in the global healthcare 
-                    sector.
-                  </p>
-                  <p>
-                    Stelios is Chairman of the Board of Directors of Biogen, Inc., 
-                    Exelixis, Inc., and Regulus Therapeutics, Inc. He is a co-founder 
-                    of Exelixis, as well as co-founder and former Chairman of Anadys 
-                    Pharmaceuticals (acquired by Hoffman–La Roche in 2011) and 
-                    Cellzome (acquired by GlaxoSmithKline in 2012). In 
-                    the not-for-profit sector, Stelios is a member of the 
-                    Board of Visitors of Duke Medicine, a member of the Global 
-                    Advisory Board of the Duke Institute for Health Innovation, 
-                    and co-founder and Chairman of Fondation Santé 
-                    (<a href="www.fondationsante.org">www.fondationsante.org</a>), a foundation providing 
-                    research support and mentorship to biomedical 
-                    scientists in Greece and Cyprus.
-                  </p>
-                  <p>
-                    Stelios spent six years (2000-06) at Cowen & Co., LLC, most 
-                    recently as Vice Chairman, where as an investment banker he 
-                    focused on the biotech and pharma sectors. Prior to joining 
-                    Cowen, he spent 13 years as an investment banker at PaineWebber, 
-                    Incorporated where he was most recently Chairman of 
-                    PaineWebber Development Corp., a PaineWebber subsidiary 
-                    focusing on biotechnology. He joined PaineWebber in 1987 
-                    from Drexel Burnham Lambert where he was an analyst in 
-                    the Equity Research Department covering the biotechnology industry. 
-                    Prior to Drexel, he was the biotechnology analyst of Donaldson, 
-                    Lufkin & Jenrette. Stelios has received multiple honors and 
-                    awards for his work in the biopharma industry as a company 
-                    founder, adviser, and financier.
-                  </p>
-                  <p>
-                    Before coming to Wall Street, Stelios was on the faculty of the 
-                    Department of Cell Biology at New York University School of 
-                    Medicine. Stelios holds an M.S. in physics, a Ph.D. in biophysics 
-                    and an M.B.A. in finance, all from New York University.
-                  </p>
-                </div>
-                <span class="persona__shadow"></span>
-              </div>
-            </div>
-          </article>
-          <article class="split__part persona">
-            <div class="persona__card">
-              <figure class="persona__image">
-                <img src="assets/images/Daphne.jpg" width="152" height="160" alt="Mike Krzan" />
-              </figure>
-              <h3 class="persona__title">Daphne Karydas</h3>
-              <div class="persona__desc">Board member</div>
-              <img class="persona__arrow" src="assets/arrow.svg" alt="">
-            </div>
-            <div class="persona__bio-wrap">
-              <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Daphne has over 25 years of experience in 
-                    financial and operations leadership roles 
-                    focused in the biopharmaceutical industry, 
-                    where she has brought an interdisciplinary 
-                    approach to implementing growth strategies 
-                    for biopharmaceutical and asset 
-                    management companies.
-                  </p>
-                  <p>
-                    She is currently the COO and CFO of Flare 
-                    Therapeutics, which she joined in October 2021. 
-                    Prior to Flare she was the CFO of Syndax 
-                    Pharmaceuticals, and also served as SVP of 
-                    Strategy and Corporate Financial Planning & 
-                    Analysis at Allergan plc, where she oversaw 
-                    the company’s long-term financial and 
-                    business strategy until its acquisition 
-                    by Abbvie in May 2020. She joined 
-                    Allergan in April 2017 as the SVP of 
-                    Global Investor Relations and Strategy, 
-                    leading engagement with the investment 
-                    community and business strategy development.
-                  </p>
-                  <p>
-                    Prior to her senior operating roles in the industry, 
-                    Daphne served as Executive Director and Senior 
-                    Healthcare Analyst at J.P. Morgan Asset Management. 
-                    Previously, she was a Portfolio Manager and Senior 
-                    Healthcare Analyst at The Boston Company Asset 
-                    Management, a BNY Mellon company. Earlier in 
-                    her career she was a VP at Goldman Sachs Asset 
-                    Management focused on healthcare, as well as a 
-                    member of Goldman Sachs’ healthcare investment 
-                    banking team. Before joining Goldman Sachs she 
-                    was a Project Chemical Engineer at Merck, 
-                    where she focused on process development 
-                    for novel vaccines.
-                  </p>
-                  <p>
-                    Daphne received a BA and MS in chemical engineering 
-                    from MIT and an MBA from Harvard Business School.
-                  </p>
-                </div>
-                <span class="persona__shadow"></span>
-                <a href="https://www.linkedin.com/in/daphne-karydas-493b17/" target="_blank" class="linkedin">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                    <g id="Group_330" data-name="Group 330" fill="#fff">
-                      <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-          <article class="split__part persona">
-            <div class="persona__card">
-              <figure class="persona__image">
-                <img src="assets/images/Dimitris_Papalexopoulos.jpg" width="152" height="160" alt="Dimitris Papalexopoulos" />
-              </figure>
-              <h3 class="persona__title">Dimitris Papalexopoulos</h3>
-              <div class="persona__desc">Board member</div>
-              <img class="persona__arrow" src="assets/arrow.svg" alt="">
-            </div>
-            <div class="persona__bio-wrap">
-              <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Dimitri is Chairman of Titan Cement Group, a cement 
-                    and building materials producer active since 1902. 
-                    The group directly employs about 5,500 people, 
-                    operates cement plants in 10 countries, and is 
-                    active in many more.Prior to joining Titan in 1989, 
-                    Dimirti started his career as a business consultant 
-                    for McKinsey & Company in the USA and Germany.
-                  </p>
-                  <p>
-                    He is Chairman of the Board of the Hellenic Federation 
-                    of Enterprises (SEV), Vice-Chairman of the European 
-                    Round Table for Industry (ERT) and chairs the ERT’s 
-                    Energy Transition & Climate Change Committee. 
-                    He is a member of the Board of the Foundation for 
-                    Economic and Industrial Research (IOBE), the 
-                    Hellenic Foundation for European and Foreign Policy 
-                    (ELIAMEP), and of Endeavor Greece.
-                  </p>
-                  <p>
-                    He holds a M.Sc. 
-                    in Electrical Engineering from the Swiss Federal 
-                    Institute of Technology (ETHZ) and an MBA 
-                    from Harvard Business School.
-                  </p>
-                </div>
-                <span class="persona__shadow"></span>
-              </div>
-            </div>
-          </article>
-          <article class="split__part persona">
-            <div class="persona__card">
-              <figure class="persona__image">
-                <img src="assets/images/Mike Krzan.jpg" width="152" height="160" alt="Mike Krzan" />
-              </figure>
-              <h3 class="persona__title">Mike Krzan</h3>
-              <div class="persona__desc">Advisor</div>
-              <img class="persona__arrow" src="assets/arrow.svg" alt="">
-            </div>
-            <div class="persona__bio-wrap">
-              <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Mike brings a lifetime of experience in building and 
-                    running high-performing patient services organizations, 
-                    having spent more than 20 years in the space. He led 
-                    Biogen’s patient services center in North Carolina 
-                    for more than a decade, and prior to that was a SVP 
-                    for member services and pharmacy operations at Medco. 
-                  </p>
-                  <p>
-                    While at Biogen, Mike was a member of the US Senior 
-                    Leadership Team, developed and set the direction for 
-                    the patient services organization to support $8B of 
-                    revenue, launched seven products (including a blockbuster 
-                    drug and an orphan drug), and collaborated with 
-                    field sales leaders to identify trends, define 
-                    tactics for improved performance, and ensure national 
-                    team alignment. 
-                  </p>
-                  <p>
-                    He holds a BS in Pharmacy 
-                    from Duquesne University.
-                  </p>
-                </div>
-                <span class="persona__shadow"></span>
-                <a href="https://www.linkedin.com/in/mike-krzan" target="_blank" class="linkedin">
+                <a v-if="persona.linkedin" :href="persona.linkedin" target="_blank" class="linkedin">
                   <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
                     <g id="Group_330" data-name="Group 330" fill="#fff">
                       <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
@@ -406,102 +154,7 @@
             </div>
           </article>
 
-          <article class="split__part persona">
-            <div class="persona__card">
-              <figure class="persona__image">
-                <img src="assets/images/Angelos.png" width="152" height="160" alt="Angelos Kapsimanis" />
-              </figure>
-              <h3 class="persona__title">Angelos Kapsimanis</h3>
-              <div class="persona__desc">Chief Technology Officer</div>
-              <img class="persona__arrow" src="assets/arrow.svg" alt="">
-            </div>
-            <div class="persona__bio-wrap">
-              <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Angelos has been working in the tech industry for more than two decades, 
-                    with experience across 65+ countries. He has led teams across multiple 
-                    verticals and industries, with a focus on data, machine learning, and AI.
-                  </p>
-                  <p>
-                    He has spent a significant amount of his career in the FinTech industry, 
-                    helping Klarna to expand globally and reach a valuation of $70B. 
-                    While at Klarna he managed teams interspersed across the planet, 
-                    focusing on analytics, machine learning, real-time decision making, 
-                    and risk management. Prior to Klarna, Angelos built the whole technology 
-                    function for Motionlogic, an analytics company that is part of the Deutsche 
-                    Telekom group, and helped it achieve a 52-fold increase in revenues in 3 years. 
-                    He bootstrapped and successful led to exit Aton Solar, which developed embedded 
-                    systems and telemetry solution for solar energy facilities.
-                  </p>
-                  <p>
-                    He holds an MS in Machine Learning from Georgia Tech, a second Masters 
-                    in Computational Statistics from De Montfort University in the UK, and a 
-                    BS in Industrial Informatics in the University of Applied Sciences in Kavala, Greece.
-                  </p>
-                </div>
-                <span class="persona__shadow"></span>
-                <a href="https://www.linkedin.com/in/angeloskapsimanis/" target="_blank" class="linkedin">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                    <g id="Group_330" data-name="Group 330" fill="#fff">
-                      <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-          <article class="split__part persona">
-            <div class="persona__card">
-              <figure class="persona__image">
-                <img src="assets/images/Oleg.png" width="152" height="160" alt="Oleg Nodelman" />
-              </figure>
-              <h3 class="persona__title">Oleg Nodelman</h3>
-              <div class="persona__desc">Board member</div>
-              <img class="persona__arrow" src="assets/arrow.svg" alt="">
-            </div>
-            <div class="persona__bio-wrap">
-              <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" alt="">
-                <div class="persona__content content">
-                  <p>
-                    Oleg is the founder and Portfolio Manager of EcoR1 Capital LLC, 
-                    a biotech-focused investment fund established in 2013, 
-                    which invests in companies at all stages of research and 
-                    development. With nearly twenty years of experience in 
-                    biotech investing, he has expertise in all aspects of 
-                    investment management and deep roots in the biotech 
-                    and scientific communities. 
-                  </p>
-                  <p>
-                    Before founding EcoR1, Oleg was a portfolio manager at BVF 
-                    Partners, one of the first hedge funds dedicated to the 
-                    biotechnology sector. He currently serves as a Board 
-                    Member for Prothena Biosciences (NASDAQ: PRTA), AnaptysBio 
-                    (Nasdaq: ANAB), Nuvation Bio (Nasdaq: NUVB), Panacea 
-                    (Nasdaq: PANA), Scorpion Therapeutics, Aktis Oncology, 
-                    ReCode, and Paratus. 
-                  </p>
-                  <p>
-                    Oleg holds a BS in Foreign Service with a concentration in 
-                    Science and Technology from Georgetown University.
-                  </p>
-                </div>
-                <span class="persona__shadow"></span>
-                <a href="https://www.linkedin.com/in/oleg-nodelman-375131/" target="_blank" class="linkedin">
-                  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
-                    <g id="Group_330" data-name="Group 330" fill="#fff">
-                      <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
-                    </g>
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </article>
-
-        </div>
+         </div>
       </div>
     </section>
 
@@ -521,7 +174,9 @@
     <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Epikast logo" width="128" height="27"/></a>
   </footer>
   
+
+  <script src="js/vue.js"></script>
   <script src="js/swiper.min.js"></script>
-  <script src="js/global.js"></script>
+  <script type="module" src="js/global.js"></script>
 </body>
 </html>

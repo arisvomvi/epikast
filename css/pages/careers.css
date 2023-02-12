@@ -105,6 +105,12 @@ h1 {
   -o-transition: 0.4s;
   transition: 0.4s;
   cursor: default;
+
+  /* height: auto; */
+}
+
+.accordion__item.active {
+  /* background: red; */
 }
 
 .accordion__content {
