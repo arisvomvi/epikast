@@ -210,6 +210,9 @@ function handle_personas(selector) {
         // filteredPersonas.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
         return orderedPersonas;
       },
+      modalIsOpen() {
+        return !!this.modalData;
+      },
     },
     watch: {
       windowSize() {
@@ -266,6 +269,11 @@ function handle_careers(selector) {
       close_modal() {
         this.modalData = null;
         document.querySelector('body').classList.remove('no-scroll');
+      },
+    },
+    computed: {
+      modalIsOpen() {
+        return !!this.modalData;
       },
     },
     watch: {

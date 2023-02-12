@@ -51,8 +51,11 @@ export const personas = [
   {
     id: 2,
     name: 'Stelios Papadopoulos, PhD',
-    title: 'CEO and board member',
-    filters: [{ position: 'board', order: 1 }],
+    title: 'Chairman of the board',
+    filters: [
+      { position: 'all', order: 5 },
+      { position: 'board', order: 1 },
+    ],
     img: 'assets/images/Stelios_papadopoulos.jpg',
     linkedin: null,
     bio: `
@@ -102,7 +105,7 @@ export const personas = [
   {
     id: 3,
     name: 'Daphne Karydas',
-    title: 'CEO and board member',
+    title: 'Board member',
     filters: [
       { position: 'all', order: 1 },
       { position: 'board', order: 2 },
@@ -158,8 +161,11 @@ export const personas = [
   {
     id: 4,
     name: 'Dimitris Papalexopoulos',
-    title: 'CEO and board member',
-    filters: [{ position: 'board', order: 4 }],
+    title: 'Board Member',
+    filters: [
+      { position: 'all', order: 6 },
+      { position: 'board', order: 4 },
+    ],
     img: 'assets/images/Dimitris_Papalexopoulos.jpg',
     linkedin: null,
     bio: `
@@ -193,7 +199,7 @@ export const personas = [
   {
     id: 5,
     name: 'Mike Krzan',
-    title: 'CEO and board member',
+    title: 'Advisor',
     filters: [
       { position: 'all', order: 3 },
       { position: 'advisors', order: 1 },
@@ -228,7 +234,7 @@ export const personas = [
   {
     id: 6,
     name: 'Angelos Kapsimanis',
-    title: 'CEO and board member',
+    title: 'Chief Technology Officer',
     filters: [
       { position: 'all', order: 2 },
       { position: 'executive', order: 2 },
@@ -262,7 +268,7 @@ export const personas = [
   {
     id: 7,
     name: 'Oleg Nodelman',
-    title: 'CEO and board member',
+    title: 'Board member',
     filters: [
       { position: 'all', order: 4 },
       { position: 'board', order: 3 },

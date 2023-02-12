@@ -5,6 +5,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <link rel="preload" href="fonts/Inter-Medium.woff" as="font" type="font/woff" crossorigin>
+  
   <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="icon" sizes="16x16" href="assets/favicon-16x16.png" />
@@ -80,8 +82,6 @@
       </figure>
     </section>
 
-    
-
     <section class="bubble" v-if="careers.size">
       <h2 class="bubble__title">Our openings</h2>
       <ul class="accordion">
@@ -121,7 +121,7 @@
     </section>
 
 
-    <div class="modal" v-if="modalData" @click.stop.self="close_modal()">
+    <div class="modal" :class="{ active: modalIsOpen }" v-if="modalIsOpen" @click.stop.self="close_modal()">
       <div class="modal__container">
         <img class="modal__close" src="assets/close.svg" @click="close_modal()">
         <h3 class="modal__title">{{ modalData.title }}</h3>
