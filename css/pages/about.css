@@ -87,11 +87,45 @@
   right: 80px;
 }
 
-
 .personas__title {
   font-size: 2rem;
   line-height: 2.4rem;
-  margin-bottom: 64px;
+}
+.personas__filter-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: 16px;
+  white-space: nowrap;
+}
+.personas__filter-list li {
+  position: relative;
+  margin: 0 32px 8px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  list-style: none;
+  color: var(--lynch);
+}
+.personas__filter-list li:last-child {
+  margin-right: 0;
+}
+.personas__filter-list li:before {
+  content: '';
+  position: absolute;
+  right: -32px;
+  width: 1px;
+  height: 20px;
+  background: var(--lynch);
+}
+.personas__filter-list li:last-child:before {
+  display: none;
+}
+.personas__filter-list li:hover,
+.personas__filter-list li.active {
+  color: var(--blue-ribbon);
 }
 .personas__container {
   margin-top: 64px;
@@ -116,16 +150,17 @@
 }
 .personas .split {
   padding-bottom: 76px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
+
+
+
 .persona {
   max-width: 200px;
   min-width: 200px;
   font-size: 1.4rem;
   line-height: 2.2rem;
-  margin-bottom: 96px;
+  margin-bottom: 48px;
   cursor: pointer;
 }
 .persona__card {
@@ -201,7 +236,7 @@
   right: 8px;
   cursor: pointer;
 }
-.persona__close:before {
+/* .persona__close:before {
   -webkit-transform: rotate(45deg) translate(2px, -1px);
       -ms-transform: rotate(45deg) translate(2px, -1px);
           transform: rotate(45deg) translate(2px, -1px);
@@ -216,7 +251,7 @@
   -webkit-transform-origin: right top;
       -ms-transform-origin: right top;
           transform-origin: right top;
-}
+} */
 .persona__content {
   color: #fff;
   overflow-y: auto;
@@ -301,6 +336,20 @@
   }
   .values__item .content {
     margin-left: 56px;
+  }
+
+  .personas__title {
+    margin-bottom: 32px;
+  }
+  .personas__filter-list {
+    justify-content: center;
+    margin: 0 0 32px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .personas__filter-list {
+    display: none;
   }
 }
 

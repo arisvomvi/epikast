@@ -97,7 +97,7 @@
           </div>
           <div class="accordion__body">
             <ul class="accordion__content">
-              <li v-for="(position, posIndex) in positions" :key="posIndex" @click.stop="open_position(posIndex)">
+              <li v-for="(position, posIndex) in positions" :key="posIndex" @click.stop="open_modal(position)">
                 <div class="position-trigger">{{ position.title }}<img src="assets/arrow.svg"></div>
                 <div class="position-location">
                   <img src="assets/pin_location.svg">
@@ -105,21 +105,6 @@
                 </div>
               </li>
             </ul>
-          </div>
-          <div class="position-wrap" 
-            :class="{ open: (catIndex == activeCategory && posIndex == activePosition) }" 
-            v-for="(position, posIndex) in positions" 
-            :key="posIndex" @click.stop.self="close_position(posIndex)">
-            <article class="position">
-              <h3 class="position__title">{{ position.title }}</h3>
-              <div class="position__location">{{ position.location }}</div>
-              <img class="position__close" src="assets/close.svg" @click="close_position(posIndex)">
-              <div class="content content--positions" v-html="position.description"></div>
-              <span class="position__shadow"></span>
-              <a v-if="position.file" :href="position.file" target="_blank" class="position__file">
-                <img src="assets/pdf_icon.svg"> Download as pdf
-              </a>
-            </article>
           </div>
         </li>
       </ul>
@@ -134,6 +119,22 @@
         gender, sexual orientation, gender identity, or religion.
       </p>
     </section>
+
+
+    <div class="modal" v-if="modalData" @click.stop.self="close_modal()">
+      <div class="modal__container">
+        <img class="modal__close" src="assets/close.svg" @click="close_modal()">
+        <h3 class="modal__title">{{ modalData.title }}</h3>
+        <div class="modal__description modal__description--icon"><img src="assets/pin_location.svg" >{{ modalData.location }}</div>
+        <div class="content" v-html="modalData.description"></div>
+        <span class="content-shadow"></span>
+        <div class="modal__footer">
+          <a v-if="modalData.file" :href="modalData.file" target="_blank" class="btn btn--icon">
+            <img src="assets/pdf_icon.svg"> Download as pdf
+          </a>
+        </div>
+      </div>
+    </div>
 
   </main>
 

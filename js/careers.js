@@ -70,7 +70,7 @@ export const careers = new Map([
             </li>
           </ul>
         `,
-        file: null,
+        file: true,
       },
       {
         title: 'Case Manager – Spanish',

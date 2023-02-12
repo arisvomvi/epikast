@@ -149,15 +149,83 @@ class Clocks {
 function handle_personas(selector) {
   new Vue({
     el: `#${selector}`,
-    data: () => ({ personas }),
+    data: () => ({
+      personas,
+      filters: [
+        { id: 'board', label: 'Board' },
+        { id: 'executive', label: 'Executive team' },
+        { id: 'advisors', label: 'Advisors' },
+        { id: 'all', label: 'All' },
+      ],
+      activeFilter: 'all',
+      activePersona: null,
+      carousel: null,
+      windowSize: window.innerWidth,
+
+      modalData: null,
+    }),
+    mounted() {
+      window.addEventListener('resize', () => {
+        this.windowSize = window.innerWidth;
+      });
+      console.log(this.modalData);
+    },
     methods: {
-      open_bio(index) {
-        let currentState = this.personas[index].isOpen;
-        this.personas.forEach(persona => (persona.isOpen = false));
-        this.personas[index].isOpen = !currentState;
+      create_carousel() {
+        this.carousel = new Swiper('.js-personas', {
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          wrapperClass: 'split',
+          slideClass: 'split__part',
+          slideActiveClass: 'active',
+          mousewheel: {
+            forceToAxis: true,
+          },
+        });
       },
-      close_bio(index) {
-        this.personas[index].isOpen = false;
+      open_modal(persona) {
+        this.activePersona = persona.id;
+        this.modalData = persona;
+        document.querySelector('body').classList.add('no-scroll');
+      },
+      close_modal() {
+        this.modalData = null;
+        document.querySelector('body').classList.remove('no-scroll');
+      },
+    },
+    computed: {
+      filterIds() {
+        return this.filterIds.map(filter => filter.id);
+      },
+      filteredPersonas() {
+        let filteredPersonas = this.personas.filter(persona => {
+          let positions = persona.filters.map(filter => filter.position);
+          return positions.includes(this.activeFilter);
+        });
+        console.log(filteredPersonas);
+
+        let orderedPersonas = filteredPersonas.sort((a, b) => {
+          return a.filters.find(filter => filter.position == this.activeFilter).order - b.filters.find(filter => filter.position == this.activeFilter).order;
+        });
+        // filteredPersonas.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+        return orderedPersonas;
+      },
+    },
+    watch: {
+      windowSize() {
+        if (window.innerWidth <= 600) {
+          this.activeFilter = 'all';
+        }
+
+        if (window.innerWidth <= 528) {
+          if (!!!this.carousel || this.carousel?.destroyed) {
+            this.create_carousel();
+          }
+        } else {
+          if (this.carousel?.enabled) {
+            this.carousel.destroy(true, true);
+          }
+        }
       },
     },
   });
@@ -170,6 +238,8 @@ function handle_careers(selector) {
       careers,
       activeCategory: null,
       activePosition: null,
+
+      modalData: null,
     }),
     mounted() {
       window.addEventListener('resize', () => {
@@ -187,6 +257,16 @@ function handle_careers(selector) {
       close_position() {
         this.activePosition = null;
       },
+
+      open_modal(career) {
+        this.activePersona = career.id;
+        this.modalData = career;
+        document.querySelector('body').classList.add('no-scroll');
+      },
+      close_modal() {
+        this.modalData = null;
+        document.querySelector('body').classList.remove('no-scroll');
+      },
     },
     watch: {
       activeCategory(newVal) {
@@ -203,6 +283,76 @@ function handle_careers(selector) {
     },
   });
 }
+
+// class Personas {
+//   constructor(selector) {
+//     this.selector = selector;
+//     this.el = document.querySelector(selector);
+//     this.personas = this.el.querySelectorAll('.persona');
+//     this.carousel = null;
+//     this.parent = this.el.closest('.personas__wrap');
+//     this.breakPoint = 528;
+//     this.body = document.querySelector('body');
+//     this.init();
+//   }
+//   init() {
+//     this.watch_carousel();
+
+//     window.addEventListener('resize', () => {
+//       this.watch_carousel();
+//       this.personas.forEach(persona => persona.classList.remove('open'));
+//       this.handle_global_scroll();
+//     });
+
+//     this.personas.forEach(persona => {
+//       persona.addEventListener('click', () => {
+//         this.personas.forEach(el => {
+//           if (el.isSameNode(persona)) {
+//             el.classList.toggle('open');
+//           } else {
+//             el.classList.remove('open');
+//           }
+//         });
+
+//         this.handle_global_scroll();
+//       });
+
+//       persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
+//       persona.querySelector('.persona__close').addEventListener('click', () => {
+//         persona.classList.remove('open');
+//         this.handle_global_scroll();
+//       });
+//     });
+//   }
+//   watch_carousel() {
+//     if (window.innerWidth <= this.breakPoint) {
+//       if (!!!this.carousel || this.carousel?.destroyed) this.create_carousel();
+//     } else {
+//       if (this.carousel?.enabled) this.carousel.destroy(true, true);
+//     }
+//   }
+//   create_carousel() {
+//     this.carousel = new Swiper(this.selector, {
+//       slidesPerView: 'auto',
+//       centeredSlides: true,
+//       wrapperClass: 'split',
+//       slideClass: 'split__part',
+//       slideActiveClass: 'active',
+//       mousewheel: {
+//         forceToAxis: true,
+//       },
+//     });
+//   }
+//   handle_global_scroll() {
+//     if (window.innerWidth >= this.breakPoint) {
+//       if ([...this.personas].filter(persona => persona.classList.contains('open')).length) {
+//         this.body.classList.add('no-scroll');
+//       } else {
+//         this.body.classList.remove('no-scroll');
+//       }
+//     }
+//   }
+// }
 
 // class Accordion {
 //   constructor(selector) {
@@ -278,75 +428,5 @@ function handle_careers(selector) {
 //   close_item(item) {
 //     item.classList.remove('active');
 //     item.querySelector('.accordion__body').style.removeProperty('height');
-//   }
-// }
-
-// class Personas {
-//   constructor(selector) {
-//     this.selector = selector;
-//     this.el = document.querySelector(selector);
-//     this.personas = this.el.querySelectorAll('.persona');
-//     this.carousel = null;
-//     this.parent = this.el.closest('.personas__wrap');
-//     this.breakPoint = 528;
-//     this.body = document.querySelector('body');
-//     this.init();
-//   }
-//   init() {
-//     this.watch_carousel();
-
-//     window.addEventListener('resize', () => {
-//       this.watch_carousel();
-//       this.personas.forEach(persona => persona.classList.remove('open'));
-//       this.handle_global_scroll();
-//     });
-
-//     this.personas.forEach(persona => {
-//       persona.addEventListener('click', () => {
-//         this.personas.forEach(el => {
-//           if (el.isSameNode(persona)) {
-//             el.classList.toggle('open');
-//           } else {
-//             el.classList.remove('open');
-//           }
-//         });
-
-//         this.handle_global_scroll();
-//       });
-
-//       persona.querySelector('.persona__bio').addEventListener('click', e => e.stopPropagation());
-//       persona.querySelector('.persona__close').addEventListener('click', () => {
-//         persona.classList.remove('open');
-//         this.handle_global_scroll();
-//       });
-//     });
-//   }
-//   watch_carousel() {
-//     if (window.innerWidth <= this.breakPoint) {
-//       if (!!!this.carousel || this.carousel?.destroyed) this.create_carousel();
-//     } else {
-//       if (this.carousel?.enabled) this.carousel.destroy(true, true);
-//     }
-//   }
-//   create_carousel() {
-//     this.carousel = new Swiper(this.selector, {
-//       slidesPerView: 'auto',
-//       centeredSlides: true,
-//       wrapperClass: 'split',
-//       slideClass: 'split__part',
-//       slideActiveClass: 'active',
-//       mousewheel: {
-//         forceToAxis: true,
-//       },
-//     });
-//   }
-//   handle_global_scroll() {
-//     if (window.innerWidth >= this.breakPoint) {
-//       if ([...this.personas].filter(persona => persona.classList.contains('open')).length) {
-//         this.body.classList.add('no-scroll');
-//       } else {
-//         this.body.classList.remove('no-scroll');
-//       }
-//     }
 //   }
 // }

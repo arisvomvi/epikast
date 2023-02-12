@@ -126,21 +126,35 @@
 
     <section class="personas">
       <h2 class="personas__title">Our leadership</h2>
-      <div class="personas__wrap">
+      <ul class="personas__filter-list">
+        <li 
+          :class="{ active: filter.id == activeFilter }"
+          v-for="filter in filters" 
+          :key="filter.id"
+          @click="activeFilter = filter.id">
+          {{ filter.label }}
+        </li>
+      </ul>
+      
+      <div class="personas__wrap js-personas">
         <div class="split split--quadraple">
 
-          <article class="split__part persona" :class="{ open: persona.isOpen }"  v-for="(persona, index) in personas" :key="index" @click="open_bio(index)">
+          <article class="split__part persona" 
+            v-for="(persona, index) in filteredPersonas" 
+            :key="index" 
+            @click="open_modal(persona)">
             <div class="persona__card">
               <figure class="persona__image">
                 <img :src="persona.img" width="152" height="160" :alt="persona.name" />
               </figure>
               <h3 class="persona__title">{{ persona.name }}</h3>
-              <div class="persona__desc">{{ persona.position }}</div>
+              <div class="persona__desc">{{ persona.title }}</div>
               <img class="persona__arrow" src="assets/arrow.svg">
             </div>
-            <div class="persona__bio-wrap" @click.stop.self="close_bio(index)">
+
+            <!-- <div class="persona__bio-wrap" @click.stop.self="activePersona = null">
               <div class="persona__bio">
-                <img class="persona__close" src="assets/close.svg" @click="close_bio(index)">
+                <img class="persona__close" src="assets/close.svg" @click="activePersona = null">
                 <div class="persona__content content" v-html="persona.bio"></div>
                 <span class="persona__shadow"></span>
                 <a v-if="persona.linkedin" :href="persona.linkedin" target="_blank" class="linkedin">
@@ -151,12 +165,30 @@
                   </svg>
                 </a>
               </div>
-            </div>
+            </div> -->
+
           </article>
 
          </div>
       </div>
     </section>
+
+    <div class="modal modal--dark" :class="{ active: !!!!modalData}" v-if="modalData" @click.stop.self="close_modal()">
+      <div class="modal__container">
+        <img class="modal__close" src="assets/close.svg" @click="close_modal()">
+        <div class="content" v-html="modalData.bio"></div>
+        <span class="content-shadow"></span>
+        <div class="modal__footer">
+          <a v-if="modalData.linkedin" :href="modalData.linkedin" target="_blank" class="linkedin">
+            <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+              <g id="Group_330" data-name="Group 330" fill="#fff">
+                <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
 
   </main>
 

@@ -1,7 +1,13 @@
 export const personas = [
   {
+    id: 1,
     name: 'Vangelis Vergetis, PhD',
-    position: 'CEO and board member',
+    title: 'CEO and board member',
+    filters: [
+      { position: 'all', order: 7 },
+      { position: 'board', order: 5 },
+      { position: 'executive', order: 1 },
+    ],
     img: 'assets/images/Vangelis_vergetis.jpg',
     linkedin: 'https://www.linkedin.com/in/vangelisvergetis',
     bio: `
@@ -41,11 +47,12 @@ export const personas = [
         Computer Science from Cornell.
       </p>
     `,
-    isOpen: false,
   },
   {
+    id: 2,
     name: 'Stelios Papadopoulos, PhD',
-    position: 'Chairman of the board',
+    title: 'CEO and board member',
+    filters: [{ position: 'board', order: 1 }],
     img: 'assets/images/Stelios_papadopoulos.jpg',
     linkedin: null,
     bio: `
@@ -91,11 +98,15 @@ export const personas = [
         and an M.B.A. in finance, all from New York University.
       </p>
     `,
-    isOpen: false,
   },
   {
+    id: 3,
     name: 'Daphne Karydas',
-    position: 'Board member',
+    title: 'CEO and board member',
+    filters: [
+      { position: 'all', order: 1 },
+      { position: 'board', order: 2 },
+    ],
     img: 'assets/images/Daphne.jpg',
     linkedin: 'https://www.linkedin.com/in/daphne-karydas-493b17/',
     bio: `
@@ -143,11 +154,12 @@ export const personas = [
         from MIT and an MBA from Harvard Business School.
       </p>
     `,
-    isOpen: false,
   },
   {
+    id: 4,
     name: 'Dimitris Papalexopoulos',
-    position: 'Board member',
+    title: 'CEO and board member',
+    filters: [{ position: 'board', order: 4 }],
     img: 'assets/images/Dimitris_Papalexopoulos.jpg',
     linkedin: null,
     bio: `
@@ -177,11 +189,15 @@ export const personas = [
         from Harvard Business School.
       </p>
     `,
-    isOpen: false,
   },
   {
+    id: 5,
     name: 'Mike Krzan',
-    position: 'Advisor',
+    title: 'CEO and board member',
+    filters: [
+      { position: 'all', order: 3 },
+      { position: 'advisors', order: 1 },
+    ],
     img: 'assets/images/Mike_Krzan.jpg',
     linkedin: 'https://www.linkedin.com/in/mike-krzan',
     bio: `
@@ -208,11 +224,15 @@ export const personas = [
         from Duquesne University.
       </p>
     `,
-    isOpen: false,
   },
   {
+    id: 6,
     name: 'Angelos Kapsimanis',
-    position: 'Chief Technology Officer',
+    title: 'CEO and board member',
+    filters: [
+      { position: 'all', order: 2 },
+      { position: 'executive', order: 2 },
+    ],
     img: 'assets/images/Angelos.png',
     linkedin: 'https://www.linkedin.com/in/angeloskapsimanis',
     bio: `
@@ -238,11 +258,15 @@ export const personas = [
         BS in Industrial Informatics in the University of Applied Sciences in Kavala, Greece.
       </p>
     `,
-    isOpen: false,
   },
   {
+    id: 7,
     name: 'Oleg Nodelman',
-    position: 'Board member',
+    title: 'CEO and board member',
+    filters: [
+      { position: 'all', order: 4 },
+      { position: 'board', order: 3 },
+    ],
     img: 'assets/images/Oleg.png',
     linkedin: 'https://www.linkedin.com/in/oleg-nodelman-375131',
     bio: `
@@ -269,6 +293,5 @@ export const personas = [
         Science and Technology from Georgetown University.
       </p>
     `,
-    isOpen: false,
   },
 ];
