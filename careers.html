@@ -92,7 +92,7 @@
           :key="catIndex" 
           @click="toggle_category(catIndex)">
           <div class="accordion__head">
-            <img class="accordion__icon" :src="category.icon" width="32" height="32" alt="Customer Service">
+            <img class="accordion__icon" :src="category.icon" width="32" height="32" :alt="category.category">
             <div class="accordion__title">{{ category.category }}</div>
           </div>
           <div class="accordion__body">
