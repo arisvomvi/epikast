@@ -22,6 +22,7 @@
 .intro__cover img {
   -o-object-fit: cover;
      object-fit: cover;
+  object-position: right;
   width: 100%;
   height: 100%;
 }
@@ -35,15 +36,21 @@ h1 {
 h1 strong {
   font-weight: 600;
 }
+.intro__desc {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  color: var(--blue-ribbon);
+}
 .intro .content {
   margin-top: 20px;
-  max-width: 576px;
+  max-width: 476px;
   color: var(--stratos);
 }
 .intro .content ul li {
   position: relative;
   margin-bottom: 16px;
-  
+  white-space: nowrap;
   font-size: 1.6rem;
   line-height: 2.2rem;
 }
@@ -150,6 +157,14 @@ h1 strong {
   margin-bottom: 16px;
   border-color: var(--geyser);
 }
+.horizontal-teaser__tag {
+  display: inline-block;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+  color: var(--blue-ribbon);
+  margin-bottom: 10px;
+}
 .horizontal-teaser__title {
   margin-bottom: 16px;
   font-size: 2.4rem;
@@ -185,6 +200,14 @@ h1 strong {
   }
 }
 
+@media only screen and (max-width: 1080px) {
+  .intro__cover img {
+    object-position: center;
+  }
+}
+
+
+
 @media only screen and (max-width: 870px) {
   .intro__cover {
     background: #D9DDE3;
@@ -203,6 +226,12 @@ h1 strong {
   }
   .horizontal-teaser figure.split__part {
     margin-bottom: 16px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .intro .content ul li {
+    white-space: normal;
   }
 }
 
@@ -268,18 +297,19 @@ h1 strong {
     padding: 0 var(--safe-space);
   }
   .horizontal-teaser .btn {
-    position: absolute;
+    /* position: absolute;
     top: 290px;
     left: var(--safe-space);
     margin: 0;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    max-width: calc(100% - var(--safe-space) * 2 - 72px);
+    max-width: calc(100% - var(--safe-space) * 2 - 72px); */
   }
   .horizontal-teasers .pagination {
     position: absolute;
     top: 290px;
+    left: var(--safe-space);
     right: var(--safe-space);
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
