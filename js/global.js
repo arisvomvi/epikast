@@ -211,21 +211,39 @@ function handle_personas(selector) {
       },
     },
     watch: {
-      windowSize() {
-        if (window.innerWidth <= 600) {
-          this.activeFilter = 'all';
-        }
+      windowSize: {
+        immediate: true,
+        handler(newVal) {
+          if (newVal <= 600) {
+            this.activeFilter = 'all';
+          }
 
-        if (window.innerWidth <= 528) {
-          if (!!!this.carousel || this.carousel?.destroyed) {
-            this.create_carousel();
+          if (newVal <= 528) {
+            if (!!!this.carousel || this.carousel?.destroyed) {
+              this.create_carousel();
+            }
+          } else {
+            if (this.carousel?.enabled) {
+              this.carousel.destroy(true, true);
+            }
           }
-        } else {
-          if (this.carousel?.enabled) {
-            this.carousel.destroy(true, true);
-          }
-        }
+        },
       },
+      // windowSize() {
+      //   if (window.innerWidth <= 600) {
+      //     this.activeFilter = 'all';
+      //   }
+
+      //   if (window.innerWidth <= 528) {
+      //     if (!!!this.carousel || this.carousel?.destroyed) {
+      //       this.create_carousel();
+      //     }
+      //   } else {
+      //     if (this.carousel?.enabled) {
+      //       this.carousel.destroy(true, true);
+      //     }
+      //   }
+      // },
     },
   });
 }
