@@ -59,6 +59,10 @@
   font-display: swap;
 }
 
+body.pipi {
+  background-color: red;
+}
+
 [v-cloak] {
   display: none;
 }

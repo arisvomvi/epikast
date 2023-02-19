@@ -173,15 +173,16 @@ function handle_personas(selector) {
     },
     methods: {
       create_carousel() {
+        document.querySelector('body').classList.add('pipi');
         this.carousel = new Swiper('.js-personas', {
           slidesPerView: 'auto',
           centeredSlides: true,
           wrapperClass: 'split',
           slideClass: 'split__part',
           slideActiveClass: 'active',
-          // mousewheel: {
-          //   forceToAxis: true,
-          // },
+          mousewheel: {
+            forceToAxis: true,
+          },
         });
       },
       open_modal(persona) {
