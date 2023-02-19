@@ -290,5 +290,5 @@ function handle_careers(selector) {
 }
 
 function is_ios() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  return navigator.appVersion.indexOf('Mac') != -1;
 }
