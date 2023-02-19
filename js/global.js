@@ -164,7 +164,6 @@ function handle_personas(selector) {
       activePersona: null,
       carousel: null,
       windowSize: window.innerWidth,
-
       modalData: null,
     }),
     mounted() {
@@ -180,9 +179,9 @@ function handle_personas(selector) {
           wrapperClass: 'split',
           slideClass: 'split__part',
           slideActiveClass: 'active',
-          mousewheel: {
-            forceToAxis: true,
-          },
+          // mousewheel: {
+          //   forceToAxis: true,
+          // },
         });
       },
       open_modal(persona) {
