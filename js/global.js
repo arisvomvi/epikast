@@ -186,6 +186,7 @@ function handle_personas(selector) {
             forceToAxis: true,
           },
         });
+        this.carousel.update();
       },
       open_modal(persona) {
         this.activePersona = persona.id;
