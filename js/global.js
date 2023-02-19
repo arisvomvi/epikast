@@ -165,6 +165,8 @@ function handle_personas(selector) {
       carousel: null,
       windowSize: window.innerWidth,
       modalData: null,
+
+      carouselActive: false,
     }),
     mounted() {
       window.addEventListener('resize', () => {
@@ -173,7 +175,7 @@ function handle_personas(selector) {
     },
     methods: {
       create_carousel() {
-        document.querySelector('body').classList.add('pipi');
+        this.carouselActive = true;
         this.carousel = new Swiper('.js-personas', {
           slidesPerView: 'auto',
           centeredSlides: true,
@@ -224,26 +226,12 @@ function handle_personas(selector) {
             }
           } else {
             if (this.carousel?.enabled) {
+              this.carouselActive = false;
               this.carousel.destroy(true, true);
             }
           }
         },
       },
-      // windowSize() {
-      //   if (window.innerWidth <= 600) {
-      //     this.activeFilter = 'all';
-      //   }
-
-      //   if (window.innerWidth <= 528) {
-      //     if (!!!this.carousel || this.carousel?.destroyed) {
-      //       this.create_carousel();
-      //     }
-      //   } else {
-      //     if (this.carousel?.enabled) {
-      //       this.carousel.destroy(true, true);
-      //     }
-      //   }
-      // },
     },
   });
 }
