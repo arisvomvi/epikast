@@ -152,11 +152,7 @@
 }
 .personas .split {
   padding-bottom: 76px;
-  /* justify-content: center; */
 }
-
-
-
 .persona {
   max-width: 200px;
   min-width: 200px;
@@ -242,46 +238,6 @@
   border-radius: 24px;
   cursor: default;
 }
-.persona__close {
-  position: absolute;
-  width: 32px;
-  top: 8px;
-  right: 8px;
-  cursor: pointer;
-}
-/* .persona__close:before {
-  -webkit-transform: rotate(45deg) translate(2px, -1px);
-      -ms-transform: rotate(45deg) translate(2px, -1px);
-          transform: rotate(45deg) translate(2px, -1px);
-  -webkit-transform-origin: left top;
-      -ms-transform-origin: left top;
-          transform-origin: left top;
-}
-.persona__close:after {
-  -webkit-transform: rotate(-45deg) translate(-2px, -1px);
-      -ms-transform: rotate(-45deg) translate(-2px, -1px);
-          transform: rotate(-45deg) translate(-2px, -1px);
-  -webkit-transform-origin: right top;
-      -ms-transform-origin: right top;
-          transform-origin: right top;
-} */
-.persona__content {
-  color: #fff;
-  overflow-y: auto;
-  padding-right: 8px;
-  padding-bottom: 16px;
-}
-.persona__content::-webkit-scrollbar {
-  width: 3px;
-  border-radius: 20px;
-}
-.persona__content::-webkit-scrollbar-track {
-  background: transparent;
-}
-.persona__content::-webkit-scrollbar-thumb {
-  background: #fff;
-  border-radius: 20px;
-}
 .persona__shadow {
   position: relative;
   padding: 12px;
@@ -295,7 +251,6 @@
   display: -ms-flexbox;
   display: flex;
 }
-
 
 @media only screen and (max-width: 1024px) {
   .values__list {
@@ -371,7 +326,7 @@
   
   .personas__wrap {
     overflow: hidden;
-    margin: 0 var(--negative-safe-space);
+    /* margin: 0 var(--negative-safe-space); */
   }
   .persona:not(.active).open {
     min-height: auto;
@@ -393,9 +348,6 @@
   }
   .personas .split {
     margin: 0;
-    /* -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; */
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;

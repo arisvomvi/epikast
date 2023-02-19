@@ -165,8 +165,6 @@ function handle_personas(selector) {
       carousel: null,
       windowSize: window.innerWidth,
       modalData: null,
-
-      carouselActive: false,
     }),
     mounted() {
       window.addEventListener('resize', () => {
@@ -175,15 +173,12 @@ function handle_personas(selector) {
     },
     methods: {
       create_carousel() {
-        this.carouselActive = true;
         this.carousel = new Swiper('.js-personas', {
           slidesPerView: 'auto',
           centeredSlides: true,
           wrapperClass: 'split',
           slideClass: 'split__part',
           slideActiveClass: 'active',
-          observeParents: true,
-          observer: true,
           mousewheel: {
             forceToAxis: true,
           },
@@ -224,11 +219,10 @@ function handle_personas(selector) {
 
           if (newVal <= 528) {
             if (!!!this.carousel || this.carousel?.destroyed) {
-              this.create_carousel();
+              this.$nextTick(this.create_carousel);
             }
           } else {
             if (this.carousel?.enabled) {
-              this.carouselActive = false;
               this.carousel.destroy(true, true);
             }
           }
