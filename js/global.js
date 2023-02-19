@@ -182,11 +182,12 @@ function handle_personas(selector) {
           wrapperClass: 'split',
           slideClass: 'split__part',
           slideActiveClass: 'active',
+          observeParents: true,
+          observer: true,
           mousewheel: {
             forceToAxis: true,
           },
         });
-        this.carousel.update();
       },
       open_modal(persona) {
         this.activePersona = persona.id;
