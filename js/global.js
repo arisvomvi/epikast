@@ -2,9 +2,12 @@ import { personas } from './personas.js';
 import { careers } from './careers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  const isIos = is_ios();
   const burger = document.querySelector('.js-burger');
   const menu = document.querySelector('.js-menu');
   const copyYear = document.querySelector('.js-copy-year');
+
+  if (!isIos) document.querySelector('body').classList.add('os-win');
 
   copyYear ? (copyYear.innerHTML = new Date().getFullYear()) : null;
 
@@ -282,4 +285,8 @@ function handle_careers(selector) {
       },
     },
   });
+}
+
+function is_ios() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 }

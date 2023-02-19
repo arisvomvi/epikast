@@ -116,6 +116,8 @@ body {
 body.no-scroll {
   height: 100vh;
   overflow: hidden;
+}
+body.no-scroll.os-win {
   padding-right: 17px;
 }
 .container {
@@ -422,8 +424,6 @@ figure.full-height {
   font-weight: 600;
 }
 
-
-
 .modal {
   display: none;
   position: fixed;
@@ -526,21 +526,6 @@ figure.full-height {
 .modal--dark .modal__footer {
   margin-left: 0;
 }
-/* .modal__shadow {
-  position: relative;
-  padding: 12px;
-  display: block;
-  margin-top: -24px;
-  width: calc(100% - 3px);
-  background: linear-gradient(to bottom, transparent, var(--stratos));
-} */
-/* .persona.open .persona__bio-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-} */
-
-
 
 @media only screen and (max-width: 1024px) {
   .bubble {
@@ -559,6 +544,9 @@ figure.full-height {
 }
 
 @media only screen and (max-width: 768px) {
+  body.no-scroll.os-win {
+    padding: 0;
+  }
   .menu li {
     margin: 0 10px;
   }
