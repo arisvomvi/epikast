@@ -292,3 +292,26 @@ function handle_careers(selector) {
 function is_ios() {
   return navigator.appVersion.indexOf('Mac') != -1;
 }
+
+// const contentful = require('contentful');
+
+// const client = contentful.createClient({
+//   space: '89o58f52uwub',
+//   environment: 'master', // defaults to 'master' if not set
+//   accessToken: 'X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw',
+// });
+
+// client
+//   .getEntry('5eI98ewPiunOQqoE6vse92')
+//   .then(entry => console.log(entry))
+//   .catch(console.error);
+
+// /89o58f52uwub/master/5eI98ewPiunOQqoE6vse92?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw
+
+fetch('https://app.contentful.com/spaces/89o58f52uwub/environments/master/entries/5eI98ewPiunOQqoE6vse92?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw')
+  .then(res => res.json())
+  .then(json => console.log(json));
+
+// /spaces/89o58f52uwub/environments/master/entries/5eI98ewPiunOQqoE6vse92?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw
+
+// X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw
