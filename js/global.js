@@ -166,6 +166,23 @@ function handle_personas(selector) {
       windowSize: window.innerWidth,
       modalData: null,
     }),
+    // created() {
+    //   fetch('https://cdn.contentful.com/spaces/89o58f52uwub/environments/master/entries?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw')
+    //     .then(res => res.json())
+    //     .then(personas => {
+    //       console.log(personas.items);
+
+    //       personas.items.forEach(persona => {
+    //         let x = {
+    //           id: persona.sys.id,
+    //           name: persona.fields.name,
+    //           image: persona.fields.image,
+    //           // linkedin: persona.fields.linkedin,
+    //           bio: persona.fields.bio,
+    //         };
+    //       });
+    //     });
+    // },
     mounted() {
       window.addEventListener('resize', () => {
         this.windowSize = window.innerWidth;
@@ -292,26 +309,3 @@ function handle_careers(selector) {
 function is_ios() {
   return navigator.appVersion.indexOf('Mac') != -1;
 }
-
-// const contentful = require('contentful');
-
-// const client = contentful.createClient({
-//   space: '89o58f52uwub',
-//   environment: 'master', // defaults to 'master' if not set
-//   accessToken: 'X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw',
-// });
-
-// client
-//   .getEntry('5eI98ewPiunOQqoE6vse92')
-//   .then(entry => console.log(entry))
-//   .catch(console.error);
-
-// /89o58f52uwub/master/5eI98ewPiunOQqoE6vse92?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw
-
-fetch('https://app.contentful.com/spaces/89o58f52uwub/environments/master/entries/5eI98ewPiunOQqoE6vse92?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw')
-  .then(res => res.json())
-  .then(json => console.log(json));
-
-// /spaces/89o58f52uwub/environments/master/entries/5eI98ewPiunOQqoE6vse92?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw
-
-// X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw
