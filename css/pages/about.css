@@ -114,6 +114,9 @@
 .personas__filter-list li:last-child {
   margin-right: 0;
 }
+.personas__filter-list li:first-child {
+  margin-left: 0;
+}
 .personas__filter-list li:before {
   content: '';
   position: absolute;
@@ -306,16 +309,17 @@
     margin-left: 56px;
   }
 
-
   .personas__filter-list {
     justify-content: center;
-    /* margin: 0 0 32px; */
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .personas__filter-list {
-    display: none;
+  .personas__filter-list li {
+    margin: 0 16px 8px;
+  }
+  .personas__filter-list li:before {
+    right: -16px;
   }
 }
 
