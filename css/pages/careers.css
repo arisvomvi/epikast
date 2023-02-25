@@ -302,7 +302,7 @@ h1 {
 
 .disclaimer {
   max-width: 836px;
-  margin: 46px;
+  margin: 46px auto;
   font-style: italic;
   font-size: 1.4rem;
   line-height: 1.8rem;

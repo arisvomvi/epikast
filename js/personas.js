@@ -8,7 +8,7 @@ export const personas = [
       { position: 'board', order: 5 },
       { position: 'executive', order: 1 },
     ],
-    img: 'assets/images/Vangelis_vergetis.jpg',
+    img: 'assets/images/Vangelis_vergetis.png',
     linkedin: 'https://www.linkedin.com/in/vangelisvergetis',
     bio: `
       <p>
