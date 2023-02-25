@@ -166,7 +166,23 @@ function handle_personas(selector) {
       windowSize: window.innerWidth,
       modalData: null,
     }),
+    // created() {
+    //   fetch('https://cdn.contentful.com/spaces/89o58f52uwub/environments/master/entries?access_token=X-9ZJTSypNRe6RSATb_Z_9ijiVL2U07XRhcyYwVjzEw')
+    //     .then(res => res.json())
+    //     .then(personas => {
+    //       console.log(personas.items);
 
+    //       personas.items.forEach(persona => {
+    //         let x = {
+    //           id: persona.sys.id,
+    //           name: persona.fields.name,
+    //           image: persona.fields.image,
+    //           // linkedin: persona.fields.linkedin,
+    //           bio: persona.fields.bio,
+    //         };
+    //       });
+    //     });
+    // },
     mounted() {
       window.addEventListener('resize', () => {
         this.windowSize = window.innerWidth;
