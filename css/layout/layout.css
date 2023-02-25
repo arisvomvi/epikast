@@ -552,10 +552,7 @@ figure.full-height {
   }
 }
 
-@media only screen and (max-width: 655px) {
-  :root {
-    --base-distance: 48px
-  }
+@media only screen and (max-width: 700px) {
   .container--header .logo {
     max-width: 130px;
   }
@@ -594,7 +591,6 @@ figure.full-height {
   .burger:hover:after {
     background: var(--blue-ribbon);
   }
-  
   .burger.active {
     border-color: transparent;
   }
@@ -647,6 +643,13 @@ figure.full-height {
   .menu li:last-child {
     margin: 0;
   }
+}
+
+@media only screen and (max-width: 655px) {
+  :root {
+    --base-distance: 48px
+  }
+ 
 
   .container--footer .logo {
     width: 24px;
