@@ -257,8 +257,8 @@
 
 .personas__nav {
   display: none;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   position: absolute;
   font-weight: 400;
@@ -269,7 +269,6 @@
   cursor: pointer;
   bottom: 172px;
   transition: 0.2s;
-  /* 172 */
 }
 .personas__nav:hover {
   border-color: var(--blue-ribbon);
@@ -309,7 +308,7 @@
   display: none;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, calc(50% + 24px + 16px));
+  transform: translate(-50%, calc(24px + 20px));
   line-height: 0;
   text-align: center;
   transition: .3s opacity;
