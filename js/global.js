@@ -179,6 +179,16 @@ function handle_personas(selector) {
           wrapperClass: 'split',
           slideClass: 'split__part',
           slideActiveClass: 'active',
+          pagination: {
+            el: '.personas__pagination',
+            dynamicBullets: true,
+            bulletClass: 'personas__pagination-bullet',
+            bulletActiveClass: 'personas__pagination-bullet-active',
+          },
+          navigation: {
+            prevEl: '.personas__nav--prev',
+            nextEl: '.personas__nav--next',
+          },
           mousewheel: {
             forceToAxis: true,
           },
@@ -213,7 +223,7 @@ function handle_personas(selector) {
       windowSize: {
         immediate: true,
         handler(newVal) {
-          if (newVal <= 528) {
+          if (newVal <= 545) {
             if (!!!this.carousel || this.carousel?.destroyed) {
               this.$nextTick(this.create_carousel);
             }
@@ -223,6 +233,11 @@ function handle_personas(selector) {
             }
           }
         },
+      },
+      activeFilter() {
+        if (this.carousel?.enabled) {
+          this.$nextTick(() => this.carousel.update());
+        }
       },
     },
   });

@@ -294,6 +294,7 @@ h1 {
   -webkit-clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
           clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
 } */
+
 .bubble__element-2 {
   position: absolute;
   top: -24px;
