@@ -254,35 +254,70 @@
   display: -ms-flexbox;
   display: flex;
 }
+
 .personas__nav {
   display: none;
-  width: 40px;
-  height: 40px;
-  margin: 0 20px;
-}
-
-.personas__nav {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background-color: red;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  position: absolute;
+  font-weight: 400;
+  font-size: 1.4rem;
+  border: 1px solid rgba(98, 114, 137, 0.2);
+  color: var(--blue-ribbon);
+  transform: translateY(calc(100% + 24px));
   cursor: pointer;
+  bottom: 172px;
+  transition: 0.2s;
+  /* 172 */
 }
-
+.personas__nav:hover {
+  border-color: var(--blue-ribbon);
+}
+.personas__nav:hover:before {
+  border-top-color: var(--blue-ribbon);
+  border-right-color: var(--blue-ribbon);
+}
+.personas__nav--next {
+  right: 0;
+}
+.personas__nav--prev {
+  left: 0;
+}
+.personas__nav--prev:before,
+.personas__nav--next:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 2px;
+  border:1px solid transparent;
+  border-top-color: var(--lynch);
+  border-right-color: var(--lynch);
+}
+.personas__nav--prev:before {
+  transform: translate(calc(-50% + 1px), -50%) rotate(45deg) scale(-1);
+}
+.personas__nav--next:before {
+  transform: translate(calc(-50% - 1px), -50%) rotate(45deg);
+}
+.swiper-button-disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
 .personas__pagination {
   display: none;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, calc(50% + 24px + 16px));
   line-height: 0;
   text-align: center;
   transition: .3s opacity;
   overflow: hidden;
   font-size: 0;
-  bottom: 148px;
+  bottom: 172px;
   white-space: nowrap;
 }
-
 .personas__pagination-bullet {
   display: inline-block;
   width: 8px;
@@ -304,6 +339,7 @@
 .personas__pagination-bullet-active-next-next {
   transform: scale(.33);
 }
+
 
 @media only screen and (max-width: 1024px) {
   .values__list {
@@ -422,8 +458,9 @@
     margin: 0 16px;
     max-height: 437px;
   }
+  .personas__nav,
   .personas__pagination {
-    display: inline-block;
+    display: block;
   }
 }
 
@@ -488,5 +525,9 @@
 
   .persona {
     margin-bottom: 64px;
+  }
+  .personas__pagination,
+  .personas__nav {
+    bottom: 140px;
   }
 }
