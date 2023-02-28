@@ -125,6 +125,8 @@
       <img src="assets/element_3.svg" class="values__element">
     </section>
 
+    {{filteredPersonas.length}}
+    - {{personasLimit}}
     <section class="personas">
       <h2 class="personas__title">Our leadership</h2>
       <ul class="personas__filter-list">
@@ -139,7 +141,7 @@
       <div class="personas__wrap js-personas">
         <div class="split split--quadraple">
           <article class="split__part persona" 
-            v-for="(persona, index) in filteredPersonas" 
+            v-for="(persona, index) in limitPersonas" 
             :key="index" 
             @click="open_modal(persona)">
             <div class="persona__card">
@@ -151,6 +153,9 @@
               <img class="persona__arrow" src="assets/arrow.svg">
             </div>
           </article>
+          <span class="split__part persona persona--read-more" 
+            @click="view_more"
+            v-if="personasLimit < filteredPersonas.length && windowSize > 545">View more</span>
          </div>
          <span class="personas__pagination"></span>
          <span class="personas__nav personas__nav--prev"></span>
