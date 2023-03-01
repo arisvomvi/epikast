@@ -107,7 +107,7 @@ export const personas = [
     name: 'Daphne Karydas',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 1 },
+      { position: 'all', order: 2 },
       { position: 'board', order: 2 },
     ],
     img: 'assets/images/Daphne.jpg',
@@ -236,7 +236,7 @@ export const personas = [
     name: 'Angelos Kapsimanis',
     title: 'Chief Technology Officer',
     filters: [
-      { position: 'all', order: 2 },
+      { position: 'all', order: 1 },
       { position: 'executive', order: 2 },
     ],
     img: 'assets/images/Angelos.png',
