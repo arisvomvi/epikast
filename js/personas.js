@@ -17,7 +17,7 @@ export const personas = [
         for more than 15 years.
       </p>
       <p>
-        He initialy worked as a consultant at McKinsey and at Hakluyt 
+        He started his career as a consultant at McKinsey and at Hakluyt 
         for about a douzen years, advising biopharmaceutical executives 
         on several topics - particularly in launching drugs across 
         disease areas, and in designing and putting in 
@@ -161,7 +161,7 @@ export const personas = [
   {
     id: 4,
     name: 'Dimitris Papalexopoulos',
-    title: 'Board Member',
+    title: 'Board member',
     filters: [
       { position: 'all', order: 6 },
       { position: 'board', order: 4 },
@@ -174,7 +174,7 @@ export const personas = [
         and building materials producer active since 1902. 
         The group directly employs about 5,500 people, 
         operates cement plants in 10 countries, and is 
-        active in many more.Prior to joining Titan in 1989, 
+        active in many more. Prior to joining Titan in 1989, 
         Dimirti started his career as a business consultant 
         for McKinsey & Company in the USA and Germany.
       </p>
