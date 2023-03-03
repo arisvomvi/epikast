@@ -160,7 +160,7 @@ export const personas = [
   },
   {
     id: 4,
-    name: 'Dimitris Papalexopoulos',
+    name: 'Dimitri Papalexopoulos',
     title: 'Board member',
     filters: [
       { position: 'all', order: 6 },
@@ -189,7 +189,7 @@ export const personas = [
         (ELIAMEP), and of Endeavor Greece.
       </p>
       <p>
-        He holds a M.Sc. 
+        Dimitri holds a M.Sc. 
         in Electrical Engineering from the Swiss Federal 
         Institute of Technology (ETHZ) and an MBA 
         from Harvard Business School.
