@@ -288,7 +288,7 @@ export const personas = [
       <p>
         Before founding EcoR1, Oleg was a portfolio manager at BVF 
         Partners, one of the first hedge funds dedicated to the 
-        biotechnology sector. He currently serves as a Board 
+        biotechnology sector. In addition to Epikast, he currently serves as a Board 
         Member for Prothena Biosciences (NASDAQ: PRTA), AnaptysBio 
         (Nasdaq: ANAB), Nuvation Bio (Nasdaq: NUVB), Panacea 
         (Nasdaq: PANA), Scorpion Therapeutics, Aktis Oncology, 
