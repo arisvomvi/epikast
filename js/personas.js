@@ -123,7 +123,7 @@ export const personas = [
         management companies.
       </p>
       <p>
-        She is currently the COO and CFO of Flare 
+        She is currently the President, COO, and CFO of Flare 
         Therapeutics, which she joined in October 2021. 
         Prior to Flare she was the CFO of Syndax 
         Pharmaceuticals, and also served as SVP of 
