@@ -44,7 +44,7 @@ export const personas = [
         Vangelis holds a 
         PhD in Electrical Engineering from the University 
         of Pennsylvania, and a BS in 
-        Computer Science from Cornell.
+        Computer Science from Cornell University.
       </p>
     `,
   },
