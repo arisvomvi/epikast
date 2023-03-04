@@ -18,7 +18,7 @@ export const personas = [
       </p>
       <p>
         He started his career as a consultant at McKinsey and at Hakluyt 
-        for about a douzen years, advising biopharmaceutical executives 
+        for about a dozen years, advising biopharmaceutical executives 
         on several topics - particularly in launching drugs across 
         disease areas, and in designing and putting in 
         place their commercial models and infrastructure. 
