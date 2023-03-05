@@ -206,6 +206,9 @@ function handle_personas(selector) {
       view_more() {
         this.personasLimit += this.personasLimit;
       },
+      view_less() {
+        this.personasLimit = 9;
+      },
     },
     computed: {
       filterIds() {
@@ -218,11 +221,17 @@ function handle_personas(selector) {
         });
         return filteredPersonas.sort((a, b) => a.filters.find(filter => filter.position == this.activeFilter).order - b.filters.find(filter => filter.position == this.activeFilter).order);
       },
-      limitPersonas() {
+      visiblePersonas() {
         return this.windowSize <= 545 ? this.filteredPersonas : this.filteredPersonas.slice(0, this.personasLimit);
       },
       modalIsOpen() {
         return !!this.modalData;
+      },
+      hasMore() {
+        return this.filteredPersonas.length > this.visiblePersonas.length;
+      },
+      hasLess() {
+        return this.filteredPersonas.length == this.visiblePersonas.length && this.visiblePersonas.length > 9;
       },
     },
     watch: {

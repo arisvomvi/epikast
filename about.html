@@ -139,7 +139,7 @@
       <div class="personas__wrap js-personas">
         <div class="split split--quadraple">
           <article class="split__part persona" 
-            v-for="(persona, index) in limitPersonas" 
+            v-for="(persona, index) in visiblePersonas" 
             :key="index" 
             @click="open_modal(persona)">
             <div class="persona__card">
@@ -153,7 +153,10 @@
           </article>
           <span class="split__part persona persona--read-more" 
             @click="view_more"
-            v-if="personasLimit < filteredPersonas.length && windowSize > 545">View more</span>
+            v-if="hasMore">View more</span>
+          <span class="split__part persona persona--read-more" 
+            @click="view_less"
+            v-if="hasLess">View less</span>
          </div>
          <span class="personas__pagination"></span>
          <span class="personas__nav personas__nav--prev"></span>
