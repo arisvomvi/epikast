@@ -152,6 +152,7 @@ function handle_personas(selector) {
   new Vue({
     el: `#${selector}`,
     data: () => ({
+      personasLimit: 2,
       personas,
       filters: [
         { id: 'board', label: 'Board' },
@@ -202,6 +203,9 @@ function handle_personas(selector) {
         this.modalData = null;
         document.querySelector('body').classList.remove('no-scroll');
       },
+      view_more() {
+        this.personasLimit += this.personasLimit;
+      },
     },
     computed: {
       filterIds() {
@@ -213,6 +217,9 @@ function handle_personas(selector) {
           return positions.includes(this.activeFilter);
         });
         return filteredPersonas.sort((a, b) => a.filters.find(filter => filter.position == this.activeFilter).order - b.filters.find(filter => filter.position == this.activeFilter).order);
+      },
+      limitPersonas() {
+        return this.windowSize <= 545 ? this.filteredPersonas : this.filteredPersonas.slice(0, this.personasLimit);
       },
       modalIsOpen() {
         return !!this.modalData;
