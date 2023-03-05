@@ -18,7 +18,7 @@ export const personas = [
       </p>
       <p>
         He started his career as a consultant at McKinsey and at Hakluyt 
-        for about a douzen years, advising biopharmaceutical executives 
+        for about a dozen years, advising biopharmaceutical executives 
         on several topics - particularly in launching drugs across 
         disease areas, and in designing and putting in 
         place their commercial models and infrastructure. 
@@ -44,7 +44,7 @@ export const personas = [
         Vangelis holds a 
         PhD in Electrical Engineering from the University 
         of Pennsylvania, and a BS in 
-        Computer Science from Cornell.
+        Computer Science from Cornell University.
       </p>
     `,
   },
@@ -123,7 +123,7 @@ export const personas = [
         management companies.
       </p>
       <p>
-        She is currently the COO and CFO of Flare 
+        She is currently the President, COO, and CFO of Flare 
         Therapeutics, which she joined in October 2021. 
         Prior to Flare she was the CFO of Syndax 
         Pharmaceuticals, and also served as SVP of 
@@ -160,7 +160,7 @@ export const personas = [
   },
   {
     id: 4,
-    name: 'Dimitris Papalexopoulos',
+    name: 'Dimitri Papalexopoulos',
     title: 'Board member',
     filters: [
       { position: 'all', order: 6 },
@@ -189,7 +189,7 @@ export const personas = [
         (ELIAMEP), and of Endeavor Greece.
       </p>
       <p>
-        He holds a M.Sc. 
+        Dimitri holds a M.Sc. 
         in Electrical Engineering from the Swiss Federal 
         Institute of Technology (ETHZ) and an MBA 
         from Harvard Business School.
@@ -288,7 +288,7 @@ export const personas = [
       <p>
         Before founding EcoR1, Oleg was a portfolio manager at BVF 
         Partners, one of the first hedge funds dedicated to the 
-        biotechnology sector. He currently serves as a Board 
+        biotechnology sector. In addition to Epikast, he currently serves as a Board 
         Member for Prothena Biosciences (NASDAQ: PRTA), AnaptysBio 
         (Nasdaq: ANAB), Nuvation Bio (Nasdaq: NUVB), Panacea 
         (Nasdaq: PANA), Scorpion Therapeutics, Aktis Oncology, 
