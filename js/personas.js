@@ -4,7 +4,7 @@ export const personas = [
     name: 'Vangelis Vergetis, PhD',
     title: 'CEO and board member',
     filters: [
-      { position: 'all', order: 7 },
+      { position: 'all', order: 8 },
       { position: 'board', order: 5 },
       { position: 'executive', order: 1 },
     ],
@@ -75,7 +75,7 @@ export const personas = [
         Board of Visitors of Duke Medicine, a member of the Global 
         Advisory Board of the Duke Institute for Health Innovation, 
         and co-founder and Chairman of Fondation Santé 
-        (<a href="www.fondationsante.org">www.fondationsante.org</a>), a foundation providing 
+        (<a href="https://www.fondationsante.org">www.fondationsante.org</a>), a foundation providing 
         research support and mentorship to biomedical 
         scientists in Greece and Cyprus.
       </p>
@@ -297,6 +297,42 @@ export const personas = [
       <p>
         Oleg holds a BS in Foreign Service with a concentration in 
         Science and Technology from Georgetown University.
+      </p>
+    `,
+  },
+  {
+    id: 8,
+    name: 'Amit Singhal, PhD',
+    title: 'Advisor',
+    filters: [
+      { position: 'all', order: 7 },
+      { position: 'advisors', order: 2 },
+    ],
+    img: 'assets/images/Amit.jpg',
+    linkedin: 'https://www.linkedin.com/in/amit-singhal-09723574/',
+    bio: `
+      <p>
+        Amit is known as the man behind Google Search, having led the 
+        Google Search team for over 15 years - from its early days 
+        in 2000 until his departure in 2016. He has received several 
+        awards and distinctions, including being named as a Google Fellow, 
+        elected to the National Academy of Engineering, elected Fellow 
+        of the ACM (Association for Computing Machinery), and 
+        called one of the "smartest people in tech" by Fortune magazine.
+      </p>
+      <p>
+        He is currently dedicated to giving back to his community 
+        through the Sitare Foundation (<a href="https://www.sitare.org">www.sitare.org</a>), a non-profit 
+        organization that he co-founded together with his wife, Shilpa. 
+        Sitare is focusing on providing access to high quality education 
+        to the most talented underprivileged children in India. Amit is 
+        also an active angel investor and an advisor to 
+        technology companies globally.
+      </p>
+      <p>
+        He holds a Bachelor of Engineering degree from IIT Roorkee, 
+        an MS from the University of Minnesota Duluth, and a PhD from 
+        Cornell University, all in Computer Science and Information Retrieval.
       </p>
     `,
   },

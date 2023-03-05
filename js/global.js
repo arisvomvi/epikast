@@ -53,7 +53,6 @@ class HorizontalTeasers {
   }
   init() {
     this.watch_carousel();
-
     window.addEventListener('resize', () => this.watch_carousel());
   }
   watch_carousel() {
