@@ -315,7 +315,7 @@ export const personas = [
         Amit is known as the man behind Google Search, having led the 
         Google Search team for over 15 years - from its early days 
         in 2000 until his departure in 2016. He has received several 
-        awards and distinctions, including being named as a Google Fellow, 
+        awards and distinctions, including being named a Google Fellow, 
         elected to the National Academy of Engineering, elected Fellow 
         of the ACM (Association for Computing Machinery), and 
         called one of the "smartest people in tech" by Fortune magazine.
