@@ -17,8 +17,8 @@ export const personas = [
         for more than 15 years.
       </p>
       <p>
-        He started his career working for twelve years as a consultant 
-        at McKinsey and at Hakluyt, where he advised biopharmaceutical executives 
+        He started his career as a consultant at McKinsey and at Hakluyt,
+        where he spent twelve years advising biopharmaceutical executives 
         on several topics - particularly in launching drugs across 
         disease areas, and in designing and implementing
         their commercial models and infrastructure. 
