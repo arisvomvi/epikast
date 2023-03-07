@@ -97,8 +97,8 @@ export const personas = [
       <p>
         Before coming to Wall Street, Stelios was on the faculty of the 
         Department of Cell Biology at New York University School of 
-        Medicine. Stelios holds an M.S. in physics, a Ph.D. in biophysics 
-        and an M.B.A. in finance, all from New York University.
+        Medicine. Stelios holds an MS in physics, a PhD in biophysics 
+        and an MBA in finance, all from New York University.
       </p>
     `,
   },
