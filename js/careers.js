@@ -362,7 +362,7 @@ export const careers = new Map([
         <p>The Director of Access and Reimbursement works directly with VP of Patient Experience to create and execute specific programs across benefits verification, prior authorization, etc.</p>
         <h4>Join us if you are excited to…</h4>
         <ul>
-          <li>…design, build, and execute comprehensiveand industry-leading BV and PA programs</li>
+          <li>…design, build, and execute comprehensive and industry-leading BV and PA programs</li>
           <li>…work hand-in-hand with the broader Epikast team to ensure that we deliver unparalleled service to our clients and to the patients we serve</li>
         </ul>
         <h4>What you’ll bring to the team</h4>
