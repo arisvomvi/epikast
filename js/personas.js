@@ -336,4 +336,44 @@ export const personas = [
       </p>
     `,
   },
+  {
+    id: 8,
+    name: 'Nassos Zarkalis',
+    title: 'Advisor',
+    filters: [
+      { position: 'all', order: 8 },
+      { position: 'advisors', order: 6 },
+    ],
+    img: 'assets/images/Nassos_Zarkalis.jpg',
+    linkedin: 'https://www.bloomberg.com/profile/person/16560405',
+    bio: `
+      <p>
+        Nassos brings 30 years of experience in building and running 
+        customer-facing organizations, with a passion for delighted 
+        customers, operational excellence, and smart capital allocation. 
+      </p>
+      <p>
+        Until recently, and for more than ten years, he served as Chairman
+        and CEO of Wind Hellas, a leading telecoms player in Greece. 
+        Working with US-based private equity partners, he led a radical 
+        business transformation that resulted in remarkable value creation 
+        upon the company's acquisition by BC Partners-owned United Group in 2022. 
+        Repositioning the company on a platform of low-cost but high-performing 
+        customer acquisition and retention was core to this journey.
+      </p>
+      <p>
+        Prior to Wind, Nassos was CEO of Hellas on Line (HoL), a Greek fixed 
+        line telecoms player; again a case of rapid business turnaround on the 
+        basis of operational excellence and smart investing. He has also held 
+        various commercial roles with Vodafone in Greece and abroad. Before his 
+        career in telecommunications, he worked for leading FMCG companies, 
+        including P&G and PepsiCo, in sales and marketing roles.
+      </p>
+      <p>
+        Nassos holds a BS in Chemical Engineering from the National Technical 
+        University of Athens (NTUA), an MS in Chemical Engineering from the University 
+        of Delaware, and an MBA from Henley Business School.
+      </p>
+    `,
+  },
 ];
