@@ -342,7 +342,7 @@ export const personas = [
     title: 'Advisor',
     filters: [
       { position: 'all', order: 9 },
-      { position: 'advisors', order: 6 },
+      { position: 'board', order: 6 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
     linkedin: 'https://www.bloomberg.com/profile/person/16560405',
