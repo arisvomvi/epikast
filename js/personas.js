@@ -5,7 +5,7 @@ export const personas = [
     title: 'CEO and board member',
     filters: [
       { position: 'all', order: 8 },
-      { position: 'board', order: 5 },
+      { position: 'board', order: 6 },
       { position: 'executive', order: 1 },
     ],
     img: 'assets/images/Vangelis_vergetis.png',
@@ -342,7 +342,7 @@ export const personas = [
     title: 'Advisor',
     filters: [
       { position: 'all', order: 9 },
-      { position: 'board', order: 6 },
+      { position: 'board', order: 5 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
     linkedin: 'https://www.bloomberg.com/profile/person/16560405',
