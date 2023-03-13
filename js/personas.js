@@ -345,7 +345,7 @@ export const personas = [
       { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
-    linkedin: 'https://www.bloomberg.com/profile/person/16560405',
+    linkedin: null,
     bio: `
       <p>
         Nassos brings 30 years of experience in building and running 
