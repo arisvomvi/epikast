@@ -160,7 +160,7 @@ function handle_personas(selector) {
         { id: 'advisors', label: 'Advisors' },
         { id: 'all', label: 'All' },
       ],
-      activeFilter: 'all',
+      activeFilter: 'board',
       activePersona: null,
       carousel: null,
       windowSize: window.innerWidth,
