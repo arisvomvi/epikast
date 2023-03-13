@@ -302,6 +302,42 @@ export const personas = [
   },
   {
     id: 8,
+    name: 'Amit Singhal, PhD',
+    title: 'Advisor',
+    filters: [
+      { position: 'all', order: 7 },
+      { position: 'advisors', order: 2 },
+    ],
+    img: 'assets/images/Amit.jpg',
+    linkedin: 'https://www.linkedin.com/in/amit-singhal-09723574/',
+    bio: `
+      <p>
+        Amit is known as the man behind Google Search, having led the 
+        Google Search team for over 15 years - from its early days 
+        in 2000 until his departure in 2016. He has received several 
+        awards and distinctions, including being named a Google Fellow, 
+        elected to the National Academy of Engineering, elected Fellow 
+        of the ACM (Association for Computing Machinery), and 
+        called one of the "smartest people in tech" by Fortune magazine.
+      </p>
+      <p>
+        He is currently dedicated to giving back to his community 
+        through the Sitare Foundation (<a href="https://www.sitare.org">www.sitare.org</a>), a non-profit 
+        organization that he co-founded together with his wife, Shilpa. 
+        Sitare is focusing on providing access to high quality education 
+        to the most talented underprivileged children in India. Amit is 
+        also an active angel investor and an advisor to 
+        technology companies globally.
+      </p>
+      <p>
+        He holds a Bachelor of Engineering degree from IIT Roorkee, 
+        an MS from the University of Minnesota Duluth, and a PhD from 
+        Cornell University, all in Computer Science and Information Retrieval.
+      </p>
+    `,
+  },
+  {
+    id: 9,
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
@@ -337,42 +373,6 @@ export const personas = [
         Nassos holds a BS in Chemical Engineering from the National Technical 
         University of Athens (NTUA), an MS in Chemical Engineering from the University 
         of Delaware, and an MBA from Henley Business School.
-      </p>
-    `,
-  },
-  {
-    id: 9,
-    name: 'Amit Singhal, PhD',
-    title: 'Advisor',
-    filters: [
-      { position: 'all', order: 7 },
-      { position: 'advisors', order: 2 },
-    ],
-    img: 'assets/images/Amit.jpg',
-    linkedin: 'https://www.linkedin.com/in/amit-singhal-09723574/',
-    bio: `
-      <p>
-        Amit is known as the man behind Google Search, having led the 
-        Google Search team for over 15 years - from its early days 
-        in 2000 until his departure in 2016. He has received several 
-        awards and distinctions, including being named a Google Fellow, 
-        elected to the National Academy of Engineering, elected Fellow 
-        of the ACM (Association for Computing Machinery), and 
-        called one of the "smartest people in tech" by Fortune magazine.
-      </p>
-      <p>
-        He is currently dedicated to giving back to his community 
-        through the Sitare Foundation (<a href="https://www.sitare.org">www.sitare.org</a>), a non-profit 
-        organization that he co-founded together with his wife, Shilpa. 
-        Sitare is focusing on providing access to high quality education 
-        to the most talented underprivileged children in India. Amit is 
-        also an active angel investor and an advisor to 
-        technology companies globally.
-      </p>
-      <p>
-        He holds a Bachelor of Engineering degree from IIT Roorkee, 
-        an MS from the University of Minnesota Duluth, and a PhD from 
-        Cornell University, all in Computer Science and Information Retrieval.
       </p>
     `,
   },
