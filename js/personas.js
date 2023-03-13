@@ -337,11 +337,11 @@ export const personas = [
     `,
   },
   {
-    id: 8,
+    id: 9,
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 8 },
+      { position: 'all', order: 9 },
       { position: 'advisors', order: 6 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
