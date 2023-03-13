@@ -152,7 +152,7 @@ function handle_personas(selector) {
   new Vue({
     el: `#${selector}`,
     data: () => ({
-      personasLimit: 9,
+      personasLimit: 10,
       personas,
       filters: [
         { id: 'board', label: 'Board' },
@@ -207,7 +207,7 @@ function handle_personas(selector) {
         this.personasLimit += this.personasLimit;
       },
       view_less() {
-        this.personasLimit = 9;
+        this.personasLimit = 10;
       },
     },
     computed: {
@@ -231,7 +231,7 @@ function handle_personas(selector) {
         return this.filteredPersonas.length > this.visiblePersonas.length;
       },
       hasLess() {
-        return this.filteredPersonas.length == this.visiblePersonas.length && this.visiblePersonas.length > 9;
+        return this.filteredPersonas.length == this.visiblePersonas.length && this.visiblePersonas.length > 10;
       },
     },
     watch: {
