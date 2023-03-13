@@ -152,7 +152,7 @@ function handle_personas(selector) {
   new Vue({
     el: `#${selector}`,
     data: () => ({
-      personasLimit: 11,
+      personasLimit: 10,
       personas,
       filters: [
         { id: 'board', label: 'Board' },
