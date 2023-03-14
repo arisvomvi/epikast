@@ -5,7 +5,7 @@ export const personas = [
     title: 'CEO and board member',
     filters: [
       { position: 'all', order: 8 },
-      { position: 'board', order: 6 },
+      { position: 'board', order: 5 },
       { position: 'executive', order: 1 },
     ],
     img: 'assets/images/Vangelis_vergetis.png',
