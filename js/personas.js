@@ -342,7 +342,7 @@ export const personas = [
     title: 'Advisor',
     filters: [
       { position: 'all', order: 9 },
-      { position: 'board', order: 5 },
+      { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
     linkedin: null,
