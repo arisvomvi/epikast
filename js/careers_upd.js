@@ -1,6 +1,6 @@
 export const careers = new Map([
   [
-    { category: 'Patients & Physicians Services ', icon: 'assets/customer_service.svg', isOpen: false },
+    { category: 'Patient & Physician Services ', icon: 'assets/customer_service.svg', isOpen: false },
     [
       {
         title: 'Case Manager – English',
