@@ -1,5 +1,5 @@
 import { personas } from './personas.js';
-import { careers } from './careers.js';
+import { careers } from './careers_upd.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const isIos = is_ios();
