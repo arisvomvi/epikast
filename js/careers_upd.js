@@ -379,7 +379,7 @@ export const careers = new Map([
         </ul>
         <h4>What's in it for you</h4>
         <ul>
-          <li>A competitive salary</li>
+          <li>A competitive salary in the $100-175K range, depending on seniority and skills</li>
           <li>Comprehensive health insurance</li>
           <li>Career development stipend</li>
           <li>A great opportunity to grow and work with some of the most exceptional minds in the industry</li>
