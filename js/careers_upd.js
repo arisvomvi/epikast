@@ -353,7 +353,7 @@ export const careers = new Map([
     ],
   ],
   [
-    { category: 'Strategy, Operations, and Finance', icon: 'assets/operations_finance.svg', isOpen: false },
+    { category: 'Corporate: Legal, Compliance, Strategy, Operations, and Finance', icon: 'assets/operations_finance.svg', isOpen: false },
     [
       {
         title: 'Director, Access & Reimbursement',
