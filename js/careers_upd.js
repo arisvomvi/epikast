@@ -3,49 +3,49 @@ export const careers = new Map([
     { category: 'Patient & Physician Services ', icon: 'assets/customer_service.svg', isOpen: false },
     [
       {
-        title: 'Case Manager – English',
-        location: 'Greece',
+        title: 'Case Manager (Patient Support) - English',
+        location: 'Athens, Greece',
         description: `
           <p>
-            The Case Manager works at our call center in Greece and/or remotely 
-            from home and interacts directly with patients on a daily basis, 
+            At Epikast we redefine how biopharmaceutical companies engage
+            with their most important stakeholders: patients, caregivers
+            and prescribers.
+          </p>
+          <p>
+            The US healthcare system is complicated, and our mission is to 
+            redefine the patients' experience, helping overcome several challenges, 
+            and better manage their disease. 
+          </p>
+          <p>
+            In order to achieve our goal, we are looking for a driven individual to 
+            interact directly over phone calls with patients on a daily basis, 
             helping them live healthier lives.
           </p>
-          <h4>Join us if you are excited to…</h4>
-          <ul>
-            <li>…serve patients as they manage their disease</li>
-            <li>
-              …interact with other stakeholders – for example 
-              insurance companies and physician offices – 
-              in order to support the needs of patients
-            </li>
-            <li>
-              …work hand-in-hand with the broader Epikast team 
-              to ensure that we deliver unparalleled service to 
-              our clients and to the patients we serve
-            </li>
-          </ul>
+
           <h4>What you’ll bring to the team</h4>
           <ul>
-            <li>
-              A solutions-oriented mindset and positive attitude, 
-              with the ability to help patients navigate and manage 
-              a complex healthcare environment as they manage their disease
+            <li>A solutions-oriented mindset and positive attitude, 
+                with the ability to help patients navigate and manage 
+                a complex healthcare environment as they manage their disease
             </li>
             <li>
-              Strong communication skills, a customer-centric 
-              mindset, and attention to detail
+              Strong communication skills, a customer-centric mindset, and 
+              attention to detail
             </li>
-            <li>Proficient in English</li>
             <li>
-              Ability to handle sensitive information in a professional and compliant way
+              Proficiency in oral and written English
+            </li>
+            <li>
+              Ability to handle sensitive information in a professional 
+              and compliant way
             </li>
             <li>
               Excellent computer skills (e.g., Windows environment, 
               CRM systems, video communications)
             </li>
             <li>
-              Ability and desire to learn about different diseases and the corresponding therapies
+              Ability and desire to learn about different diseases 
+              and the corresponding therapies
             </li>
             <li>
               BA/BS degree, preferably in a relevant discipline 
@@ -53,134 +53,96 @@ export const careers = new Map([
               MS and/or other advanced degrees an asset but not required
             </li>
             <li>
-              Bonus points if: previous experience in a customer service role
+              Bonus points if you hold previous experience in a customer service role
             </li>
           </ul>
+
           <h4>What's in it for you</h4>
           <ul>
             <li>A competitive salary</li>
-            <li>Career development stipend</li>
+            <li>Career development budget</li>
             <li>
               An environment that offers challenging goals, 
               autonomy, and mentoring,creating opportunities for growth
             </li>
             <li>
               You will be part of a mission to ensure that patients 
-              receive the best possible supportas they manage their disease
+              receive the best possible support as they manage their disease
             </li>
           </ul>
         `,
         file: 'assets/files/JD - Case Manager - English.pdf',
       },
       {
-        title: 'Case Manager – Spanish',
-        location: 'Greece',
+        title: 'Case Manager (Patient Support) – Spanish',
+        location: 'Athens, Greece',
         description: `
           <p>
-            The Case Manager works at our call center in Greece and/or remotely from home and interacts directly with patients on a daily basis, helping them live healthier lives.
+            At Epikast we redefine how biopharmaceutical companies engage
+            with their most important stakeholders: patients, caregivers
+            and prescribers.
           </p>
-          <h4>Join us if you are excited to…</h4>
-          <ul>
-            <li>…serve patients as they manage their disease</li>
-            <li>…interact with other stakeholders – for example insurance companies and physician offices – in order to support the needs of patients</li>
-            <li>…work hand-in-hand with the broader Epikast team to ensure that we deliver unparalleled service to our clients and to the patients we serve</li>
-          </ul>
+          <p>
+            The US healthcare system is complicated, and our mission is to 
+            redefine the patients' experience, helping overcome several challenges, 
+            and better manage their disease. 
+          </p>
+          <p>
+            In order to achieve our goal, we are looking for a driven individual to 
+            interact directly over phone calls with patients on a daily basis, 
+            helping them live healthier lives.
+          </p>
+
           <h4>What you’ll bring to the team</h4>
           <ul>
-            <li>
-              A solutions-oriented mindset and positive attitude, with the ability to help patients navigate and manage a complex healthcare environment as they manage their disease
+            <li>A solutions-oriented mindset and positive attitude, 
+                with the ability to help patients navigate and manage 
+                a complex healthcare environment as they manage their disease
             </li>
             <li>
-              Strong communication skills, a customer-centric mindset, and attention to detail
+              Strong communication skills, a customer-centric mindset, and 
+              attention to detail
             </li>
             <li>
-              Proficient in English and in Spanish
+              Proficiency in oral and written Spanish
             </li>
-            <li>Ability to handle sensitive information in a professional and compliant way</li>
-            <li>Excellent computer skills (e.g., Windows environment, CRM systems, video communications)</li>
-            <li>Ability and desire to learn about different diseases and the corresponding therapies</li>
-            <li>BA/BS degree, preferably in a relevant discipline (e.g., biology, nursing, pharmacology, medicine, etc.); MS and/or other advanced degrees an asset but not required</li>
-            <li>Bonus points if: previous experience in a customer service role</li>
+            <li>
+              Ability to handle sensitive information in a professional 
+              and compliant way
+            </li>
+            <li>
+              Excellent computer skills (e.g., Windows environment, 
+              CRM systems, video communications)
+            </li>
+            <li>
+              Ability and desire to learn about different diseases 
+              and the corresponding therapies
+            </li>
+            <li>
+              BA/BS degree, preferably in a relevant discipline 
+              (e.g., biology, nursing, pharmacology, medicine, etc.); 
+              MS and/or other advanced degrees an asset but not required
+            </li>
+            <li>
+              Bonus points if you hold previous experience in a customer service role
+            </li>
           </ul>
+
           <h4>What's in it for you</h4>
           <ul>
             <li>A competitive salary</li>
-            <li>Career development stipend</li>
-            <li>An environment that offers challenging goals, autonomy, and mentoring,creating opportunities for growth</li>
-            <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
+            <li>Career development budget</li>
+            <li>
+              An environment that offers challenging goals, 
+              autonomy, and mentoring,creating opportunities for growth
+            </li>
+            <li>
+              You will be part of a mission to ensure that patients 
+              receive the best possible support as they manage their disease
+            </li>
           </ul>
         `,
         file: 'assets/files/JD - Case Manager - Spanish.pdf',
-      },
-      {
-        title: 'Senior Case Manager – English',
-        location: 'Greece',
-        description: `
-          <p>
-            The Case Manager works at our call center in Greece and/or remotely from home and interacts directly with patients on a daily basis, helping them live healthier lives.
-          </p>
-          <h4>Join us if you are excited to…</h4>
-          <ul>
-            <li>…serve patients as they manage their disease</li>
-            <li>…interact with other stakeholders – for example insurance companies and physician offices – in order to support the needs of patients</li>
-            <li>…work hand-in-hand with the broader Epikast team to ensure that we deliver unparalleled service to our clients and to the patients we serve</li>
-          </ul>
-          <h4>What you’ll bring to the team</h4>
-          <ul>
-            <li>2+ years of experience in a customer service role</li>
-            <li>A solutions-oriented mindset and positive attitude, with the ability to help patients navigate and manage a complex healthcare environment as they manage their disease</li>
-            <li>Strong communication skills, a customer-centric mindset, and attention to detail</li>
-            <li>Proficient in English</li>
-            <li>Ability to handle sensitive information in a professional and compliant way</li>
-            <li>Excellent computer skills (e.g., Windows environment, CRM systems, video communications)</li>
-            <li>Ability and desire to learn about different diseases and the corresponding therapies</li>
-            <li>BA/BS degree, preferably in a relevant discipline (e.g., biology, nursing, pharmacology, medicine, etc.); MS and/or other advanced degreespreferred, but not required</li>
-            <li>Bonus points if: previous experience in working in the healthcare industry, and/or directly with patients</li>
-          </ul>
-          <h4>What's in it for you</h4>
-          <ul>
-            <li>A competitive salary</li>
-            <li>Career development stipend</li>
-            <li>An environment that offers challenging goals, autonomy, and mentoring,creating opportunities for growth</li>
-            <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
-          </ul>
-        `,
-        file: 'assets/files/JD - Senior Case Manager - English.pdf',
-      },
-      {
-        title: 'Senior Case Manager – Spanish',
-        location: 'Greece',
-        description: `
-          <p>
-            The Case Manager works at our call center in Greece and/or remotely from home and interacts directly with patients on a daily basis, helping them live healthier lives.
-          </p>
-          <h4>Join us if you are excited to…</h4>
-          <ul>
-            <li>…serve patients as they manage their disease</li>
-            <li>…interact with other stakeholders – for example insurance companies and physician offices – in order to support the needs of patients</li>
-            <li>…work hand-in-hand with the broader Epikast team to ensure that we deliver unparalleled service to our clients and to the patients we serve</li>
-          </ul>
-          <h4>What you’ll bring to the team</h4>
-          <ul>
-            <li>2+ years of experience in a customer service role</li>
-            <li>A solutions-oriented mindset and positive attitude, with the ability to help patients navigate and manage a complex healthcare environment as they manage their disease</li>
-            <li>Strong communication skills, a customer-centric mindset, and attention to detail</li>
-            <li>Proficient in English and in Spanish</li>
-            <li>Ability to handle sensitive information in a professional and compliant way</li>
-            <li>Excellent computer skills (e.g., Windows environment, CRM systems, video communications)</li>
-            <li>Ability and desire to learn about different diseases and the corresponding therapies</li>
-            <li>BA/BS degree, preferably in a relevant discipline (e.g., biology, nursing, pharmacology, medicine, etc.); MS and/or other advanced degreespreferred, but not required</li>
-            <li>Bonus points if: previous experience in working in the healthcare industry, and/or directly with patients</li>
-          </ul>
-          <h4>What's in it for you</h4>
-          <ul>
-            <li>A competitive salary</li>
-            <li>Career development stipend</li>
-            <li>An environment that offers challenging goals, autonomy, and mentoring,creating opportunities for growth</li>
-            <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
-          </ul>
-        `,
-        file: 'assets/files/JD - Senior Case Manager - Spanish.pdf',
       },
     ],
   ],
@@ -189,7 +151,7 @@ export const careers = new Map([
     [
       {
         title: 'Data engineer',
-        location: 'Greece',
+        location: 'Remote',
         description: `
           <p>The data engineer works directly with our VP of Engineering, to help to architect, build, and launch scalable data pipelines to support our data processing and analytics needs.</p>
           <h4>Join us if you are excited to…</h4>
@@ -221,47 +183,8 @@ export const careers = new Map([
         file: 'assets/files/JD - Data Engineer.pdf',
       },
       {
-        title: 'Full stack engineer',
-        location: 'Greece',
-        description: `
-          <p>The full stack engineer works directly with our VP of Engineering to build web applications and services using modern web technologies, coordinate with a cross-functional team of engineers and domain experts to deploy new features, work with our product team to materialize new ideas into value-adding functions, and make key decisions that will shape our application architecture.</p>
-          <h4>Join us if you are excited to…</h4>
-          <ul>
-            <li>…work with the product team to develop new features for our internal CRM applications</li>
-            <li>…design and build performant micro-services and frontend-facing APIs</li>
-            <li>…build reusable code and libraries</li>
-            <li>…optimize application for speed, and scalability</li>
-            <li>…develop and ensure automated test coverage</li>
-            <li>…use the latest data and cloud infrastructure (airflow, Google cloud, kubernetes)</li>
-            <li>…work as part of a highly motivated team</li>
-          </ul>
-          <h4>What you’ll bring to the team</h4>
-          <ul>
-            <li>At least 3 years of experience in full-stack software development</li>
-            <li>Results-oriented work ethic and a positive attitude</li>
-            <li>Hands-on experience in the React ecosystem and application state management tools and libraries (preferably Redux)</li>
-            <li>Good understanding of web standards and protocols (incl. HTTP, REST, OAuth 2.0, GraphQL)</li>
-            <li>Programming in Python 3</li>
-            <li>Experience in at least one major Python web framework (Django preferred)</li>
-            <li>Database modeling and query optimization, preferably using PostgreSQL</li>
-            <li>Experience with FE and BE testing frameworks</li>
-            <li>Experience in software engineering standard approaches for testability, maintainability and scalability</li>
-            <li>Familiarity with software development practices, e.g., code reviews, pair-programming</li>
-          </ul>
-          <h4>What's in it for you</h4>
-          <ul>
-            <li>A competitive salary</li>
-            <li>Privatehealth insurance</li>
-            <li>Career development stipend</li>
-            <li>An environment that offers challenging goals, autonomy, and mentoring,creating unparalleled growth opportunities</li>
-            <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
-          </ul>
-        `,
-        file: 'assets/files/JD - Full stack engineer.pdf',
-      },
-      {
-        title: 'NLP data scientist',
-        location: 'Greece',
+        title: 'NLP engineer',
+        location: 'Remote',
         description: `
           <p>The NLP data scientist is responsible for building data science models with a main focus on data extraction and insights. You will need to rapidly prototype various algorithmic implementations and test their efficacy using appropriate experimental design and hypothesis validation.</p>
           <h4>Join us if you are excited to…</h4>
