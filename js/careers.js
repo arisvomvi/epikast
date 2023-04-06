@@ -109,6 +109,9 @@ export const careers = new Map([
             to Equal Employment Opportunity without regard for race, color, national origin, 
             ethnicity, disability, gender, sexual orientation, gender identity, or religion
           </p>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/32">Apply</a>
         `,
         file: 'assets/files/JD - Case Manager - English.pdf',
       },
@@ -180,6 +183,9 @@ export const careers = new Map([
               receive the best possible support as they manage their disease
             </li>
           </ul>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/25">Apply</a>
         `,
         file: 'assets/files/JD - Case Manager - English.pdf',
       },
@@ -238,7 +244,7 @@ export const careers = new Map([
             </li>
           </ul>
 
-          <h4>What's in it for you</h4>
+          <h4>What do we offer:</h4>
           <ul>
             <li>A competitive salary</li>
             <li>Career development budget</li>
@@ -251,6 +257,9 @@ export const careers = new Map([
               receive the best possible support as they manage their disease
             </li>
           </ul>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/26">Apply</a>
         `,
         file: 'assets/files/JD - Case Manager - Spanish.pdf',
       },
@@ -302,6 +311,9 @@ export const careers = new Map([
             If you share our values for excellence, innovation, integrity and care, we are 
             excited to hear back from you!
           </p>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/23">Apply</a>
         `,
         file: 'assets/files/JD - Data Engineer.pdf',
       },
@@ -369,6 +381,8 @@ export const careers = new Map([
             excited to hear back from you!
           </p>
 
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/28">Apply</a>
         `,
         file: 'assets/files/JD - Data Engineer.pdf',
       },
@@ -441,6 +455,9 @@ export const careers = new Map([
             If you share our values for excellence, innovation, integrity and care, we are 
             excited to hear back from you!
           </p>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/29">Apply</a>
         `,
         file: 'assets/files/JD - NLP data scientist.pdf',
       },
@@ -503,6 +520,9 @@ export const careers = new Map([
             <li>Being part of an environment that offers challenging goals, autonomy, and mentoring,creating unparalleled opportunities both for you and the team</li>
             <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
           </ul>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/30">Apply</a>
         `,
         file: 'assets/files/JD - Customer Success Manager.pdf',
       },
@@ -672,6 +692,9 @@ export const careers = new Map([
           Equal Employment Opportunity without regard for race, color, national origin, ethnicity, 
           disability, gender, sexual orientation, gender identity, or religion.
         </p>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/27">Apply</a>
       `,
         file: 'assets/files/JD - Director of Access & Reimbursement.pdf',
       },
@@ -738,6 +761,9 @@ export const careers = new Map([
           Equal Employment Opportunity without regard for race, color, national origin, ethnicity, 
           disability, gender, sexual orientation, gender identity, or religion.
         </p>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/31">Apply</a>
       `,
         file: 'assets/files/JD - Director of Access & Reimbursement.pdf',
       },
@@ -790,6 +816,9 @@ export const careers = new Map([
           We celebrate unconventional ideas and approaches. If you share our values for excellence, 
           innovation, integrity and care, we are excited to hear back from you!
         </p>
+
+          <p>Please use the link below to apply:</p>
+          <a href="https://epikast.bamboohr.com/careers/24">Apply</a>
       `,
         file: 'assets/files/JD - Director of Access & Reimbursement.pdf',
       },
