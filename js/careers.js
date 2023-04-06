@@ -529,7 +529,7 @@ export const careers = new Map([
     ],
   ],
   [
-      { category: 'Operations, Legal, Finance and Strategy', icon: 'assets/operations_finance.svg', isOpen: false },
+      { category: 'Operations, Legal, Finance, and Strategy', icon: 'assets/operations_finance.svg', isOpen: false },
     [
       {
         title: 'Chief Legal & Compliance Officer',
