@@ -263,28 +263,45 @@ export const careers = new Map([
         title: 'Communication Systems Engineering Manager',
         location: 'Remote',
         description: `
-          <p>The data engineer works directly with our VP of Engineering, to help to architect, build, and launch scalable data pipelines to support our data processing and analytics needs.</p>
-          <h4>Join us if you are excited to…</h4>
+          <p>
+            At Epikast we redefine how biopharmaceutical companies engage with their most important 
+            stakeholders: patients, caregivers and prescribers.
+          </p>
+
+          <p>
+            The US healthcare system is complicated, and our mission is to redefine the patients' 
+            experience, helping overcome several challenges, and better manage their disease.
+          </p>
+
+          <p>
+            In order to achieve our goal, we are looking for a driven individual to assume the 
+            responsibility for the development, monitoring  and operations of our communication 
+            systems.
+          </p>
+          
+          <h4>What we’re looking for:</h4>
           <ul>
-            <li>…design and implement efficient and robust data processing pipelines</li>
-            <li>…design and build performant micro-services and frontend-facing APIs</li>
-            <li>…use modern data and cloud infrastructure (Airflow, Google Cloud, Kubernetes)</li>
-          </ul>
-          <h4>What we’re looking for</h4>
-          <ul>
-            <li>experience managing technical projects and engineers</li>
+            <li>experience managing technical projects and engineers </li>
             <li>managing complex software systems</li>
             <li>collaborating with different types of stakeholders</li>
-            <li>additional experience with cloud platforms and inter-system integrations will be considered a plus</li>
+            <li>
+              additional experience with cloud platforms and inter-system integrations 
+              will be considered a plus
+            </li> 
           </ul>
+          
           <h4>What we offe</h4>
           <ul>
             <li>fully remote and friendly environment</li>
             <li>industry-leading compensation and benefits</li>
             <li>ample space for personal and professional development</li>
           </ul>
-          <p>We celebrate unconventional ideas and approaches and hire across various locations. If you share our values for 
-          excellence, innovation, integrity and care, we are excited to hear back from you!</p>
+
+          <p>
+            We celebrate unconventional ideas and approaches and hire across various locations. 
+            If you share our values for excellence, innovation, integrity and care, we are 
+            excited to hear back from you!
+          </p>
         `,
         file: 'assets/files/JD - Data Engineer.pdf',
       },
@@ -292,13 +309,30 @@ export const careers = new Map([
         title: 'Data engineer',
         location: 'Remote',
         description: `
-          <p>The data engineer works directly with our VP of Engineering, to help to architect, build, and launch scalable data pipelines to support our data processing and analytics needs.</p>
+
+          <p>
+            At Epikast we redefine how biopharmaceutical companies engage with their most important 
+            stakeholders: patients, caregivers and prescribers.
+          </p>
+
+          <p>
+            The US healthcare system is complicated, and our mission is to redefine the patients' 
+            experience, helping overcome several challenges, and better manage their disease.
+          </p>
+
+          <p>
+            In order to achieve our goal, we are looking for a driven individual to assume the 
+            responsibility for the development, monitoring  and operations of our communication 
+            systems.
+          </p>
+
           <h4>Join us if you are excited to…</h4>
           <ul>
-            <li>…design and implement efficient and robust data processing pipelines</li>
-            <li>…design and build performant micro-services and frontend-facing APIs</li>
-            <li>…use modern data and cloud infrastructure (Airflow, Google Cloud, Kubernetes)</li>
+            <li>design and implement efficient and robust data processing pipelines</li>
+            <li>design and build performant micro-services and frontend-facing APIs</li>
+            <li>se modern data and cloud infrastructure (Airflow, Google Cloud, Kubernetes)</li>
           </ul>
+
           <h4>What you’ll bring to the team</h4>
           <ul>
             <li>5+ years of experience in software development</li>
@@ -308,16 +342,33 @@ export const careers = new Map([
             <li>At least one major web framework of your preferred language, such as Django, Flask</li>
             <li>Experience with task orchestration tools (preferably Airflow)</li>
             <li>Experience with cloud services (preferably Google Cloud), docker</li>
-            <li>Software engineering best practices such as testability, modularity, code reviews, pair-programming</li>
+            <li>
+              Software engineering best practices such as testability, modularity, 
+              code reviews, pair-programming
+            </li>
           </ul>
-          <h4>What's in it for you</h4>
+
+          <h4>What we offer</h4>
           <ul>
             <li>A competitive salary</li>
             <li>Privatehealth insurance</li>
-            <li>Career development stipend</li>
-            <li>An environment that offers challenging goals, autonomy, and mentoring,creating unparalleled opportunities both for you and the team</li>
-            <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
+            <li>Career development budget</li>
+            <li>
+              An environment that offers challenging goals, autonomy, and mentoring,
+              creating unparalleled opportunities both for you and the team
+            </li>
+            <li>
+              You will be part of a mission to ensure that patients receive the best 
+              possible supportas they manage their disease
+            </li>
           </ul>
+
+          <p>
+            We celebrate unconventional ideas and approaches and hire across various locations. 
+            If you share our values for excellence, innovation, integrity and care, we are 
+            excited to hear back from you!
+          </p>
+
         `,
         file: 'assets/files/JD - Data Engineer.pdf',
       },
@@ -325,13 +376,30 @@ export const careers = new Map([
         title: 'NLP engineer',
         location: 'Remote',
         description: `
-          <p>The NLP data scientist is responsible for building data science models with a main focus on data extraction and insights. You will need to rapidly prototype various algorithmic implementations and test their efficacy using appropriate experimental design and hypothesis validation.</p>
+
+          <p>
+            At Epikast we redefine how biopharmaceutical companies engage with their most important 
+            stakeholders: patients, caregivers and prescribers.
+          </p>
+
+          <p>
+            The US healthcare system is complicated, and our mission is to redefine the patients' 
+            experience, helping overcome several challenges, and better manage their disease.
+          </p>
+
+          <p>
+            In order to achieve our goal, we are looking for a driven individual to assume the 
+            responsibility for the development, monitoring  and operations of our communication 
+            systems.
+          </p>
+          
           <h4>Join us if you are excited to…</h4>
           <ul>
             <li>…deploy the latest NLP techniques to extract insights from speech and text</li>
             <li>…work closely with your Customer Success and Product colleagues to understand the requirements from customers and design the most appropriate data science models </li>
             <li>…work as part of a highly motivated team</li>
           </ul>
+          
           <h4>What you’ll bring to the team</h4>
           <ul>
             <li>At least 3 years of industry experience in NLP and relevant areas (e.g., clustering and classifications of text, question answering, text mining, information retrieval, distributional semantics, knowledge engineering, search rank and recommendation)</li>
@@ -358,7 +426,8 @@ export const careers = new Map([
             <li>BS degree in quantitative field such as computer science, engineering, statistics, or applied mathematics</li>
             <li>Preferred, but not required: Advanced degree (PhD or MS) in computer science, computational linguistics, Artificial Intelligence with a heavy focus on NLP/text</li>
           </ul>
-          <h4>What's in it for you</h4>
+
+          <h4>What we offer</h4>
           <ul>
             <li>A competitive salary</li>
             <li>Privatehealth insurance</li>
@@ -366,6 +435,12 @@ export const careers = new Map([
             <li>An environment that offers challenging goals, autonomy, and mentoring,creating unparalleled growth opportunities</li>
             <li>You will be part of a mission to ensure that patients receive the best possible supportas they manage their disease</li>
           </ul>
+
+          <p>
+            We celebrate unconventional ideas and approaches and hire across various locations. 
+            If you share our values for excellence, innovation, integrity and care, we are 
+            excited to hear back from you!
+          </p>
         `,
         file: 'assets/files/JD - NLP data scientist.pdf',
       },
