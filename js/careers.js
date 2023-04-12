@@ -113,7 +113,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/32">Apply</a>
         `,
-        file: 'assets/files/JD - Case Manager - English.pdf',
+        file: '',
       },
       {
         title: 'Case Manager (Patient Support) - English',
@@ -187,7 +187,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/25">Apply</a>
         `,
-        file: 'assets/files/JD - Case Manager - English.pdf',
+        file: '',
       },
       {
         title: 'Case Manager (Patient Support) – Spanish',
@@ -261,7 +261,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/26">Apply</a>
         `,
-        file: 'assets/files/JD - Case Manager - Spanish.pdf',
+        file: '',
       },
     ],
   ],
@@ -315,7 +315,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/23">Apply</a>
         `,
-        file: 'assets/files/JD - Data Engineer.pdf',
+        file: '',
       },
       {
         title: 'Data engineer',
@@ -384,7 +384,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/28">Apply</a>
         `,
-        file: 'assets/files/JD - Data Engineer.pdf',
+        file: '',
       },
       {
         title: 'NLP engineer',
@@ -459,7 +459,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/29">Apply</a>
         `,
-        file: 'assets/files/JD - NLP data scientist.pdf',
+        file: '',
       },
     ],
   ],
@@ -524,7 +524,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/30">Apply</a>
         `,
-        file: 'assets/files/JD - Customer Success Manager.pdf',
+        file: '',
       },
     ],
   ],
@@ -696,7 +696,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/27">Apply</a>
       `,
-        file: 'assets/files/JD - Director of Access & Reimbursement.pdf',
+        file: '',
       },
       {
         title: 'Director, Access & Reimbursement',
@@ -765,7 +765,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/31">Apply</a>
       `,
-        file: 'assets/files/JD - Director of Access & Reimbursement.pdf',
+        file: '',
       },
       {
         title: 'People & Culture Specialist ',
@@ -820,7 +820,7 @@ export const careers = new Map([
           <p>Please use the link below to apply:</p>
           <a href="https://epikast.bamboohr.com/careers/24">Apply</a>
       `,
-        file: 'assets/files/JD - Director of Access & Reimbursement.pdf',
+        file: '',
       },
     ],
   ],
