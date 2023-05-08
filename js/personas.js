@@ -108,7 +108,7 @@ export const personas = [
     title: 'Board member',
     filters: [
       { position: 'all', order: 2 },
-      { position: 'board', order: 2 },
+      { position: 'board', order: 3 },
     ],
     img: 'assets/images/Daphne.jpg',
     linkedin: 'https://www.linkedin.com/in/daphne-karydas-493b17/',
@@ -164,7 +164,7 @@ export const personas = [
     title: 'Board member',
     filters: [
       { position: 'all', order: 6 },
-      { position: 'board', order: 4 },
+      { position: 'board', order: 5 },
     ],
     img: 'assets/images/Dimitris_Papalexopoulos.jpg',
     linkedin: null,
@@ -271,7 +271,7 @@ export const personas = [
     title: 'Board member',
     filters: [
       { position: 'all', order: 4 },
-      { position: 'board', order: 3 },
+      { position: 'board', order: 4 },
     ],
     img: 'assets/images/Oleg.png',
     linkedin: 'https://www.linkedin.com/in/oleg-nodelman-375131',
@@ -381,11 +381,11 @@ export const personas = [
     name: 'Todd Holmes',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 10 },
-      { position: 'advisors', order: 4 },
+      { position: 'all', order: 1 },
+      { position: 'board', order: 2 },
     ],
     img: 'assets/images/Todd_Holmes.jpg',
-    linkedin: null,
+    linkedin: "https://www.linkedin.com/in/todd-holmes-467511/",
     bio: `
       <p>
         Todd is the Founder and Managing Partner of NewVale Capital LLC, 
