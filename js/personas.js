@@ -385,7 +385,7 @@ export const personas = [
       { position: 'board', order: 2 },
     ],
     img: 'assets/images/Todd_Holmes.jpg',
-    linkedin: null,
+    linkedin: 'https://www.linkedin.com/in/todd-holmes-467511/',
     bio: `
       <p>
         Todd is the Founder and Managing Partner of NewVale Capital LLC, 
