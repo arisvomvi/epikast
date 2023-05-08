@@ -376,4 +376,37 @@ export const personas = [
       </p>
     `,
   },
+  {
+    id: 10,
+    name: 'Todd Holmes',
+    title: 'Board member',
+    filters: [
+      { position: 'all', order: 10 },
+      { position: 'advisors', order: 4 },
+    ],
+    img: 'assets/images/Todd_Holmes.jpg',
+    linkedin: null,
+    bio: `
+      <p>
+        Todd is the Founder and Managing Partner of NewVale Capital LLC, 
+        a growth equity fund focused on investing in life science services companies. 
+        With nearly 20 years of Life Science investing, company-building, and 
+        transaction experience across private and public sectors, Todd’s passion is 
+        finding solutions to the many complex challenges that face the pharmaceutical industry. 
+      </p>
+      <p>
+        Before founding NewVale, Todd led pharma and pharma services investing at CRG LP, 
+        a Healthcare-dedicated structured capital firm. Prior to CRG, he held senior 
+        investment roles with Gurnet Point Capital and Third Rock Ventures, helping to 
+        build and grow Life Science companies across both development and commercial stages. 
+        Earlier in his career, he was an investor with BVF Partners, a biotechnology-focused 
+        hedge fund. Todd has been actively involved on numerous industry leadership councils, 
+        including the BIO Investment Advisory Board and New England Venture Network.
+      </p>
+      <p>
+        Todd holds a BS in economics from Colgate University, and an MBA from the Wharton School 
+        at the University of Pennsylvania.
+      </p>
+    `,
+  }
 ];
