@@ -4,8 +4,8 @@ export const personas = [
     name: 'Vangelis Vergetis, PhD',
     title: 'CEO and board member',
     filters: [
-      { position: 'all', order: 8 },
-      { position: 'board', order: 5 },
+      { position: 'all', order: 9 },
+      { position: 'board', order: 6 },
       { position: 'executive', order: 1 },
     ],
     img: 'assets/images/Vangelis_vergetis.png',
@@ -53,7 +53,7 @@ export const personas = [
     name: 'Stelios Papadopoulos, PhD',
     title: 'Chairman of the board',
     filters: [
-      { position: 'all', order: 5 },
+      { position: 'all', order: 6 },
       { position: 'board', order: 1 },
     ],
     img: 'assets/images/Stelios_papadopoulos.jpg',
@@ -201,7 +201,7 @@ export const personas = [
     name: 'Mike Krzan',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 3 },
+      { position: 'all', order: 4 },
       { position: 'advisors', order: 1 },
     ],
     img: 'assets/images/Mike_Krzan.jpg',
@@ -236,7 +236,7 @@ export const personas = [
     name: 'Angelos Kapsimanis',
     title: 'Chief Technology Officer',
     filters: [
-      { position: 'all', order: 1 },
+      { position: 'all', order: 2 },
       { position: 'executive', order: 2 },
     ],
     img: 'assets/images/Angelos.png',
@@ -270,7 +270,7 @@ export const personas = [
     name: 'Oleg Nodelman',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 4 },
+      { position: 'all', order: 5 },
       { position: 'board', order: 4 },
     ],
     img: 'assets/images/Oleg.png',
@@ -305,7 +305,7 @@ export const personas = [
     name: 'Amit Singhal, PhD',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 7 },
+      { position: 'all', order: 8 },
       { position: 'advisors', order: 2 },
     ],
     img: 'assets/images/Amit.jpg',
@@ -341,7 +341,7 @@ export const personas = [
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 9 },
+      { position: 'all', order: 10 },
       { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
@@ -385,7 +385,7 @@ export const personas = [
       { position: 'board', order: 2 },
     ],
     img: 'assets/images/Todd_Holmes.jpg',
-    linkedin: "https://www.linkedin.com/in/todd-holmes-467511/",
+    linkedin: 'https://www.linkedin.com/in/todd-holmes-467511/',
     bio: `
       <p>
         Todd is the Founder and Managing Partner of NewVale Capital LLC, 
