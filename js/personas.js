@@ -421,15 +421,16 @@ export const personas = [
     linkedin: 'https://www.linkedin.com/in/brad-prosek-66b08b1/',
     bio: `
       <p>
-        Brad has been in the biotechnology / life sciences business for over 25 years. Most recently, he 
-        served as Senior Vice President and Chief Business Officer at Constellation Pharmaceuticals, an 
+        Brad has been in the biotechnology / life sciences business for over 25 years. He is currently 
+        an Executive in Residence at EcoR1 Capital LLC. Most recently, he 
+        served as SVP and Chief Business Officer at Constellation Pharmaceuticals, an 
         oncology-focused biotech company, from September 2017 until the company was acquired by MorphoSys 
         AG in July 2021. During his tenure, Brad led Corporate Development and Strategy efforts, including 
         Business Development, Commercial Strategy, and Program Leadership. He contributed to multiple 
         financings and overall company operational oversight as a member of Constellation’s executive team. 
       </p>
       <p>
-        Prior to joining Constellation, Brad founded and served as President of All Terrain
+        Prior to joining Constellation, Brad founded and served as President of All Terrain 
         bioPartners LLC, a business development consulting firm. While running All Terrain bioPartners, 
         he advised and provided interim general management services to a global set of life sciences 
         companies. Before that, Brad spent 10 years building Cubist Pharmaceuticals, Inc., a leading 
