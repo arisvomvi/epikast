@@ -4,7 +4,7 @@ export const personas = [
     name: 'Vangelis Vergetis, PhD',
     title: 'CEO and board member',
     filters: [
-      { position: 'all', order: 9 },
+      { position: 'all', order: 10 },
       { position: 'board', order: 6 },
       { position: 'executive', order: 1 },
     ],
@@ -305,8 +305,8 @@ export const personas = [
     name: 'Amit Singhal, PhD',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 8 },
-      { position: 'advisors', order: 2 },
+      { position: 'all', order: 9 },
+      { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Amit.jpg',
     linkedin: 'https://www.linkedin.com/in/amit-singhal-09723574/',
@@ -341,8 +341,8 @@ export const personas = [
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 10 },
-      { position: 'advisors', order: 3 },
+      { position: 'all', order: 11 },
+      { position: 'advisors', order: 4 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
     linkedin: null,
@@ -406,6 +406,43 @@ export const personas = [
       <p>
         Todd holds a BS in economics from Colgate University, and an MBA from the Wharton School 
         at the University of Pennsylvania.
+      </p>
+    `,
+  },
+  {
+    id: 11,
+    name: 'Brad Prosek',
+    title: 'Advisor',
+    filters: [
+      { position: 'all', order: 8 },
+      { position: 'advisors', order: 2 },
+    ],
+    img: 'assets/images/Brad.jpg',
+    linkedin: 'https://www.linkedin.com/in/brad-prosek-66b08b1/',
+    bio: `
+      <p>
+        Brad has been in the biotechnology / life sciences business for over 25 years. Most recently, he 
+        served as Senior Vice President and Chief Business Officer at Constellation Pharmaceuticals, an 
+        oncology-focused biotech company, from September 2017 until the company was acquired by MorphoSys 
+        AG in July 2021. During his tenure, Brad led Corporate Development and Strategy efforts, including 
+        Business Development, Commercial Strategy, and Program Leadership. He contributed to multiple 
+        financings and overall company operational oversight as a member of Constellation’s executive team. 
+      </p>
+      <p>
+        Prior to joining Constellation, Brad founded and served as President of All Terrain
+        bioPartners LLC, a business development consulting firm. While running All Terrain bioPartners, 
+        he advised and provided interim general management services to a global set of life sciences 
+        companies. Before that, Brad spent 10 years building Cubist Pharmaceuticals, Inc., a leading 
+        biopharmaceutical company in the hospital anti-infectives and products space, from early in its 
+        commercialization of its flagship product CUBICIN (daptomycin) through the company’s acquisition 
+        by Merck. Prior to Cubist, Brad worked in the US and Europe in commercial operations and business 
+        development roles at Biogen and helped to build one of the earliest market access consulting firms 
+        to support life sciences companies. He has also served as an advisor to Xenex Disinfection, a 
+        medical device company, as well as international relations education-focused nonprofits.  
+      </p>
+      <p>
+        Brad holds an MBA from Columbia University and a BS in Foreign Service from Georgetown
+        University with a concentration in Science & Technology in International Relations.
       </p>
     `,
   }
