@@ -34,10 +34,10 @@ export const personas = [
         as a board advisor to the company.
       </p>
       <p>
-        He is a board member and member of the executive committee 
+        He previously served as a founding board member and member of the executive committee 
         at the Alliance for AI in Healthcare (AAIH), 
-        and a former member of the advisory board for 
-        Cornell's Bowers College of Computing &amp; 
+        and as member of the advisory board for 
+        Cornell's Bowers College of Computing & 
         Information Science (CIS).
       </p>
       <p>
