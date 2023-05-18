@@ -107,7 +107,7 @@ export const personas = [
     name: 'Daphne Karydas',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 2 },
+      { position: 'all', order: 3 },
       { position: 'board', order: 3 },
     ],
     img: 'assets/images/Daphne.jpg',
