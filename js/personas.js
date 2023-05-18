@@ -443,7 +443,7 @@ export const personas = [
       </p>
       <p>
         Brad holds an MBA from Columbia University and a BS in Foreign Service from Georgetown
-        University with a concentration in Science & Technology in International Relations.
+        University, with a concentration in Science & Technology in International Relations.
       </p>
     `,
   }
