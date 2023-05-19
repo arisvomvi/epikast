@@ -422,7 +422,7 @@ export const personas = [
     bio: `
       <p>
         Brad has been in the biotechnology / life sciences business for over 25 years. He is currently 
-        an Executive in Residence at EcoR1 Capital LLC. Most recently, he 
+        an Operating Partner at EcoR1 Capital LLC. Most recently, he 
         served as SVP and Chief Business Officer at Constellation Pharmaceuticals, an 
         oncology-focused biotech company, from September 2017 until the company was acquired by MorphoSys 
         AG in July 2021. During his tenure, Brad led Corporate Development and Strategy efforts, including 
