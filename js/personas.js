@@ -4,7 +4,7 @@ export const personas = [
     name: 'Vangelis Vergetis, PhD',
     title: 'CEO and board member',
     filters: [
-      { position: 'all', order: 10 },
+      { position: 'all', order: 11 },
       { position: 'board', order: 6 },
       { position: 'executive', order: 1 },
     ],
@@ -53,7 +53,7 @@ export const personas = [
     name: 'Stelios Papadopoulos, PhD',
     title: 'Chairman of the board',
     filters: [
-      { position: 'all', order: 6 },
+      { position: 'all', order: 7 },
       { position: 'board', order: 1 },
     ],
     img: 'assets/images/Stelios_papadopoulos.jpg',
@@ -163,7 +163,7 @@ export const personas = [
     name: 'Dimitri Papalexopoulos',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 6 },
+      { position: 'all', order: 8 },
       { position: 'board', order: 5 },
     ],
     img: 'assets/images/Dimitris_Papalexopoulos.jpg',
@@ -305,7 +305,7 @@ export const personas = [
     name: 'Amit Singhal, PhD',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 9 },
+      { position: 'all', order: 10 },
       { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Amit.jpg',
@@ -341,7 +341,7 @@ export const personas = [
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 11 },
+      { position: 'all', order: 12 },
       { position: 'advisors', order: 4 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
@@ -414,7 +414,7 @@ export const personas = [
     name: 'Brad Prosek',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 8 },
+      { position: 'all', order: 9 },
       { position: 'advisors', order: 2 },
     ],
     img: 'assets/images/Brad.jpg',
@@ -444,6 +444,43 @@ export const personas = [
       <p>
         Brad holds an MBA from Columbia University and a BS in Foreign Service from Georgetown
         University, with a concentration in Science & Technology in International Relations.
+      </p>
+    `,
+  },
+  {
+    id: 12,
+    name: 'Yiannis Livanos',
+    title: 'Chief Patient & Physician Engagement Officer',
+    filters: [
+      { position: 'all', order: 5 },
+      { position: 'executive', order: 3 },
+    ],
+    img: 'assets/images/Yiannis_Livanos.jpg',
+    linkedin: 'https://www.linkedin.com/in/yannislivanos/',
+    bio: `
+      <p>
+        Yiannis serves as Epikast’s Chief Patient & Physician Engagement Officer, responsible for overseeing 
+        all operations related to supporting patients, caregivers, and healthcare providers. In this role, 
+        he leads our broader team that delivers exceptional experiences. He focuses on innovation and the
+        use of the latest technologies, while driving continuous improvement and agility, and enhancing 
+        efficiency in the company’s growing operations. 
+      </p>
+      <p>
+        Before joining Epikast, Yiannis spent 16 years in the telecommunications sector, holding commercial 
+        roles of increasing responsibility at WIND and NOVA, two leading telecoms companies in Greece. He 
+        played a pivotal role in establishing, managing, and growing commercial and customer support 
+        operations, and he also led the innovation and set-up of an omnichannel approach to customer 
+        engagement, which resulted in improved customer satisfaction and increased revenues.  
+      </p>
+      <p>
+        Yiannis’ extensive experience across operations and his expert grasp of digital technologies have 
+        enabled him to lead large, successful businesses with a holistic approach to serving clients. He is 
+        committed to ensuring that Epikast's operations are always at the forefront of innovation in the 
+        healthcare industry.
+      </p>
+      <p>
+        He holds an MS in Business Innovation & Technology from Athens information Technology, and a BS 
+        in Business Administration in the university of Essex.
       </p>
     `,
   }
