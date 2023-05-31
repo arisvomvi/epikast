@@ -422,12 +422,12 @@ export const personas = [
     bio: `
       <p>
         Brad has been in the biotechnology / life sciences business for over 25 years. He is currently 
-        an Operating Partner at EcoR1 Capital LLC. Most recently, he 
-        served as SVP and Chief Business Officer at Constellation Pharmaceuticals, an 
-        oncology-focused biotech company, from September 2017 until the company was acquired by MorphoSys 
-        AG in July 2021. During his tenure, Brad led Corporate Development and Strategy efforts, including 
-        Business Development, Commercial Strategy, and Program Leadership. He contributed to multiple 
-        financings and overall company operational oversight as a member of Constellation’s executive team. 
+        an Operating Partner at EcoR1 Capital LLC. Most recently, he served as SVP and Chief Business Officer 
+        at Constellation Pharmaceuticals, an oncology-focused biotech company, from September 2017 until 
+        the company was acquired by MorphoSys AG in July 2021. During his tenure, Brad led Corporate 
+        Development and Strategy efforts, including Business Development, Commercial Strategy, and Program 
+        Leadership. He contributed to multiple financings and overall company operational oversight as a 
+        member of Constellation’s executive team. 
       </p>
       <p>
         Prior to joining Constellation, Brad founded and served as President of All Terrain 
@@ -460,9 +460,9 @@ export const personas = [
     bio: `
       <p>
         Yiannis serves as Epikast’s Chief Patient & Physician Engagement Officer, responsible for overseeing 
-        all operations related to supporting patients, caregivers, and healthcare providers. In this role, 
-        he leads our broader team that delivers exceptional experiences. He focuses on innovation and the
-        use of the latest technologies, while driving continuous improvement and agility, and enhancing 
+        all operations related to supporting and engaging with patients, physicians, and other healthcare 
+        providers. In this role, he leads our broader team that delivers exceptional experiences. He focuses 
+        on innovation and the use of the latest technologies, driving continuous improvement and agility, and enhancing 
         efficiency in the company’s growing operations. 
       </p>
       <p>
