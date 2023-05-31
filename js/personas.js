@@ -270,7 +270,7 @@ export const personas = [
     name: 'Oleg Nodelman',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 5 },
+      { position: 'all', order: 6 },
       { position: 'board', order: 4 },
     ],
     img: 'assets/images/Oleg.png',
