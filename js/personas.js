@@ -4,11 +4,11 @@ export const personas = [
     name: 'Vangelis Vergetis, PhD',
     title: 'CEO and board member',
     filters: [
-      { position: 'all', order: 9 },
+      { position: 'all', order: 11 },
       { position: 'board', order: 6 },
       { position: 'executive', order: 1 },
     ],
-    img: 'assets/images/Vangelis_vergetis.png',
+    img: 'assets/images/Vangelis_Vergetis.jpg',
     linkedin: 'https://www.linkedin.com/in/vangelisvergetis',
     bio: `
       <p>
@@ -34,10 +34,10 @@ export const personas = [
         as a board advisor to the company.
       </p>
       <p>
-        He is a board member and member of the executive committee 
+        He previously served as a founding board member and member of the executive committee 
         at the Alliance for AI in Healthcare (AAIH), 
-        and a former member of the advisory board for 
-        Cornell's Bowers College of Computing &amp; 
+        and as member of the advisory board for 
+        Cornell's Bowers College of Computing & 
         Information Science (CIS).
       </p>
       <p>
@@ -53,7 +53,7 @@ export const personas = [
     name: 'Stelios Papadopoulos, PhD',
     title: 'Chairman of the board',
     filters: [
-      { position: 'all', order: 6 },
+      { position: 'all', order: 7 },
       { position: 'board', order: 1 },
     ],
     img: 'assets/images/Stelios_papadopoulos.jpg',
@@ -97,7 +97,7 @@ export const personas = [
       <p>
         Before coming to Wall Street, Stelios was on the faculty of the 
         Department of Cell Biology at New York University School of 
-        Medicine. Stelios holds an MS in physics, a PhD in biophysics 
+        Medicine. Stelios holds an MS in physics, a PhD in biophysics, 
         and an MBA in finance, all from New York University.
       </p>
     `,
@@ -107,7 +107,7 @@ export const personas = [
     name: 'Daphne Karydas',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 2 },
+      { position: 'all', order: 3 },
       { position: 'board', order: 3 },
     ],
     img: 'assets/images/Daphne.jpg',
@@ -163,7 +163,7 @@ export const personas = [
     name: 'Dimitri Papalexopoulos',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 6 },
+      { position: 'all', order: 8 },
       { position: 'board', order: 5 },
     ],
     img: 'assets/images/Dimitris_Papalexopoulos.jpg',
@@ -270,7 +270,7 @@ export const personas = [
     name: 'Oleg Nodelman',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 5 },
+      { position: 'all', order: 6 },
       { position: 'board', order: 4 },
     ],
     img: 'assets/images/Oleg.png',
@@ -305,8 +305,8 @@ export const personas = [
     name: 'Amit Singhal, PhD',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 8 },
-      { position: 'advisors', order: 2 },
+      { position: 'all', order: 10 },
+      { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Amit.jpg',
     linkedin: 'https://www.linkedin.com/in/amit-singhal-09723574/',
@@ -341,8 +341,8 @@ export const personas = [
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 10 },
-      { position: 'advisors', order: 3 },
+      { position: 'all', order: 12 },
+      { position: 'advisors', order: 4 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
     linkedin: null,
@@ -406,6 +406,81 @@ export const personas = [
       <p>
         Todd holds a BS in economics from Colgate University, and an MBA from the Wharton School 
         at the University of Pennsylvania.
+      </p>
+    `,
+  },
+  {
+    id: 11,
+    name: 'Brad Prosek',
+    title: 'Advisor',
+    filters: [
+      { position: 'all', order: 9 },
+      { position: 'advisors', order: 2 },
+    ],
+    img: 'assets/images/Brad.jpg',
+    linkedin: 'https://www.linkedin.com/in/brad-prosek-66b08b1/',
+    bio: `
+      <p>
+        Brad has been in the biotechnology / life sciences business for over 25 years. He is currently 
+        an Operating Partner at EcoR1 Capital LLC. Most recently, he served as SVP and Chief Business Officer 
+        at Constellation Pharmaceuticals, an oncology-focused biotech company, from September 2017 until 
+        the company was acquired by MorphoSys AG in July 2021. During his tenure, Brad led Corporate 
+        Development and Strategy efforts, including Business Development, Commercial Strategy, and Program 
+        Leadership. He contributed to multiple financings and overall company operational oversight as a 
+        member of Constellation’s executive team. 
+      </p>
+      <p>
+        Prior to joining Constellation, Brad founded and served as President of All Terrain 
+        bioPartners LLC, a business development consulting firm. While running All Terrain bioPartners, 
+        he advised and provided interim general management services to a global set of life sciences 
+        companies. Before that, Brad spent 10 years building Cubist Pharmaceuticals, Inc., a leading 
+        biopharmaceutical company in the hospital anti-infectives and products space, from early in its 
+        commercialization of its flagship product CUBICIN (daptomycin) through the company’s acquisition 
+        by Merck. Prior to Cubist, Brad worked in the US and Europe in commercial operations and business 
+        development roles at Biogen and helped to build one of the earliest market access consulting firms 
+        to support life sciences companies. He has also served as an advisor to Xenex Disinfection, a 
+        medical device company, as well as international relations education-focused nonprofits.  
+      </p>
+      <p>
+        Brad holds an MBA from Columbia University and a BS in Foreign Service from Georgetown
+        University, with a concentration in Science & Technology in International Relations.
+      </p>
+    `,
+  },
+  {
+    id: 12,
+    name: 'Yiannis Livanos',
+    title: 'Chief Patient & Physician Engagement Officer',
+    filters: [
+      { position: 'all', order: 5 },
+      { position: 'executive', order: 3 },
+    ],
+    img: 'assets/images/Yiannis_Livanos.jpg',
+    linkedin: 'https://www.linkedin.com/in/yannislivanos/',
+    bio: `
+      <p>
+        Yiannis serves as Epikast’s Chief Patient & Physician Engagement Officer, responsible for overseeing 
+        all operations related to supporting and engaging with patients, physicians, and other healthcare 
+        providers. In this role, he leads our broader team that delivers exceptional experiences. He focuses 
+        on innovation and the use of the latest technologies, driving continuous improvement and agility, and enhancing 
+        efficiency in the company’s growing operations. 
+      </p>
+      <p>
+        Before joining Epikast, Yiannis spent 16 years in the telecommunications sector, holding commercial 
+        roles of increasing responsibility at WIND and NOVA, two leading telecoms companies in Greece. He 
+        played a pivotal role in establishing, managing, and growing commercial and customer support 
+        operations, and he also led the innovation and set-up of an omnichannel approach to customer 
+        engagement, which resulted in improved customer satisfaction and increased revenues.  
+      </p>
+      <p>
+        Yiannis’ extensive experience across operations and his expert grasp of digital technologies have 
+        enabled him to lead large, successful businesses with a holistic approach to serving clients. He is 
+        committed to ensuring that Epikast's operations are always at the forefront of innovation in the 
+        healthcare industry.
+      </p>
+      <p>
+        He holds an MS in Business Innovation & Technology from Athens information Technology, and a BS 
+        in Business Administration in the university of Essex.
       </p>
     `,
   }
