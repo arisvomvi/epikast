@@ -220,55 +220,6 @@ export const careers = new Map([
   [
     { category: 'Software engineering, data science, and product', icon: 'assets/software_service.svg', isOpen: false },
     [
-      {
-        title: 'Communication Systems Engineering Manager',
-        location: 'Remote',
-        description: `
-          <p>
-            At Epikast we redefine how biopharmaceutical companies engage with their most important 
-            stakeholders: patients, caregivers and prescribers.
-          </p>
-
-          <p>
-            The US healthcare system is complicated, and our mission is to redefine the patients' 
-            experience, helping overcome several challenges, and better manage their disease.
-          </p>
-
-          <p>
-            In order to achieve our goal, we are looking for a driven individual to assume the 
-            responsibility for the development, monitoring  and operations of our communication 
-            systems.
-          </p>
-          
-          <h4>What we’re looking for:</h4>
-          <ul>
-            <li>experience managing technical projects and engineers </li>
-            <li>managing complex software systems</li>
-            <li>collaborating with different types of stakeholders</li>
-            <li>
-              additional experience with cloud platforms and inter-system integrations 
-              will be considered a plus
-            </li> 
-          </ul>
-          
-          <h4>What we offe</h4>
-          <ul>
-            <li>fully remote and friendly environment</li>
-            <li>industry-leading compensation and benefits</li>
-            <li>ample space for personal and professional development</li>
-          </ul>
-
-          <p>
-            We celebrate unconventional ideas and approaches and hire across various locations. 
-            If you share our values for excellence, innovation, integrity and care, we are 
-            excited to hear back from you!
-          </p>
-
-          <p>Please use the link below to apply:</p>
-          <a href="https://epikast.bamboohr.com/careers/23">Apply</a>
-        `,
-        file: 'assets/files/JD - Data Engineer.pdf',
-      },
     ],
   ],
   [
