@@ -4,7 +4,7 @@ export const personas = [
     name: 'Vangelis Vergetis, PhD',
     title: 'CEO and board member',
     filters: [
-      { position: 'all', order: 11 },
+      { position: 'all', order: 12 },
       { position: 'board', order: 6 },
       { position: 'executive', order: 1 },
     ],
@@ -22,9 +22,6 @@ export const personas = [
         on several topics - particularly in launching drugs across 
         disease areas, and in designing and implementing
         their commercial models and infrastructure. 
-      </p>
-      <p>
-        
       </p>
       <p>
         Immediately prior to Epikast, Vangelis was the 
@@ -53,7 +50,7 @@ export const personas = [
     name: 'Stelios Papadopoulos, PhD',
     title: 'Chairman of the board',
     filters: [
-      { position: 'all', order: 7 },
+      { position: 'all', order: 8 },
       { position: 'board', order: 1 },
     ],
     img: 'assets/images/Stelios_papadopoulos.jpg',
@@ -107,7 +104,7 @@ export const personas = [
     name: 'Daphne Karydas',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 3 },
+      { position: 'all', order: 4 },
       { position: 'board', order: 3 },
     ],
     img: 'assets/images/Daphne.jpg',
@@ -163,7 +160,7 @@ export const personas = [
     name: 'Dimitri Papalexopoulos',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 8 },
+      { position: 'all', order: 9 },
       { position: 'board', order: 5 },
     ],
     img: 'assets/images/Dimitris_Papalexopoulos.jpg',
@@ -201,7 +198,7 @@ export const personas = [
     name: 'Mike Krzan',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 4 },
+      { position: 'all', order: 5 },
       { position: 'advisors', order: 1 },
     ],
     img: 'assets/images/Mike_Krzan.jpg',
@@ -236,8 +233,8 @@ export const personas = [
     name: 'Angelos Kapsimanis',
     title: 'Chief Technology Officer',
     filters: [
-      { position: 'all', order: 2 },
-      { position: 'executive', order: 2 },
+      { position: 'all', order: 3 },
+      { position: 'executive', order: 3 },
     ],
     img: 'assets/images/Angelos.png',
     linkedin: 'https://www.linkedin.com/in/angeloskapsimanis',
@@ -270,7 +267,7 @@ export const personas = [
     name: 'Oleg Nodelman',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 6 },
+      { position: 'all', order: 7 },
       { position: 'board', order: 4 },
     ],
     img: 'assets/images/Oleg.png',
@@ -305,7 +302,7 @@ export const personas = [
     name: 'Amit Singhal, PhD',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 10 },
+      { position: 'all', order: 11 },
       { position: 'advisors', order: 3 },
     ],
     img: 'assets/images/Amit.jpg',
@@ -341,7 +338,7 @@ export const personas = [
     name: 'Nassos Zarkalis',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 12 },
+      { position: 'all', order: 13 },
       { position: 'advisors', order: 4 },
     ],
     img: 'assets/images/Nassos_Zarkalis.jpg',
@@ -381,7 +378,7 @@ export const personas = [
     name: 'Todd Holmes',
     title: 'Board member',
     filters: [
-      { position: 'all', order: 1 },
+      { position: 'all', order: 2 },
       { position: 'board', order: 2 },
     ],
     img: 'assets/images/Todd_Holmes.jpg',
@@ -414,7 +411,7 @@ export const personas = [
     name: 'Brad Prosek',
     title: 'Advisor',
     filters: [
-      { position: 'all', order: 9 },
+      { position: 'all', order: 10 },
       { position: 'advisors', order: 2 },
     ],
     img: 'assets/images/Brad.jpg',
@@ -452,8 +449,8 @@ export const personas = [
     name: 'Yiannis Livanos',
     title: 'Chief Patient & Physician Engagement Officer',
     filters: [
-      { position: 'all', order: 5 },
-      { position: 'executive', order: 3 },
+      { position: 'all', order: 6 },
+      { position: 'executive', order: 4 },
     ],
     img: 'assets/images/Yiannis_Livanos.jpg',
     linkedin: 'https://www.linkedin.com/in/yannislivanos/',
@@ -481,6 +478,53 @@ export const personas = [
       <p>
         He holds an MS in Business Innovation & Technology from Athens information Technology, and a BS 
         in Business Administration in the university of Essex.
+      </p>
+    `,
+  },
+  {
+    id: 13,
+    name: 'Tina Beamon, Esq.',
+    title: 'Chief Legal & Compliance Officer',
+    filters: [
+      { position: 'all', order: 1 },
+      { position: 'executive', order: 2 },
+    ],
+    img: 'assets/images/Tina_Beamon.png',
+    linkedin: 'https://www.linkedin.com/in/tina-clark-beamon-99144710/',
+    bio: `
+      <p>
+        Tina, who will join Epikast as Chief Legal and Compliance Officer in August of 2023, is an attorney 
+        with over 20 years of experience advising the healthcare and pharmaceutical industries. She has deep 
+        legal and compliance expertise in the pharmaceutical space, with therapeutic area experience in 
+        oncology, rare disease and primary care, and has proudly provided legal and compliance leadership and 
+        support across nine new product/new indication launches. 
+      </p>
+      <p>
+        Tina served as the lead attorney for the oncology division and the consumer healthcare division at 
+        Boehringer Ingelheim USA Corporation. She was also appointed Counsel and Secretary for the BICARES 
+        Foundation, which operated the Patient Assistance Program for US patients, the Product Donation 
+        Program, and managed all charitable giving by the organization. Tina also served as Executive Director 
+        of Compliance and Ethics at Alexion Pharmaceuticals, with global responsibility for the development of 
+        a compliance program supporting R&D, Medical Affairs, Manufacturing Operations, and Business Development 
+        functions. She served as the compliance lead supporting Alexion’s global patient support programs. 
+      </p>
+      <p>
+        Most recently, Tina served as Chief Compliance Officer for MEI Pharma, a pre-commercial pharmaceutical company 
+        in the oncology therapeutic area. She led the design and implementation of their early-stage compliance 
+        program as well as provided critical leadership and governance support for the organization. Tina began 
+        her career as a health law associate at Wiggin & Dana, LLP, and a health law and litigation associate at 
+        Neubert Pepe and Monteith, PC. She is a Connecticut native and was located in the New Haven office of both firms.
+      </p>
+      <p>
+        Committed to giving back, Tina serves on the Dean’s Advisory Board-College of Liberal Arts and Sciences and the 
+        African American Alumni Council for the University of Connecticut. She also served on the Board of Directors for 
+        many community-based organizations including CT CASA (Court Appointed Special Advocates) and the Lawyer’s 
+        Collaborative for Diversity. She was recognized in 2022 as part of SAVOY Magazine’s Power 300: Most Influential 
+        Black Executives in Corporate America. 
+      </p>
+      <p>
+        Tina received her undergraduate degree from the University of Connecticut, (BA Psychology, magna cum laude, Phi 
+        Beta Kappa) and her law degree (JD) from Washington and Lee University School of Law.  
       </p>
     `,
   }
