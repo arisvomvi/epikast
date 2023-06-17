@@ -523,8 +523,8 @@ export const personas = [
         Black Executives in Corporate America. 
       </p>
       <p>
-        Tina received her undergraduate degree from the University of Connecticut, (BA Psychology, magna cum laude, Phi 
-        Beta Kappa) and her law degree (JD) from Washington and Lee University School of Law.  
+        Tina received her a BS in psychology from the University of Connecticut (magna cum laude, Phi 
+        Beta Kappa), and her JD from Washington and Lee University School of Law.  
       </p>
     `,
   }
