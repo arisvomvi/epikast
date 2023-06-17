@@ -495,9 +495,9 @@ export const personas = [
       <p>
         Tina, who will join Epikast as Chief Legal and Compliance Officer in August of 2023, is an attorney 
         with over 20 years of experience advising the healthcare and pharmaceutical industries. She has deep 
-        legal and compliance expertise in the pharmaceutical space, with therapeutic area experience in 
-        oncology, rare disease and primary care, and has proudly provided legal and compliance leadership and 
-        support across nine new product/new indication launches. 
+        legal and compliance expertise in the pharmaceutical space, with therapeutic area experience across 
+        specialty care, rare diseases, and primary care, and has proudly provided legal and compliance leadership  
+        and support across nine new product/new indication launches. 
       </p>
       <p>
         Tina served as the lead attorney for the oncology division and the consumer healthcare division at 
