@@ -484,7 +484,7 @@ export const personas = [
   {
     id: 13,
     name: 'Tina Beamon, Esq.',
-    title: 'Chief Legal & Compliance Officer',
+    title: 'Chief Legal & Compliance Officer (effective Aug 2023)',
     filters: [
       { position: 'all', order: 1 },
       { position: 'executive', order: 2 },
