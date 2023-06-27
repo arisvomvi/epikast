@@ -484,7 +484,7 @@ export const personas = [
   {
     id: 13,
     name: 'Tina Beamon, Esq.',
-    title: 'Chief Legal & Compliance Officer (effective Aug 2023)',
+    title: 'Chief Legal & Compliance Officer',
     filters: [
       { position: 'all', order: 1 },
       { position: 'executive', order: 2 },
@@ -527,5 +527,8 @@ export const personas = [
         Beta Kappa), and her JD from Washington and Lee University School of Law.  
       </p>
     `,
-  }
+    additional: {
+      title: ' (effective Aug 2023)',
+    },
+  },
 ];
