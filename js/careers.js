@@ -106,7 +106,7 @@ export const careers = new Map([
         file: 'https://epikast.bamboohr.com/careers/39',
       },
       {
-        title: 'Medical Representative',
+        title: 'Medical Consultant',
         location: 'Athens, Greece',
         description: `
           <p>
@@ -115,7 +115,7 @@ export const careers = new Map([
             and prescribers.
           </p>
           <p>
-            In your role as a Medical Representative, you will engage with 
+            In your role as a Medical Consultant, you will engage with 
             sophisticated physicians and other healthcare professionals in 
             the US. You will better educate them about the latest 
             developments within a particular disease area, and/or articulate 
@@ -160,7 +160,7 @@ export const careers = new Map([
         file: 'https://epikast.bamboohr.com/careers/40',
       },
       {
-        title: 'Medical Representative Team Lead',
+        title: 'Medical Consultant Team Lead',
         location: 'Athens, Greece',
         description: `
           <p>
