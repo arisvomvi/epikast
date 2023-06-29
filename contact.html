@@ -68,37 +68,59 @@
     <section class="locations bubble">
       <h2 class="bubble__title">Our locations</h2>
       <div class="locations__wrap">
-
         <table class="locations__list">
           <tr data-location="ny">
-            <td data-clock="NY" class="location__time">--:--</td>
             <td>
-              <address>
-                <span>USA</span>
-                <span>New York, NY</span>
-              </address>
+              <a href="https://goo.gl/maps/B2121TctJNVi71v16" target="_blank" data-clock="NY" class="location__time">--:--</a>
+            </td>
+            <td>
+              <a href="https://goo.gl/maps/B2121TctJNVi71v16" target="_blank">
+                <address>
+                  <span>USA</span>
+                  <span>New York, NY</span>
+                  <div>
+                    180 Varick Street, 6<sup>th</sup> Floor <br>
+                    New York, NY 10014
+                  </div>
+                </address>
+              </a>
             </td>
           </tr>
           <tr data-location="eu">
-            <td data-clock="GR" class="location__time">--:--</td>
             <td>
-              <address>
-                <span>Europe</span>
-                <span>Athens, GR</span>
-              </address>
+              <a href="https://goo.gl/maps/ZX3rZau31b9PFFiq8" target="_blank" data-clock="GR" class="location__time">--:--</a>
+            </td>
+            <td>
+              <a href="https://goo.gl/maps/ZX3rZau31b9PFFiq8" target="_blank">
+                <address>
+                  <span>Europe</span>
+                  <span>Athens, GR</span>
+                  <div>
+                    Pireos 108, 5<sup>th</sup> Floor <br>
+                    Athens, 11854
+                  </div>
+                </address>
+              </a>
             </td>
           </tr>
         </table>
-        <figure class="locations__map">
+        <div class="locations__map">
           <img src="assets/map.svg" width="900" height="408" alt="Global map" />
-          <div class="locations__dot locations__dot--ny" data-location="ny">
+          <a href="https://goo.gl/maps/B2121TctJNVi71v16" target="_blank" class="locations__dot locations__dot--ny" data-location="ny">
             <address>
+              <h5>US HEADQUARTERS<img class="persona__arrow" src="assets/arrow.svg"></h5>
               180 Varick Street, 6<sup>th</sup> Floor <br>
               New York, NY 10014
             </address>
-          </div>
-          <div class="locations__dot locations__dot--eu" data-location="eu"></div>
-        </figure>
+          </a>
+          <a href="https://goo.gl/maps/ZX3rZau31b9PFFiq8" target="_blank" class="locations__dot locations__dot--eu" data-location="eu">
+            <address>
+              <h5>GREECE HUB<img class="persona__arrow" src="assets/arrow.svg"></h5>
+              Pireos 108, 5<sup>th</sup> Floor <br>
+              Athens, 11854
+            </address>
+          </a>
+        </div>
       </div>
     </section>
   </main>
