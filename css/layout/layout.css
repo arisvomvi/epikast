@@ -651,9 +651,9 @@ figure.full-height {
 
 @media only screen and (max-width: 655px) {
   :root {
-    --base-distance: 48px
+    --safe-space: 24px;
+    --base-distance: 48px;
   }
- 
 
   .container--footer .logo {
     width: 24px;
