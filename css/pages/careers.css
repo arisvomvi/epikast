@@ -85,6 +85,14 @@ h1 {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
 }
+.accordion__head--empty {
+  padding-right: 16px;
+}
+.accordion__head--empty::before,
+.accordion__head--empty::after {
+  display: none;
+}
+
 .accordion__icon {
   width: 32px;
   height: 32px;
@@ -95,6 +103,13 @@ h1 {
       -ms-flex: 1;
           flex: 1;
   font-weight: 600;
+  color: var(--lynch);
+  margin-right: 8px;
+}
+.accordion__message {
+  font-size: 12px;
+  line-height: 18px;
+  font-style: italic;
   color: var(--lynch);
 }
 .accordion__body {
@@ -371,6 +386,17 @@ h1 {
   }
   .position-wrap {
     padding: 16px 0;
+  }
+  .accordion__head--empty {
+    flex-wrap: wrap;
+  }
+  .accordion__title {
+    margin-right: 0;
+  }
+  .accordion__message {
+    width: 100%;
+    text-align: center;
+    margin-top: 8px;
   }
 }
 
