@@ -255,9 +255,6 @@
   line-height: 2.2rem;
   font-weight: 600;
 }
-.persona__title span {
-  font-size: 12px;
-}
 .persona__desc {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -277,6 +274,9 @@
   -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;;
+}
+.persona__desc span {
+  font-size: 12px;
 }
 .persona:hover .persona__arrow {
   -webkit-transform: translateX(8px);
