@@ -92,9 +92,10 @@
           v-for="([category, positions], catIndex) in careers" 
           :key="catIndex" 
           @click="toggle_category(catIndex)">
-          <div class="accordion__head">
+          <div class="accordion__head" :class="{ 'accordion__head--empty': !positions.length }">
             <img class="accordion__icon" :src="category.icon" width="32" height="32" :alt="category.category">
             <div class="accordion__title">{{ category.category }}</div>
+            <span v-if="!positions.length" class="accordion__message">No openings currently available</span>
           </div>
           <div class="accordion__body">
             <ul class="accordion__content">

@@ -32,13 +32,13 @@ class Locations {
   }
   init() {
     this.triggers.forEach(trigger => {
-      trigger.addEventListener('mouseenter', () => {
+      trigger.addEventListener('mouseover', () => {
         if (window.innerWidth <= 800) return;
         let location = trigger.getAttribute('data-location');
         [...this.popups].forEach(el => el.classList.remove('active'));
         [...this.popups].find(el => el.classList.contains(`locations__dot--${location}`)).classList.add('active');
       });
-      trigger.addEventListener('mouseleave', () => {
+      trigger.addEventListener('mouseout', () => {
         [...this.popups].forEach(el => el.classList.remove('active'));
       });
     });
@@ -152,7 +152,7 @@ function handle_personas(selector) {
   new Vue({
     el: `#${selector}`,
     data: () => ({
-      personasLimit: 10,
+      personasLimit: 9,
       personas,
       filters: [
         { id: 'board', label: 'Board' },
@@ -207,7 +207,7 @@ function handle_personas(selector) {
         this.personasLimit += this.personasLimit;
       },
       view_less() {
-        this.personasLimit = 10;
+        this.personasLimit = 9;
       },
     },
     computed: {

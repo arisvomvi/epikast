@@ -85,13 +85,19 @@ h1 {
 address {
   font-style: normal;
 }
-address span:first-child {
+.locations__list address span:nth-child(1) {
   font-size: 3.2rem;
   line-height: 3.8rem;
   font-weight: 700;
 }
-address span:last-child {
+.locations__list address span:nth-child(2) {
   display: block;
+  color: var(--lynch);
+}
+.locations__list address div:nth-child(3) {
+  display: none;
+  font-size: 12px;
+  line-height: 18px;
   color: var(--lynch);
 }
 .locations__map {
@@ -113,11 +119,13 @@ address span:last-child {
   background: var(--blue-ribbon);
   border-radius: 50%;
   background: var(--blue-ribbon);
+  cursor: pointer;
+  z-index: 1;
 }
 .locations__dot:before {
   content: '';
   position: absolute;
-  inset: -8px;
+  inset: -20px;
   cursor: pointer;
 }
 .locations__dot--eu {
@@ -130,9 +138,8 @@ address span:last-child {
 }
 .locations__dot address {
   position: absolute;
-  right: 100%;
+  white-space: nowrap;
   margin-right: 16px;
-  width: 213px;
   padding: 24px;
   color: var(--lynch);
   font-size: 14px;
@@ -140,16 +147,37 @@ address span:last-child {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 0 30px rgba(0, 102, 255, 0.24);
-  z-index: 1;
   top: 16px;
   transform: translate(0, -50%);
   transition: 0.4s;;
   opacity: 0;
-  pointer-events: none;
+}
+.locations__dot--ny address {
+  right: 100%;
+  margin-right: 16px;
+}
+.locations__dot--eu address {
+  left: 100%;
+  margin-left: 16px;
+}
+.locations__dot address h5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.locations__dot address img {
+  width: 20px;
+  transform: translateX(-10px);
+  opacity: 0;
+  transition: 0.2s 0.2s;
 }
 .locations__dot.active address {
   opacity: 1;
   transform: translate(0, calc(-50% - 16px));
+}
+.locations__dot.active address img {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 @media only screen and (max-width: 860px) {
@@ -203,6 +231,9 @@ address span:last-child {
         -ms-flex-align: start;
             align-items: flex-start;
   }
+  .locations__map {
+    display: none;
+  }
   .locations__list tbody {
     display: block;
   }
@@ -215,6 +246,12 @@ address span:last-child {
   .locations__list td, 
   .locations__list tr:not(:first-child) td {
     padding-right: 0;
+  }
+  .locations__list address span:nth-child(2) {
+    display: none;
+  }
+  .locations__list address div:nth-child(3) {
+    display: block;
   }
 }
 
@@ -236,9 +273,7 @@ address span:last-child {
   .intro__bottom {
     margin-top: 64px;
   }
-  .locations__map {
-    display: none;
-  }
+  
   .locations__list {
     display: block;
     margin: 0;

@@ -147,14 +147,14 @@
                 <img :src="persona.img" width="152" height="160" :alt="persona.name" />
               </figure>
               <h3 class="persona__title">{{ persona.name }}</h3>
-              <div class="persona__desc">{{ persona.title }}</div>
+              <div class="persona__desc">{{ persona.title }}<span v-if="persona?.additional?.title">{{ persona.additional.title}}</span></div>
               <img class="persona__arrow" src="assets/arrow.svg">
             </div>
           </article>
-          <span class="split__part persona persona--read-more" 
+          <span class="split__part persona persona-extras" 
             @click="view_more"
             v-if="hasMore">View more</span>
-          <span class="split__part persona persona--read-more" 
+          <span class="split__part persona persona-extras" 
             @click="view_less"
             v-if="hasLess">View less</span>
          </div>
