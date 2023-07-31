@@ -493,7 +493,7 @@ export const personas = [
     linkedin: 'https://www.linkedin.com/in/tina-clark-beamon-99144710/',
     bio: `
       <p>
-        Tina, who will join Epikast as Chief Legal and Compliance Officer in August of 2023, is an attorney 
+        Tina is an attorney 
         with over 20 years of experience advising the healthcare and pharmaceutical industries. She has deep 
         legal and compliance expertise in the pharmaceutical space, with therapeutic area experience across 
         specialty care, rare diseases, and primary care, and has proudly provided legal and compliance leadership  
@@ -527,8 +527,6 @@ export const personas = [
         Beta Kappa), and her JD from Washington and Lee University School of Law.  
       </p>
     `,
-    additional: {
-      title: ' (effective Aug 2023)',
     },
   },
 ];
