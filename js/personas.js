@@ -527,6 +527,5 @@ export const personas = [
         Beta Kappa), and her JD from Washington and Lee University School of Law.  
       </p>
     `,
-    },
   },
 ];
