@@ -476,8 +476,8 @@ export const personas = [
         healthcare industry.
       </p>
       <p>
-        He holds an MS in Business Innovation & Technology from Athens information Technology, and a BS 
-        in Business Administration in the university of Essex.
+        He holds an MS in Business Innovation & Technology from Athens Information Technology (AIT), and a BS 
+        in Business Administration from the University of Essex.
       </p>
     `,
   },
