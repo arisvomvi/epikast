@@ -483,7 +483,7 @@ export const personas = [
   },
   {
     id: 13,
-    name: 'Tina Beamon, Esq.',
+    name: 'Tina Beamon, JD',
     title: 'Chief Legal & Compliance Officer',
     filters: [
       { position: 'all', order: 1 },
