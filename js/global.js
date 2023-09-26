@@ -2,7 +2,7 @@ import { personas } from './personas.js';
 import { careers } from './careers.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const isIos = is_ios();
+  const isIos = navigator.appVersion.indexOf('Mac') != -1;
   const burger = document.querySelector('.js-burger');
   const menu = document.querySelector('.js-menu');
   const copyYear = document.querySelector('.js-copy-year');
@@ -22,8 +22,73 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelector('.js-values')) new Values('.js-values');
   if (document.querySelectorAll('[data-clock]').length) new Clocks('[data-clock]');
   if (document.querySelectorAll('[data-location]').length) new Locations('[data-location]');
-});
+  if (document.getElementById('subjects') != null) new Select('subjects');
 
+  let formControls = document.querySelectorAll('.form-control');
+
+  if (formControls.length) {
+    formControls.forEach(group => {
+      let targets = group.querySelectorAll('input, textarea');
+      targets.forEach(target => {
+        target.addEventListener('focus', () => {
+          group.classList.add('focused');
+        });
+        target.addEventListener('blur', () => {
+          if (!target.value.trim().length) group.classList.remove('focused');
+        });
+      });
+    });
+  }
+
+  const contactForm = document.getElementById('contact-form');
+
+  if (contactForm) {
+    let agreement = document.getElementById('agreement');
+    let submitBtn = contactForm.querySelector('button[type="submit"]');
+
+    agreement.addEventListener('click', () => {
+      if (agreement.checked) {
+        submitBtn.removeAttribute('disabled');
+      } else {
+        submitBtn.setAttribute('disabled', 'disabled');
+      }
+    });
+
+    document.getElementById('contact-form').addEventListener('submit', async e => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      const formObject = {};
+
+      formData.forEach((value, key) => {
+        formObject[key] = value;
+      });
+
+      console.log('formObject: ', formObject);
+
+      // Send the form data to your Lambda function
+      // try {
+      //   const response = await fetch('', {
+      //     method: 'POST',
+      //     body: JSON.stringify(formObject),
+      //     headers: {
+      //       'Content-Type': 'application/json',
+      //     },
+      //   });
+
+      //   if (response.ok) {
+      //     alert('Message sent successfully!');
+      //     // Optionally, reset or clear the form
+      //     e.target.reset();
+      //   } else {
+      //     alert('Message failed to send. Please try again later.');
+      //   }
+      // } catch (error) {
+      //   console.error('Error sending message:', error);
+      //   alert('An error occurred. Please try again later.');
+      // }
+    });
+  }
+});
 class Locations {
   constructor(selector) {
     this.triggers = document.querySelectorAll(selector);
@@ -145,6 +210,65 @@ class Clocks {
         default:
       }
     });
+  }
+}
+class Select {
+  constructor(selector) {
+    this.select = document.getElementById(selector);
+    this.trigger = this.select.querySelector('.select__head');
+    this.body = this.select.querySelector('.select__body');
+    this.optionsDom = this.select.querySelector('.select__options');
+    this.options = this.select.querySelectorAll('.select__options li');
+    this.selection = this.select.querySelector('.select__selected');
+    this.value = null;
+    this.isOpen = false;
+    this.nativeSelect = this.select.querySelector(`#${selector} select`);
+    this.init(selector);
+  }
+  init(selector) {
+    this.value = this.options[0].getAttribute('data-value');
+    this.options[0].classList.add('active');
+
+    window.addEventListener('click', e => {
+      if (!e.target.closest(`#${selector}`) && this.isOpen) this.close();
+    });
+
+    this.optionsDom.addEventListener('click', () => {
+      this.close();
+    });
+
+    this.trigger.addEventListener('click', () => {
+      if (this.isOpen) {
+        this.close();
+      } else {
+        this.open();
+      }
+    });
+
+    this.options.forEach(option => {
+      const newOption = document.createElement('option');
+      newOption.value = option.getAttribute('data-value');
+      newOption.textContent = option.innerHTML;
+      this.nativeSelect.appendChild(newOption);
+
+      option.addEventListener('click', e => {
+        this.selection.innerHTML = e.target.innerHTML;
+        this.value = e.target.getAttribute('data-value');
+        this.options.forEach(el => el.classList.remove('active'));
+        option.classList.add('active');
+
+        let nativeOption = [...this.nativeSelect.options].find(option => option.value === this.value);
+        nativeOption.selected = true;
+      });
+    });
+  }
+  open() {
+    this.select.classList.add('open');
+    this.isOpen = true;
+  }
+  close() {
+    this.select.classList.remove('open');
+    this.isOpen = false;
   }
 }
 
@@ -313,8 +437,4 @@ function handle_careers(selector) {
       },
     },
   });
-}
-
-function is_ios() {
-  return navigator.appVersion.indexOf('Mac') != -1;
 }

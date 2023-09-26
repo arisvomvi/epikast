@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preload" href="fonts/Inter-Medium.woff" as="font" type="font/woff" crossorigin>
+  
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="icon" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="icon" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" sizes="192x192" href="assets/android-chrome-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <meta name="description" content="Some page description" />
+  <meta property="og:site_name" content="Epikast" />
+
+  <meta property="og:title" content="Epikast page title" />
+  <meta property="og:description" content="Page description" />
+  <meta property="og:image" content="assess/og_img.png" />
+
+  <link rel="stylesheet" href="css/layout/layout.css">
+  <link rel="stylesheet" href="css/pages/doc.css">
+  <title>Contact</title>
+</head>
+<body>
+
+  <header>
+    <div class="container container--header">
+      <a href="index.html" class="logo">
+        <figure>
+          <img src="assets/logo.svg" alt="Epikast logo" width="158" height="36">
+        </figure>
+      </a>
+      <nav class="menu-wrap js-menu">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Our services</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+        </ul>
+      </nav>
+      <span class="burger js-burger"></span>
+    </div>
+  </header>
+
+  <main class="container container--main">
+    <h1>GTPR</h1>
+
+    <div class="text-editor">
+      <h3>1. Introduction</h3>
+      <p>
+        Welcome to our <a href="http://epikast.com">epikast</a> website
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Qui natus omnis exercitationem possimus praesentium? 
+        Aliquid modi eius, totam veritatis ipsam sed at optio itaque 
+        officiis, quaerat suscipit reiciendis vero vel.
+      </p>
+      <h3>2. Privacy Policy</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Qui natus omnis exercitationem possimus praesentium? 
+        Aliquid modi eius, totam veritatis ipsam sed at optio itaque 
+        officiis, quaerat suscipit reiciendis vero vel.
+      </p>
+    </div>
+
+    <section class="contact">
+      <form id="contact-form" action="" class="contact-form">
+        <div class="contact-form__fields">
+          <div class="form-control">
+            <input type="text" id="name" name="name" required>
+            <label for="name">Name</label>
+          </div>
+          <div class="form-control">
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="form-control">
+            <div class="select" id="subjects">
+              <div class="select__head">
+                <div class="select__selected">
+                  Ask a copy of all of your data
+                </div>
+                <span class="select__arrow"></span>
+              </div>
+              <div class="select__body">
+                <ul class="select__options">
+                  <li data-value="1">
+                    Ask a copy of all of your data
+                  </li>
+                  <li data-value="2">
+                    Invoke the right to be forgotten
+                  </li>
+                  <li data-value="3">
+                    Object the use of your data for non-service related purposes
+                  </li>
+                  <li data-value="4">
+                    Report a data breach
+                  </li>
+                </ul>
+              </div>
+              <select name="options"></select>
+            </div>
+          </div>
+          <div class="form-control">
+            <textarea name="message" id="message"></textarea>
+            <label for="message">Description</label>
+          </div>
+          <div class="form-checkbox">
+            <input type="checkbox" name="agreement" id="agreement">
+            <label for="agreement">
+              By submitting this form, you acknowledge you have 
+              read and agreed to our 
+              <a href="privacy.html" target="_blank">Privacy Policy</a>
+              and 
+              <a href="terms.html" target="_blank">Terms and Conditions</a>
+            </label>
+          </div>
+        </div>
+        <button disabled type="submit" class="btn btn--fill">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="container container--footer">
+    <a href="https://www.linkedin.com/company/epikast/" target="_blank" aria-label="Linkedin" class="linkedin">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+        <g id="Group_330" data-name="Group 330" fill="#000033">
+          <path id="Path_177" data-name="Path 177" class="cls-1" d="m13.27,31.23h-5.06V15.17h4.97v16.06h.09Zm-2.53-18.21c-1.6-.09-2.82-1.46-2.73-3.06.08-1.47,1.26-2.65,2.73-2.73,1.6.09,2.82,1.46,2.73,3.06-.08,1.47-1.26,2.65-2.73,2.73Zm21.25,18.21h-4.96v-7.83c0-1.87,0-4.3-2.62-4.3s-2.99,2.09-2.99,4.11v7.94h-5.05v-15.99h4.78v2.15h.1c.98-1.69,2.81-2.7,4.77-2.62,5.06,0,6,3.36,6,7.66v8.87h-.01Z"/>
+        </g>
+      </svg>
+    </a>
+    <ul class="footer-menu">
+      <li>
+        <div class="mail-copy">
+          <span class="js-copy-year"></span> &copy; All rights reserved
+        </div>
+      </li>
+      <li>
+        <a href="terms.html">Terms and Conditions</a>
+      </li>
+      <li>
+        <a href="privacy.html">Privacy</a>
+      </li>
+      <li>
+        <a href="gtpr.html" class="active">GTPR</a>
+      </li>
+    </ul>
+    <a href="index.html" class="logo"><img src="assets/logo.svg" alt="Epikast logo" width="128" height="27"/></a>
+  </footer>
+
+  <script type="module" src="js/global.js"></script>
+</body>
+</html>
