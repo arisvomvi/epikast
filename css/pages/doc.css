@@ -16,7 +16,9 @@ h1 {
   bottom: 0;
   width: 100vw;
   background-color: var(--athens-gray);
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
   z-index: -1;
 }
 .os-win .contact:before {
@@ -27,7 +29,11 @@ h1 {
   margin-top: 16px;
   left: 50%;
   min-width: 188px;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 .contact-form button:disabled {
@@ -35,9 +41,12 @@ h1 {
   cursor: not-allowed;
 }
 .contact-form__fields {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 32px 1fr;
   grid-template-columns: 1fr 1fr;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin: 0 auto;
   max-width: 688px;
   gap: 32px;
@@ -45,13 +54,20 @@ h1 {
 .contact-form__fields > *:nth-child(3),
 .contact-form__fields > *:nth-child(4),
 .contact-form__fields > *:nth-child(5) {
-  grid-column-start: 1;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-span: 2;
   grid-column-end: 3;
 }
 
 @media only screen and (max-width: 655px) {
   .contact-form__fields {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
