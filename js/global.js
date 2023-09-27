@@ -85,6 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
             alertContentDom.innerHTML = 'Message sent successfully!';
             alert.classList.remove('error');
             alert.classList.add('visible');
+            setTimeout(() => {
+              alert.classList.remove('visible');
+            }, 2000);
           } else {
             alert('Message sent successfully!');
           }

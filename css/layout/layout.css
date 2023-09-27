@@ -619,7 +619,6 @@ button {
 }
 .form-checkbox {
   position: relative;
-  margin: 0 16px;
 }
 .form-checkbox input {
   position: absolute;
@@ -716,30 +715,43 @@ button {
 
 .alert {
   display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
-  padding: 28px;
+  padding: 8px;
   min-width: 300px;
   text-align: center;
-  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 51, 0.1);
   border-radius: 4px;
+  min-height: 100px;
+  z-index: 1;
+  border: 8px solid #fff;
+}
+.alert__content {
+  flex: 1;
 }
 .alert__close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  display: none;
   font-size: 14px;
   line-height: 14px;
   cursor: pointer;
+  margin-left: 8px;
 }
 .alert.visible {
-  display: block;
+  display: flex;
+}
+.alert.error {
+  background: #FFE3E3;
 }
 .alert.error .alert__content {
   color: #B00020;
+}
+.alert.error .alert__close {
+  display: block;
 }
 
 @media only screen and (max-width: 1024px) {
