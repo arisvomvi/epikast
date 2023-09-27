@@ -567,6 +567,10 @@ button {
   margin-left: 0;
 }
 
+.text-editor {
+  max-width: 940px;
+  margin: 0 auto;
+}
 .text-editor p {
   color: var(--lynch);
 }
@@ -677,15 +681,13 @@ button {
 }
 .select__body {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 4px);
   left: 0;
   right: 0;
-  /* outline: 1px solid; */
   padding: 16px 0;
   background: #fff;
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
   transform: translateY(-20px);
-  /* opacity: 0; */
   clip-path: polygon(-10% -10%, 110% -10%, 110% -10%, -10% -10%);
   transition: 0.4s;
   z-index: -1;
@@ -710,6 +712,34 @@ button {
 .select__options li:hover,
 .select__options li.active {
   background: #E6F4FE;
+}
+
+.alert {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 28px;
+  min-width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.alert__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 14px;
+  line-height: 14px;
+  cursor: pointer;
+}
+.alert.visible {
+  display: block;
+}
+.alert.error .alert__content {
+  color: #B00020;
 }
 
 @media only screen and (max-width: 1024px) {

@@ -24,8 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.querySelectorAll('[data-location]').length) new Locations('[data-location]');
   if (document.getElementById('subjects') != null) new Select('subjects');
 
-  let formControls = document.querySelectorAll('.form-control');
+  const alert = document.getElementById('alert');
+  if (alert) {
+    let closeBtn = alert.querySelector('.alert__close');
+    closeBtn.addEventListener('click', () => {
+      alert.classList.remove('visible');
+    });
+  }
 
+  let formControls = document.querySelectorAll('.form-control');
   if (formControls.length) {
     formControls.forEach(group => {
       let targets = group.querySelectorAll('input, textarea');
@@ -41,7 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const contactForm = document.getElementById('contact-form');
-
   if (contactForm) {
     let agreement = document.getElementById('agreement');
     let submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -58,34 +64,43 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const formData = new FormData(e.target);
       const formObject = {};
+      let alertContentDom = alert ? alert.querySelector('.alert__content') : null;
 
       formData.forEach((value, key) => {
         formObject[key] = value;
       });
+      delete formObject.agreement;
 
-      console.log('formObject: ', formObject);
+      try {
+        const response = await fetch('', {
+          method: 'POST',
+          body: JSON.stringify(formObject),
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
 
-      // Send the form data to your Lambda function
-      // try {
-      //   const response = await fetch('', {
-      //     method: 'POST',
-      //     body: JSON.stringify(formObject),
-      //     headers: {
-      //       'Content-Type': 'application/json',
-      //     },
-      //   });
-
-      //   if (response.ok) {
-      //     alert('Message sent successfully!');
-      //     // Optionally, reset or clear the form
-      //     e.target.reset();
-      //   } else {
-      //     alert('Message failed to send. Please try again later.');
-      //   }
-      // } catch (error) {
-      //   console.error('Error sending message:', error);
-      //   alert('An error occurred. Please try again later.');
-      // }
+        if (response.ok) {
+          if (alertContentDom) {
+            alertContentDom.innerHTML = 'Message sent successfully!';
+            alert.classList.remove('error');
+            alert.classList.add('visible');
+          } else {
+            alert('Message sent successfully!');
+          }
+        } else {
+          if (alertContentDom) {
+            alertContentDom.innerHTML = 'Message failed to send. Please try again later.';
+            alert.classList.add('error');
+            alert.classList.add('visible');
+          } else {
+            alert('Message failed to send. Please try again later.');
+          }
+        }
+      } catch (error) {
+        console.error('Error sending message:', error);
+        alert('An error occurred. Please try again later.');
+      }
     });
   }
 });
