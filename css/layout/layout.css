@@ -792,11 +792,13 @@ button {
   min-height: 100px;
   z-index: 1;
   border: 8px solid #fff;
+  background: #effcf6;
 }
 .alert__content {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  color: #0c6b58;
 }
 .alert__close {
   display: none;
