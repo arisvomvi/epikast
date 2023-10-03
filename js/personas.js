@@ -347,7 +347,9 @@ export const personas = [
       <p>
         Nassos brings 30 years of experience in building and running 
         customer-facing organizations, with a passion for delighted 
-        customers, operational excellence, and smart capital allocation. 
+        customers, operational excellence, and smart capital allocation.
+        He currently serves as the chairman of Ethniki Insurance, and as a member
+        of the board of the National Bank of Greece.
       </p>
       <p>
         Until recently, and for more than ten years, he served as Chairman
