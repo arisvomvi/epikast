@@ -347,7 +347,9 @@ export const personas = [
       <p>
         Nassos brings 30 years of experience in building and running 
         customer-facing organizations, with a passion for delighted 
-        customers, operational excellence, and smart capital allocation. 
+        customers, operational excellence, and smart capital allocation.
+        He currently serves as the chairman of Ethniki Insurance, and as a member
+        of the board of the National Bank of Greece.
       </p>
       <p>
         Until recently, and for more than ten years, he served as Chairman
@@ -476,14 +478,14 @@ export const personas = [
         healthcare industry.
       </p>
       <p>
-        He holds an MS in Business Innovation & Technology from Athens information Technology, and a BS 
-        in Business Administration in the university of Essex.
+        He holds an MS in Business Innovation & Technology from Athens Information Technology (AIT), and a BS 
+        in Business Administration from the University of Essex.
       </p>
     `,
   },
   {
     id: 13,
-    name: 'Tina Beamon, Esq.',
+    name: 'Tina Beamon, JD',
     title: 'Chief Legal & Compliance Officer',
     filters: [
       { position: 'all', order: 1 },
