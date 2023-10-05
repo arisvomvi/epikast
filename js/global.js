@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const contactForm = document.getElementById('contact-form');
+
   if (contactForm) {
     let agreement = document.getElementById('agreement');
     let submitBtn = contactForm.querySelector('button[type="submit"]');
@@ -60,24 +61,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    document.getElementById('contact-form').addEventListener('submit', async e => {
+    contactForm.addEventListener('submit', async e => {
       e.preventDefault();
       const formData = new FormData(e.target);
       const formObject = {};
       let alertContentDom = alert ? alert.querySelector('.alert__content') : null;
-
       formData.forEach((value, key) => {
         formObject[key] = value;
       });
       delete formObject.agreement;
 
       try {
-        const response = await fetch('', {
-          method: 'POST',
+        const response = await fetch(e.target.action, {
+          method: contactForm.method,
           body: JSON.stringify(formObject),
-          headers: {
-            'Content-Type': 'application/json',
-          },
+          headers: { Accept: 'application/json' },
         });
 
         if (response.ok) {
@@ -101,8 +99,13 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       } catch (error) {
-        console.error('Error sending message:', error);
-        alert('An error occurred. Please try again later.');
+        if (alertContentDom) {
+          alertContentDom.innerHTML = 'Message failed to send. Please try again later.';
+          alert.classList.add('error');
+          alert.classList.add('visible');
+        } else {
+          alert('Message failed to send. Please try again later.');
+        }
       }
     });
   }

@@ -635,6 +635,7 @@ button {
 .form-control textarea {
   resize: none;
   min-height: 200px;
+  font-family: var(--font-inter);
 }
 .form-control label {
   position: absolute;
